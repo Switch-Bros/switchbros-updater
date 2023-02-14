@@ -50,7 +50,7 @@
     "cheats_label": "\ue016  Скачать читы для конкретной игры с сайта GBAtemp.net или CheatSlips.com",
     "show_cheat_files": "Показать все файлы читов",
     "cheats_not_found": "Не могу найти читы, соответствующие текущему build ID игры. Возможно, текущая версия игры еще не поддерживается",
-    "old_cheats_found": "Найдены читы, соответствующие этому BID(s) - [ {}].",
+    "old_cheats_found": "Найдены читы, соответствующие этому/этим BID - [ {}].",
     "cheatslips_logout": "Выйти"
 
   },
@@ -115,6 +115,7 @@
     "firmware_version": "\ue016  Текущая версия прошивки: ",
     "cheats_text": "\uE016  Загрузка обновлений читов с сайта 'gbatemp.net'. Читы для игр, которые у вас не установлены не будут распаковываться на карту памяти. Вы можете отключить обновления читов для определённых игр через меню 'Инструменты → Управление читами'.\n\uE016  Для активации читов, удерживайте кнопку (L) во время запуска игры!\n\n\uE016  Текущая версия читов: ",
     "get_cheats": "Скачать читы с GBAtemp.net (ver {})",
+    "get_cheats_gfx": "Загрузить читы для улучшения графики",
     "sigpatches": "sigpatches",
     "sigpatches_text": "\ue016  Sigpatches allow your Switch to install and run unofficial NSP file. Make sure you pick the correct sigpatches for your setup (pure Atmosph\u00e8re or Hekate+Atmosph\u00e8re). Reboot the console to apply patches.",
     "firmware": "firmware",
@@ -165,7 +166,7 @@
 
   },
   "utils": {
-    "fw_warning": "Раззмер архива слишком большой. Запустите программу в режиме тайтла - для этого запустите любую игру, удерживая кнопку R до появления Homebrew Menu",
+    "fw_warning": "Размер архива слишком большой. Запустите программу в режиме тайтла - для этого запустите любую игру, удерживая кнопку (R) до появления Homebrew Menu",
     "overwrite": " Do you want to overwrite existing ",
     "wrong_type_sigpatches": "The downloaded file is not a sigpatches archive. This is most likely due to a broken link. If the problem persists after more than 30 minutes, please open an issue on Github.",
     "wrong_type_fw": "The downloaded file is not a firmware archive. This is most likely due to a broken link. If the problem persists after more than 30 minutes, please open an issue on Github.",
@@ -184,7 +185,7 @@
     "mariko_rev": "\u25c6 Ревизия: Mariko"
   },
   "firmware": {
-    "launch_daybreak": "Запустить Daybreak для установки скачанной прошивки??"
+    "launch_daybreak": "Запустить Daybreak для установки скачанной прошивки?"
   },
   "net": {
     "title": "Internet settings"
@@ -197,6 +198,7 @@
   "language": {
     "system_default": "System default",
     "en-US": "American English (en-US)",
-    "ru": "Russian (ru)"
+    "ru": "Russian (ru)",
+    "ua": "Ukrainian (ua)"
   }
 }

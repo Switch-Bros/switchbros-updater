@@ -147,24 +147,8 @@ ToolsTab::ToolsTab(const std::string& tag, const nlohmann::ordered_json& payload
     language->getClickEvent()->subscribe([](brls::View* view) {
         std::vector<std::pair<std::string, std::string>> languages{
             std::make_pair("American English ({})", "en-US"),
-            std::make_pair("日本語 ({})", "ja"),
-            std::make_pair("Français ({})", "fr"),
-            std::make_pair("Deutsch ({})", "de"),
-            std::make_pair("Italiano ({})", "it"),
-            std::make_pair("Español ({})", "es"),
-            std::make_pair("Português ({})", "pt"),
-            std::make_pair("Nederlands ({})", "nl"),
             std::make_pair("Русский ({})", "ru"),
-            std::make_pair("한국어 ({})", "ko"),
-            std::make_pair("Polski ({})", "pl"),
-            std::make_pair("简体中文 ({})", "zh-CN"),
-            std::make_pair("繁體中文 ({})", "zh-TW"),
-            std::make_pair("English (Great Britain) ({})", "en-GB"),
-            std::make_pair("Français (Canada) ({})", "fr-CA"),
-            std::make_pair("Español (Latinoamérica) ({})", "es-419"),
-            std::make_pair("Português brasileiro ({})", "pt-BR"),
-            std::make_pair("Traditional Chinese ({})", "zh-Hant"),
-            std::make_pair("Simplified Chinese ({})", "zh-Hans")};
+            std::make_pair("Українська ({})", "ua")};
         brls::AppletFrame* appView = new brls::AppletFrame(true, true);
         brls::List* list = new brls::List();
         brls::ListItem* listItem;

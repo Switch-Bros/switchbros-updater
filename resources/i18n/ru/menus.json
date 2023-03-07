@@ -169,7 +169,7 @@
     "fw_warning": "Размер архива слишком большой. Запустите программу в режиме тайтла - для этого запустите любую игру, удерживая кнопку (R) до появления Homebrew Menu",
     "overwrite": " Do you want to overwrite existing ",
     "wrong_type_sigpatches": "The downloaded file is not a sigpatches archive. This is most likely due to a broken link. If the problem persists after more than 30 minutes, please open an issue on Github.",
-    "wrong_type_fw": "The downloaded file is not a firmware archive. This is most likely due to a broken link. If the problem persists after more than 30 minutes, please open an issue on Github.",
+    "wrong_type_fw": "Загружаемый файл - не архив с прошивкой. Возможно, ссылка по которой должен быть архив с прошивкой, битая. Попробуйте еще через пол часа. Если проблема повторилась, напишите в группу в telegram: https://t.me/kefir_switch/29305",
     "overwrite_inis": "Do you want to overwrite existing .ini config files?",
     "wrong_type_cfw": "The downloaded file is not a CFW archive. This is most likely due to a broken link. If the problem persists after more than 30 minutes, please open an issue on Github."
   },

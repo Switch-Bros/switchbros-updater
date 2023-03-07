@@ -1,7 +1,7 @@
 {
   "about": {
-    "title": "All-in-One Nintendo Switch Updater",
-    "copyright": "AIO-Switch-Updater is licensed under GPL-3.0",
+    "title": "Kefir Updater",
+    "copyright": "Kefir Updater (AIO-Switch-Updater fork) is licensed under GPL-3.0",
     "disclaimers_title": "Disclaimers",
     "disclaimers": "\u25c6 Aside from cheat codes that are mirrored from the main GBAtemp thread, HamletDuFromage isn't hosting anything. All credits go to respective owners.\n\u25c6 Links are refreshed every 30 minutes. If a link remains broken after 30 minutes have passed, please open a Github issue.",
     "donate": "\u25c6 Like the app? Consider donating to support my efforts: 'https://git.io/donate_homlet'"
@@ -98,7 +98,7 @@
   "pro_con": {
     "title": "Pro controller color swapper",
     "desc": "You can change the internal color of your Pro controller. Make sure it's set to player 1.",
-    "warning": "AIO-Switch-Updater does not currently support changing Pro controller grip color. Use Joy-Con Toolkit on PC instead.",
+    "warning": "Kefir Updater does not currently support changing Pro controller grip color. Use Joy-Con Toolkit on PC instead.",
     "label": "Pro controller color swapper",
     "backing_up": "Backing up the color profile.",
     "all_done": "All done! You may need to turn your controller on and off for the change to take effect.",
@@ -107,6 +107,7 @@
   "main": {
     "getting": "Getting {}",
     "firmware_text": "\u25c6 Firmware dumps from 'https://darthsternie.net/switch-firmwares/'. Once downloaded, it will be extracted in '/firmware'. You can then install the update through Daybreak.\n\u25c6 Current FW: ",
+    "firmware_version": "\ue016  Current firmware version: ",
     "cheats_text": "\u25c6 This will download a daily updated archive of cheat codes from 'gbatemp.net'. Cheat codes for games you don't have installed won't be extracted to your SD card. You can turn off cheat updates for specific games in 'Tools→Cheat menu'.\n\u25c6 Current cheats version: ",
     "get_cheats": "Download GBAtemp.net cheat archive (ver {})",
     "get_cheats_gfx": "Download graphics enhancing cheats",
@@ -178,6 +179,7 @@
     "delete_contents": "Would you like to remove the existing '/atmosphere/contents/' directory? This will prevent crashes if you have sysmodules that do not support the latest Atmosphère. Please note that it will delete all your existing sysmodules, mods and cheats.",
     "delete_sysmodules_flags": "Would you like to delete all the custom sysmodules startup flags? This will turn off all your sysmodules and prevent crashes if you have sysmodules that do not support the latest Atmosphère.",
     "current_ams": "\u25c6 Current Atmosphère:",
+    "current_kefir": "Current version: \n\ue016 Kefir: ",
     "erista_rev": "\u25c6 Erista revision",
     "mariko_rev": "\u25c6 Mariko revision",
     "deepsea_builder": "DeepSea builder",

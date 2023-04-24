@@ -86,7 +86,7 @@ ToolsTab::ToolsTab(const std::string& tag, const nlohmann::ordered_json& payload
     brls::ListItem* browser = new brls::ListItem("menus/tools/browser"_i18n);
     browser->getClickEvent()->subscribe([](brls::View* view) {
         std::string url;
-        if (brls::Swkbd::openForText([&url](std::string text) { url = text; }, "cheatslips.com e-mail", "", 64, "https://duckduckgo.com", 0, "Submit", "https://website.tld")) {
+        if (brls::Swkbd::openForText([&url](std::string text) { url = text; }, "cheatslips.com E-Mail", "", 64, "https://duckduckgo.com", 0, "Submit", "https://website.tld")) {
             std::string error = "";
             int at = appletGetAppletType();
             if (at == AppletType_Application) {  // Running as a title
@@ -94,17 +94,17 @@ ToolsTab::ToolsTab(const std::string& tag, const nlohmann::ordered_json& payload
                 WebCommonReply out;
                 Result rc = webPageCreate(&conf, url.c_str());
                 if (R_FAILED(rc))
-                    error += "\uE016 Не могу запустить браузер.\n\uE016 Код ошибки: " + rc;
+                    error += "\uE016 Konnte den Browser nicht starten.\n\uE016 Fehlercode: " + rc;
                 webConfigSetJsExtension(&conf, true);
                 webConfigSetPageCache(&conf, true);
                 webConfigSetBootLoadingIcon(&conf, true);
                 webConfigSetWhitelist(&conf, ".*");
                 rc = webConfigShow(&conf, &out);
                 if (R_FAILED(rc))
-                     error += "\uE016 Не могу запустить браузер.\n\uE016 Код ошибки: " + rc;
+                     error += "\uE016 Browser kann nicht gestartet werden.\n\uE016 Fehlercode: " + rc;
             }
             else {  // Running under applet
-                error += "Эта функция не доступна в режиме апплета (через альбомы).\nПожалуйста перезапустите программу в режиме тайтла (через форвардер или игру), чтобы воспользоваться ей.";
+                error += "Diese Funktion ist im Eingeschraenkten App-Modus (über Album) nicht verfügbar.\nBitte starte die App im Titel-Override Modus (über Forwarder oder Spiel) neu, um sie zu benutzen.";
             }
             if (!error.empty()) {
                 util::showDialogBoxInfo(error);
@@ -147,8 +147,7 @@ ToolsTab::ToolsTab(const std::string& tag, const nlohmann::ordered_json& payload
     language->getClickEvent()->subscribe([](brls::View* view) {
         std::vector<std::pair<std::string, std::string>> languages{
             std::make_pair("American English ({})", "en-US"),
-            std::make_pair("Русский ({})", "ru"),
-            std::make_pair("Українська ({})", "ua")};
+            std::make_pair("Deutsch ({})", "de"),};
         brls::AppletFrame* appView = new brls::AppletFrame(true, true);
         brls::List* list = new brls::List();
         brls::ListItem* listItem;

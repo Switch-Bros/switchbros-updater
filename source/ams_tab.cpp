@@ -104,13 +104,13 @@ void AmsTab_Regular::CreateLists()
     this->type = contentType::ams_cfw;
     auto cfws = util::getValueFromKey(this->nxlinks, "cfws");
 
-    brls::Label* kefText = new brls::Label(
+    brls::Label* sbText = new brls::Label(
     brls::LabelStyle::DESCRIPTION,
-        fmt::format("menus/main/kefir_text"_i18n), true);
-    kefText->setHorizontalAlign(NVG_ALIGN_LEFT);
+        fmt::format("menus/main/switchbros_text"_i18n), true);
+    sbText->setHorizontalAlign(NVG_ALIGN_LEFT);
 
-    this->addView(kefText);
-    this->addView(new brls::Label(brls::LabelStyle::MEDIUM, (CurrentCfw::running_cfw == CFW::ams ? "menus/ams_update/current_kefir"_i18n + CurrentCfw::getAmsInfo() : "") + (erista ? "\n" + "menus/ams_update/erista_rev"_i18n : "\n" + "menus/ams_update/mariko_rev"_i18n), true));
+    this->addView(sbText);
+    this->addView(new brls::Label(brls::LabelStyle::MEDIUM, (CurrentCfw::running_cfw == CFW::ams ? "menus/ams_update/current_switchbros"_i18n + CurrentCfw::getAmsInfo() : "") + (erista ? "\n" + "menus/ams_update/erista_rev"_i18n : "\n" + "menus/ams_update/mariko_rev"_i18n), true));
     CreateDownloadItems(util::getValueFromKey(cfws, "Atmosphere"));
 
     // this->addView(new brls::Label(

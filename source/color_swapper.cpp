@@ -146,7 +146,7 @@ namespace JC {
                     }
                 }
                 if (properData) {
-                    if (name == "") name = "Unamed";
+                    if (name == "") name = "Unbenannt";
                     auto profile = std::make_pair(name, (std::vector<int>){
                                                             hexToBGR(values[0]),
                                                             hexToBGR(values[1]),
@@ -171,7 +171,7 @@ namespace JC {
         ProgressEvent::instance().setStep(1);
         int res = setColor(values);
         if (res != 0) {
-            util::showDialogBoxBlocking("Could not change the Joy-Cons color. Make sure they're docked and try again.\nError :" + std::to_string(res), "Ok");
+            util::showDialogBoxBlocking("Die Farbe der Joy-Cons konnte nicht geaendert werden. Bitte andocken, und erneut versuchen.\nFehler :" + std::to_string(res), "OK");
         }
         hiddbgExit();
         hidsysExit();

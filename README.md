@@ -16,7 +16,7 @@ Jetzt kannst du im hbmenu (nicht über das Album bitte) die switchbros-updater a
 ## Beschreibung der Funktionen
 ### ⬦ Switch Bros. aktualisieren
 - Lade unser [Switch Bros. Basis Paket](https://github.com/Switch-Bros/Switch-Bros.-Pack/releases/tag/1.1.0) herunter. Nach dem herunterladen unseres Pakets, wird es entpackt und deine Switch in die Payload [TegraExplorer](https://github.com/suchmememanyskill/TegraExplorer/releases/) gestartet um das Paket korrekt zu installieren/aktualisieren.
-Sollte deine Konsole in der app bleiben und nicht automatisch neu starten, dann halte einfach die POWER-Taste gedrückt (cav5 sek.) und wähle 'Neustart'!
+Sollte deine Konsole in der app bleiben und nicht automatisch neu starten, dann halte einfach die POWER-Taste gedrückt (ca. 5 sek.) und wähle 'Neustart'!
 
 ### ⬦ Firmware Downloads
 - Lade Firmwares in den `/firmware` Ordner runter und installiere sie mit der App DayBreak.

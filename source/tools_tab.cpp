@@ -147,7 +147,7 @@ ToolsTab::ToolsTab(const std::string& tag, const nlohmann::ordered_json& payload
     language->getClickEvent()->subscribe([](brls::View* view) {
         std::vector<std::pair<std::string, std::string>> languages{
             std::make_pair("American English ({})", "en-US"),
-            std::make_pair("Deutsch ({})", "de"),};
+            std::make_pair("Deutsch ({})", "de")};
         brls::AppletFrame* appView = new brls::AppletFrame(true, true);
         brls::List* list = new brls::List();
         brls::ListItem* listItem;

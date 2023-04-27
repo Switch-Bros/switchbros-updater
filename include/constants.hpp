@@ -10,7 +10,7 @@ constexpr const char CONFIG_FILE[] =       "/config/switchbros-updater/config.js
 
 constexpr const char RCM_PAYLOAD_PATH[] =         "/payload.bin";
 constexpr const char MARIKO_PAYLOAD_PATH[] =      "/payload.bin";
-constexpr const char MARIKO_PAYLOAD_PATH_TEMP[] = "/payload.bin.aio";
+constexpr const char MARIKO_PAYLOAD_PATH_TEMP[] = "/payload.bin.sbu";
 
 constexpr const char APP_URL[] =            "https://github.com/Switch-Bros/switchbros-updater/releases/latest/download/switchbros-updater.zip";
 constexpr const char TAGS_INFO[] =          "https://api.github.com/repos/Switch-Bros/switchbros-updater/releases/latest";

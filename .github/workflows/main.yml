@@ -1,11 +1,11 @@
-name: Build AIO-switch-updater
+name: Build switch-updater
 
 on: 
   push:
   workflow_dispatch:
 
 jobs:
-  AIO-switch-updater:
+  SwitchBros-updater:
     runs-on: ubuntu-latest
     #container: hamletdufromage/devkita64_devkitarm
     container: devkitpro/devkita64
@@ -16,12 +16,12 @@ jobs:
       run: |
         git submodule update --init --recursive
         
-    - name: Building aio-switch-updater
+    - name: Building switchbros-updater
       run: |
-        make -C aiosu-forwarder -f Makefile
+        make -C sbu-forwarder -f Makefile
         make -j$(nproc)
         
     - uses: actions/upload-artifact@master
       with:
-        name: aio-switch-updater
-        path: aio-switch-updater.nro
+        name: switchbros-updater
+        path: switchbros-updater.nro

@@ -246,7 +246,7 @@ void AmsTab_Custom::CreateLists()
         brls::LabelStyle::DESCRIPTION,
         "menus/ams_update/custom_packs_ams"_i18n,
         true));
-    CreateDownloadItems(util::getValueFromKey(this->custom_packs, "ams"), true);
+    CreateDownloadItems(util::getValueFromKey(this->custom_packs, "Paket"), true);
     this->AddLinkCreator();
 
     this->type = contentType::custom;
@@ -254,19 +254,19 @@ void AmsTab_Custom::CreateLists()
         brls::LabelStyle::DESCRIPTION,
         "menus/ams_update/custom_packs_misc"_i18n,
         true));
-    CreateDownloadItems(util::getValueFromKey(this->custom_packs, "misc"), false, false);
+    CreateDownloadItems(util::getValueFromKey(this->custom_packs, "Sonstiges"), false, false);
     this->AddLinkCreator();
 }
 
 void AmsTab_Custom::AddLinkCreator()
 {
-    std::string category = this->type == contentType::ams_cfw ? "ams" : "misc";
+    std::string category = this->type == contentType::ams_cfw ? "Paket" : "Sonstiges";
     listItem = new brls::ListItem("menus/ams_update/add_custom_link"_i18n);
     listItem->setHeight(LISTITEM_HEIGHT);
     listItem->getClickEvent()->subscribe([this, category](brls::View* view) {
         std::string title, link;
-        brls::Swkbd::openForText([&title](std::string text) { title = text; }, "Enter title", "", 64, "", 0, "Submit", "Title");
-        brls::Swkbd::openForText([&link](std::string text) { link = text; }, "Enter direct link", "", 64, "", 0, "Submit", "https://site/download.zip");
+        brls::Swkbd::openForText([&title](std::string text) { title = text; }, "Titel eingeben", "", 64, "", 0, "Bestaetigen", "Tiel");
+        brls::Swkbd::openForText([&link](std::string text) { link = text; }, "Direktlink eingeben", "", 64, "", 0, "Bestaetigen", "https://Seite/download.zip");
         auto links = util::getValueFromKey(this->custom_packs, category);
         links[title] = link;
         this->custom_packs[category] = links;
@@ -279,7 +279,7 @@ void AmsTab_Custom::AddLinkCreator()
 void AmsTab_Custom::RegisterListItemAction(brls::ListItem* listItem)
 {
     std::string label = listItem->getLabel();
-    std::string category = this->type == contentType::ams_cfw ? "ams" : "misc";
+    std::string category = this->type == contentType::ams_cfw ? "Paket" : "Sonstiges";
     listItem->registerAction("menus/ams_update/delete_custom_link"_i18n, brls::Key::X, [this, label, category] {
         auto& links = this->custom_packs.at(category);
         links.erase(label);

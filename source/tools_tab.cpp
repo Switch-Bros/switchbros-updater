@@ -101,7 +101,7 @@ ToolsTab::ToolsTab(const std::string& tag, const nlohmann::ordered_json& payload
                 webConfigSetWhitelist(&conf, ".*");
                 rc = webConfigShow(&conf, &out);
                 if (R_FAILED(rc))
-                     error += "\uE016 Browser kann nicht gestartet werden.\n\uE016 Fehlercode: " + rc;
+                    error += "\uE016 Browser kann nicht gestartet werden.\n\uE016 Fehlercode: " + rc;
             }
             else {  // Running under applet
                 error += "Diese Funktion ist im Eingeschraenkten App-Modus (über Album) nicht verfügbar.\nBitte starte die App im Titel-Override Modus (über Forwarder oder Spiel) neu, um sie zu benutzen.";

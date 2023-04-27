@@ -122,7 +122,7 @@ namespace extract {
                 }
                 else {
                     if ((filename == "/atmosphere/package3") || (filename == "/atmosphere/stratosphere.romfs")) {
-                        extractEntry(filename + ".aio", zfile);
+                        extractEntry(filename + ".sbu", zfile);
                     }
                     else {
                         extractEntry(filename, zfile);

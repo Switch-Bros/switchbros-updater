@@ -133,6 +133,7 @@
     "about": "Über die App",
     "update_ams": "SwitchBros OS Update",
     "update_cfw": "SwitchBros OS Update",
+	"custom_downloads": "SB Entwicklung",
     "update_sigpatches": "SigPatches Update",
     "download_firmware": "Firmware herunterladen",
     "download_cheats": "Cheats herunterladen",
@@ -183,7 +184,13 @@
     "getting_ams": "SwitchBros herunterladen",
     "current_ams": "\u25c6 Aktuelle Version von SwitchBros-O-Sphere:",
     "erista_rev": "\u25c6 Chip-Generation: Erista",
-    "mariko_rev": "\u25c6 Chip-Generation: Mariko"
+    "mariko_rev": "\u25c6 Chip-Generation: Mariko",
+    "custom_packs_label": "\u25c6 Hier sind Entwicklungspakete aus der {} Datei. Man kann eigene hinzufügen oder löschen!",
+    "custom_packs_ams": "\u25c6 Downloads für Pakete (CFW).",
+    "custom_packs_misc": "\u25c6 Downloads für Apps und Tools.",
+    "custom_download" : "Eigener Download",
+    "add_custom_link": "Eigenen Link einfügen",
+    "delete_custom_link": "Löschen"
   },
   "firmware": {
     "launch_daybreak": "Soll Daybreak gestartet werden, um das heruntergeladene Firmware-Upgrade zu installieren?"

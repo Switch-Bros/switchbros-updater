@@ -17,7 +17,7 @@ constexpr const char TAGS_INFO[] =          "https://api.github.com/repos/Switch
 constexpr const char APP_FILENAME[] =       "/config/switchbros-updater/app.zip";
 
 constexpr const char NXLINKS_URL[] =        "https://raw.githubusercontent.com/Switch-Bros/nx-links/master/nx-links.json";
-constexpr const char CUSTOM_FILENAME[] =    "/config/switchbros-updater/entwickler.zip";
+constexpr const char CUSTOM_FILENAME[] =    "/config/switchbros-updater/custom.zip";
 constexpr const char HEKATE_IPL_PATH[] =    "/bootloader/hekate_ipl.ini";
 
 constexpr const char FIRMWARE_URL[] =       "https://raw.githubusercontent.com/Switch-Bros/nx-links/master/firmwares.json";

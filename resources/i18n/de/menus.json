@@ -6,10 +6,9 @@
     "disclaimers": "\u25c6 Außer Cheat-Codes, die vom Haupt-GBAtemp.net-Thread stammen, hostet HamletDuFromage nichts selber. Alle Anerkennung geht an die jeweiligen Besitzer.\n\u25c6 Links werden alle 30 Minuten aktualisiert. Wenn ein Link nach 30 Minuten weiterhin nicht funktioniert, öffne bitte ein 'Ticket' auf unserem Discord Server.\n",
     "donate": "\u25c6 Gefällt dir die App? Hier kannst du meine Bemühungen unterstützen: 'https://git.io/donate_homlet'"
   },
-  
   "cheats": {
     "installed": "Installierte Cheats",
-	"label": "Für folgende Titel gibt es Cheat-Updates. Bitte berücksichtige, dass heruntergeladene Cheats möglicherweise nicht mit deiner Spielversion übereinstimmen.",
+    "label": "Für folgende Titel gibt es Cheat-Updates. Bitte berücksichtige, dass heruntergeladene Cheats möglicherweise nicht mit deiner Spielversion übereinstimmen.",
     "downloading": "Wird heruntergeladen:\nNeueste Cheats\n\nvon:\n",
     "dl_latest": "Aktuellste Cheats herunterladen",
     "getting_cheats": "Sammle Cheats",
@@ -40,8 +39,8 @@
     "exclude_titles": "Spiele ausschließen",
     "exclude_titles_desc": "Mit diesem Menü kannst du Cheat-Udates ausschließen",
     "exclude_titles_save": "Auswahl speichern und zurück",
-    "exclude_all": "Exclude all",
-    "exclude_none": "Exclude none",
+    "exclude_all": "Alle ausschließen",
+    "exclude_none": "Keine ausschließen",
     "dl_all": "Das gesamte GBAtemp.net Cheat-Archiv herunterladen und enptacken",
     "gbatemp_dl": "Lade von GBAtemp.net verwaltete Cheat-Codes herunter. Diese Cheats werden am Ende deiner bestehenden Cheat-Datei hinzugefügt.",
     "gbatemp_dl_cheatcode": "Cheat-Code herunterladen",
@@ -57,7 +56,6 @@
     "old_cheats_found": "Zu diesem/r BID passende Cheats gefunden - [ {}].",
     "cheatslips_logout": "Ausloggen"
   },
-  
   "common": {
     "downloading": "Wird heruntergeladen…",
     "extracting": "Wird entpackt…",
@@ -80,19 +78,16 @@
     "applet_mode_not_supported": "Diese Funktion ist im Applet-Modus nicht verfügbar. Bitte starte den SwitchBros-Updater über Title-Override, um darauf zuzugreifen.",
     "nothing_to_see": "Gehen Sie bitte weiter!\nHier gibt es nichts zu sehen!\n\nGehen Sie bitte weiter!"
   },
-  
   "changelog": {
     "changelog": "Changelog"
   },
-  
   "payloads": {
     "dl_payloads": "Payloads herunterladen",
     "select": " Wähle ein Payload zum neustarten aus.",
     "set_reboot_payload": "Als reboot_payload.bin festlegen",
     "set_update_bin": "Als /bootloader/update.bin festlegen",
-    "copy_success": "Erfolgreich kopiert '",
+    "copy_success": "Erfolgreich kopiert `{}` nach `{}`."
   },
-  
   "joy_con": {
     "title": "JoyCon Farbwechsler",
     "description": "Du kannst die interne Farbe deiner JoyCons ändern. Stelle sicher, dass sie angedockt sind.\nFarbprofile werden gespeichert in `{}`. Gehe zu '{}' um eigene Profile zu generieren.",
@@ -102,7 +97,6 @@
     "changing": "Ändern der Farbe. Stell sicher, dass die JoyCons angeschlossen sind. Wenn der Prozess hängt, versuche die JoyCons zu trennen und neu anzuschließen.",
     "all_done": "Fertig! Du musst die JoyCons vielleicht trennen und neu anschließen um den Effekt zu sehen."
   },
-  
   "pro_con": {
     "title": "Pro-Con Farbwechsler",
     "desc": "Du kannst die Farbe deines Pro Controllers ändern. Stelle sicher, dass er als Spieler 1 erkannt wird.",
@@ -112,7 +106,6 @@
     "all_done": "Fertig! Du musst den Pro Controller vielleicht trennen und neu anschließen um den Effekt zu sehen.",
     "changing": "Ändern der Farbe. Stelle sicher, dass der Pro-Con auf Spieler 1 eingestellt ist."
   },
-  
   "main": {
     "getting": "Herunterladen: {}",
     "firmware_text": "\u25c6 Firmware von: 'https://darthsternie.net/switch-firmwares/'.\nFirmware wird heruntergeladen und im Ordner '/firmware' entpackt.\nDanach kannst du das Update mit Daybreak installieren.",
@@ -137,7 +130,7 @@
     "new_update": " - Neues App-Update verfügbar",
     "about": "Über die App",
     "update_ams": "SwitchBros OS Update",
-	"custom_downloads": "SB Entwicklung",
+    "custom_downloads": "SB Entwicklung",
     "update_cfw": "SwitchBros OS Update",
     "update_bootloaders": "Bootloader aktualisieren",
     "download_firmware": "Firmware herunterladen",
@@ -149,19 +142,17 @@
     "payloads_label": "\u25c6 RCM payloads herunterladen nach {}",
     "hekate_ipl_label": "\u25c6 Lade eine abgespeckte \"geht gerade so\"-hekate_ipl.ini Konfigurationsdatei herunter. Diese überschreibt deine aktuelle hekate_ipl.ini."
   },
-  
   "hide": {
     "title": "Tabs verstecken",
     "desc": "Verstecke Tabs aus dem Hauptmenü",
     "update_ams_deepsea": "Atmosphère and DeepSea downloads"
   },
-  
   "tools": {
     "cheats": "Cheats-Menü",
     "joy_cons": "Ändere die Farbe deiner Joy-Cons",
     "pro_cons": "Ändere die Farbe deines Pro Controllers",
-	"dl_payloads": "Lade Payloads hierhin herunter: ",
-	"inject_payloads": "Injiziere Payload",
+    "dl_payloads": "Lade Payloads hierhin herunter: ",
+    "inject_payloads": "Injiziere Payload",
     "getting_payload": "Hole payload",
     "update_app": "Aktualisiere die App (v{})",
     "dl_app": "Lade herunter:\nSwitchBros-Updater\n\nVon:\n",
@@ -178,23 +169,19 @@
     "latest_version_not_found": "Infos zur Aktualisierung konnten nicht gefunden werden",
     "outdated_titles_desc": "Es gibt Aktualisierungen für folgende Spiele:"
   },
-  
   "utils": {
     "fw_warning": "Wegen der Größe der Firmwarearchive werden Downloads im Applet Mode nicht unterstützt. Bitte öffne die App mit vollem RAM Zugriff (Title Override).",
     "overwrite": " Möchtest du die folgende Datei überschreiben: ",
     "not_an_archive": "Bei der heruntergeladenen Datei handelt es sich nicht um ein Zip-Archiv. Dies ist höchstwahrscheinlich auf einen defekten Link zurückzuführen. Wenn das Problem nach mehr als 30 Minuten immer noch besteht, erstelle bitte ein Ticket auf unserem Discord Server.",
     "overwrite_inis": "Möchtest du die vorhandene .ini Konfigurationsdateien überschreiben?",
-    "set_hekate_reboot_payload": "Do you want to copy the Hekate payload `{}` to `{}`?"
+    "set_hekate_reboot_payload": "Möchtest du die hekate payload `{}` nach `{}` kopieren?"
   },
-  
   "ams_update": {
     "reboot_rcm": "Die Switch führt einen Neustart in den TegraExplorer aus, um die Installation zu beginnen.\nSolltest du in hekate landen dann starte einfach in die CFW!",
     "install_hekate": "Möchtest du auch Hekate herunterladen?\nFalls nein, wird die Switch nun in den TegraExplorer neustarten, um die Installation zu beginnen.",
     "delete_contents": "Möchtest du den bestehenden '/atmosphere/contents/' Ordner löschen? Dies wird Crashes vorbeugen, falls ein Sysmodul die neueste SwitchBros-O-Sphere Version nicht unterstützt. Bedenke, dass dies all deine Sys-Module, Mods und Cheats löscht!",
     "delete_sysmodules_flags": "Möchtest du den Autostart von allen Sysmodules verhindern? Dies wird Crashes vorbeugen, falls ein Sys-Modul die neueste SwitchBros-O-Sphere Version nicht unterstützt.",
-    "current_switchbros": "Aktuelle Version: \n\u25c6 SwitchBros_BasisPaket: ",
-    "getting_ams": "SwitchBros herunterladen",
-    "current_ams": "\u25c6 Aktuelle Version von SwitchBros-O-Sphere:",
+    "current_ams": "\u25c6 Aktuelle Version von SwitchBros-O-Sphere:",    "current_switchbros": "Aktuelle Version: \n\u25c6 SwitchBros_BasisPaket: ",
     "erista_rev": "\u25c6 Chip-Generation: Erista",
     "mariko_rev": "\u25c6 Chip-Generation: Mariko",
     "deepsea_builder": "DeepSea Builder",
@@ -206,28 +193,25 @@
     "download_deepsea_package": "Kompilieren und herunterladen",
     "cant_fetch_deepsea": "Es konnten keine Pakete geholt werden. Öffne ein 'Ticket' auf unserem Discord Server, wenn dieses Problem weiterhin besteht.",
     "build_your_deepsea": "Baue dein eigenes DeepSea Paket durch Auswählen von Paketen",
+    "getting_ams": "SwitchBros herunterladen",
     "custom_packs_label": "\u25c6 Hier sind CFW Pakete aus der {} Datei. Man kann eigene hinzufügen oder löschen!",
-	"custom_packs_ams": "\u25c6 Downloads für Pakete (CFW).",
-	"custom_packs_misc": "\u25c6 Downloads für Apps und Tools.",
+    "custom_packs_ams": "\u25c6 Downloads für Pakete (CFW).",
+    "custom_packs_misc": "\u25c6 Downloads für Apps und Tools.",
     "custom_download" : "Eigener Download",
     "add_custom_link": "Eigenen Link einfügen",
     "delete_custom_link": "Löschen"
   },
-  
   "firmware": {
     "launch_daybreak": "Soll Daybreak gestartet werden, um die heruntergeladene Firmware zu installieren?"
   },
-  
   "net": {
     "title": "Interneteinstellungen"
   },
-  
   "errors": {
     "insufficient_storage": "Auf der SD-Karte ist nicht genügend Speicherplatz vorhanden, um diesen Vorgang durchzuführen.",
     "error_message": "{}\\nBitte versuche es in Kürze erneut. Wenn das Problem weiterhin besteht, öffne bitte ein 'Ticket' auf unserem Discord Server.",
     "mariko_payload_missing": "Um SwitchBros-O-Sphere auf gepatchten Switches zu aktualisieren, muss sich die \"payload.bin\" im Root-Verzeichnis der SD-Karte befinden."
   },
-  
   "language": {
     "system_default": "Systemstandard",
     "de": "Deutsch (de-DE)",

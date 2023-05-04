@@ -22,7 +22,7 @@ DATA		:=	data
 INCLUDES	:=	include /lib/borealis/library/include/borealis/extern/nlohmann
 APP_TITLE	:=	SwitchBros Updater
 APP_AUTHOR	:=	HamletDuFromage, forked by SwitchBros
-APP_VERSION :=  2.22.0-SB
+APP_VERSION :=  2.22.2-SB
 TARGET		:=	$(notdir $(CURDIR))
 
 ROMFS				:=	resources

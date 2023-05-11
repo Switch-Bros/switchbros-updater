@@ -17,13 +17,10 @@
     "exclude": "Spiele von Cheat-Updates ausschließen",
     "delete_existing": "Alle vorhandenen Cheats löschen",
     "delete_all": "Alle Cheats löschen",
-    "delete_orphaned": "Cheats von deinstallierten Spielen löschen",
     "deleting": "Lösche…",
     "cheatslips_title": "Cheat Slips Cheats",
-    "gbatemp_title": "GBAtemp.net Cheats",
     "get_gbatemp": "Cheats von GBAtemp.net runterladen",
     "get_cheatslips": "Cheats von Cheat Slips herunterladen",
-    "cheats_label": "\u25c6 Lade einzelne Cheat-Codes aus der GBAtemp.net-Datenbank oder Cheat-Sheets von Cheat Slips herunter",
     "cheatslips_label": "\u25c6 Log dich auf Cheat Slips ein und lade Cheats für deine Spiele herunter.",
     "cheatslips_dl": "Lade eine Auswahl von Cheats von Cheat Slips herunter.\nDie Cheats werden deiner bestehenden Cheat-Datei hinzugefügt.",
     "delete_file": "Lösche Cheat-Datei",
@@ -42,6 +39,8 @@
     "exclude_all": "Alle ausschließen",
     "exclude_none": "Keine ausschließen",
     "dl_all": "Das gesamte GBAtemp.net Cheat-Archiv herunterladen und enptacken",
+    "delete_orphaned": "Cheats von deinstallierten Spielen löschen",
+    "cheats_label": "\u25c6 Lade einzelne Cheat-Codes aus der GBAtemp.net-Datenbank oder Cheat-Sheets von Cheat Slips herunter",
     "gbatemp_dl": "Lade von GBAtemp.net verwaltete Cheat-Codes herunter. Diese Cheats werden am Ende deiner bestehenden Cheat-Datei hinzugefügt.",
     "gbatemp_dl_cheatcode": "Cheat-Code herunterladen",
     "gbatemp_dl_successful_dl": "Folgender Cheat-Code wurde erfolgreich heruntergeladen:\\n{}",
@@ -52,6 +51,7 @@
     "delete_cheats": "Cheats für dieses Spiel löschen",
     "deletion_error": "Konnte die Cheat-Dateien für das Spiel mit der ID:\\n{} nicht löschen",
     "show_cheat_files": "Alle Cheat-Dateien anzeigen",
+    "gbatemp_title": "GBAtemp.net Cheats",
     "cheats_not_found": "Ich kann keine Cheats finden, die mit der aktuellen Build-ID des Spiels übereinstimmen. Vielleicht wird die aktuelle Version des Spiels noch nicht unterstützt",
     "old_cheats_found": "Zu diesem/r BID passende Cheats gefunden - [ {}].",
     "cheatslips_logout": "Ausloggen"
@@ -87,6 +87,7 @@
     "set_reboot_payload": "Als reboot_payload.bin festlegen",
     "set_update_bin": "Als /bootloader/update.bin festlegen",
     "copy_success": "Erfolgreich kopiert `{}` nach `{}`."
+    "to": "' zu '"
   },
   "joy_con": {
     "title": "JoyCon Farbwechsler",
@@ -100,11 +101,11 @@
   "pro_con": {
     "title": "Pro-Con Farbwechsler",
     "desc": "Du kannst die Farbe deines Pro Controllers ändern. Stelle sicher, dass er als Spieler 1 erkannt wird.",
-    "warning": "SwitchBros-Updater unterstützt derzeit nicht das ändern der Grifffarbe des Pro-Controllers. Verwende stattdessen das JoyCon Toolkit auf dem PC.",
     "label": "Pro Controller Farbwechsler",
     "backing_up": "Derzeitiges Profil sichern",
-    "changing": "Ändern der Farbe. Stelle sicher, dass der Pro-Con auf Spieler 1 eingestellt ist.",
     "all_done": "Abgeschlossen! Du musst den Pro Controller vielleicht trennen und neu anschließen um den Effekt zu sehen."
+    "warning": "SwitchBros-Updater unterstützt derzeit nicht das ändern der Grifffarbe des Pro-Controllers. Verwende stattdessen das JoyCon Toolkit auf dem PC.",
+    "changing": "Ändern der Farbe. Stelle sicher, dass der Pro-Con auf Spieler 1 eingestellt ist.",
   },
   "main": {
     "getting": "Herunterladen: {}",
@@ -113,18 +114,15 @@
     "cheats_text": "\u25c6 Lade ein täglich aktualisiertes Archiv von 'gbatemp.net' runter. Cheats von Spielen, die du nicht besitzt, werden nicht entpackt. Du kannst Updates für ausgewählte Spiele unter 'Tools→Cheat Menü' deaktivieren.\n\u25c6 Momentane Cheatversion: ",
     "get_cheats": "Lade GBAtemp.net Cheatarchiv herunter (Version {})",
     "get_cheats_gfx": "Herunterladen von grafikverbessernden Cheats",
-    "get_all_cheats:": "GBAtemp.net Cheat-Archiv herunterladen",
     "firmware": "Firmware",
     "not_found": "Nicht gefunden",
     "latest_cheats": "Neueste Version",
     "app": "App",
     "cfw": "CFW",
-    "switchbros": "Aktuelle SwitchBros Version: ",
-    "ams": "SwitchBros",
     "ams_text": "\u25c6 Lade das SwitchBros. Paket herunter und aktualisiere es auf die neueste Version.\n\u25c6 Nach dem herunterladen und entpacken wird die Konsole in die SwitchBros. payload neu gestartet um das Update-Skript auszuführen.\nWenn nicht, dann starte die Konsole über den Power-Button neu.\n\nBitte nicht das SwitchBros. Update oder die payload unterbrechen, um Probleme zu vermeiden!",
+    "switchbros": "Aktuelle SwitchBros Version: ",
     "switchbros_text": "\u25c6 Lade das SwitchBros. Paket herunter und aktualisiere es auf die neueste Version.\n\u25c6 Nach dem herunterladen und entpacken wird die Konsole in die SwitchBros. payload neu gestartet um das Update-Skript auszuführen.\nWenn nicht, dann starte die Konsole über den Power-Button neu.\n\nBitte nicht das SwitchBros. Update oder die payload unterbrechen, um Probleme zu vermeiden!",
     "cfw_text": "\u25c6 SwitchBros auf die neueste Version aktualisieren",
-    "bootloaders_text": "\u25c6 Herunterladen und aktualisieren des Bootloaders.",
     "cheats": "Cheats",
     "links_not_found": "Konnte keinen Downloadlink finden. Stelle sicher, dass deine Switch Internetzugriff hat.\nWenn das Problem bestehen bleibt, öffne bitte eine 'Ticket' auf unserem Discord Server:\n\nhttps://discord.gg/switchbros",
     "new_update": " - Neues App-Update verfügbar",
@@ -132,15 +130,18 @@
     "update_ams": "SwitchBros OS Update",
     "custom_downloads": "SB Entwicklung",
     "update_cfw": "SwitchBros OS Update",
-    "update_bootloaders": "Bootloader aktualisieren",
     "download_firmware": "Firmware herunterladen",
     "download_cheats": "Cheats herunterladen",
     "tools": "Werkzeuge",
     "launch_warning": "Bitte beachte die folgenden Punkte, bevor du die App verwendest:\n\n\u25c6 Lese zuerst, wie du deine Switch manuell aktualisierst. Auf diese Weise kannst du die App besser verstehen und wissen, was zu tun ist, wenn etwas schief geht.\n\u25c6 Bitte beachte, dass von der Verwendung dieser App auf einer exFAT-SD-Karte DRINGEND abgeraten wird, da diese höchstwahrscheinlich im Laufe der Zeit deine Daten beschädigen wird.\n\n\u25c6 Möglicherweise wurden einige Änderungen bezüglich der aktuellen Funktionen eingeführt. Sieh sie dir über das Menü Tools→Changelog an.\nHilfe bekommst du auch auf unserem Discord Server:\n\nhttps://discord.gg/switchbros\n\nDieser Bildschirm wird nicht mehr angezeigt.",
+    "get_all_cheats:": "GBAtemp.net Cheat-Archiv herunterladen",
+    "ams": "SwitchBros",
+    "bootloaders_text": "\u25c6 Herunterladen und aktualisieren des Bootloaders.",
+    "update_bootloaders": "Bootloader aktualisieren",
+    "hekate_ipl_label": "\u25c6 Lade eine abgespeckte \"geht gerade so\"-hekate_ipl.ini Konfigurationsdatei herunter. Diese überschreibt deine aktuelle hekate_ipl.ini.",
     "footer_text": "v{} | {:.1f}GB verfügbar",
 	"theme_warning": "Es scheint, dass ein benutzerdefiniertes Theme installiert ist, das dazu führen kann, dass das System nach dem Upgrade der Firmware nicht mehr startet. Bitte lösche das Theme vor dem Upgrade.",
-    "payloads_label": "\u25c6 RCM payloads herunterladen nach {}",
-    "hekate_ipl_label": "\u25c6 Lade eine abgespeckte \"geht gerade so\"-hekate_ipl.ini Konfigurationsdatei herunter. Diese überschreibt deine aktuelle hekate_ipl.ini."
+    "payloads_label": "\u25c6 RCM payloads herunterladen nach {}"
   },
   "hide": {
     "title": "Tabs verstecken",
@@ -153,7 +154,6 @@
     "pro_cons": "Ändere die Farbe deines Pro Controllers",
     "dl_payloads": "payloads herunterladen nach: ",
     "inject_payloads": "Injiziere payload",
-    "getting_payload": "payload holen",
     "update_app": "Aktualisiere die App (v{})",
     "dl_app": "Lade herunter:\nSwitchBros-Updater\n\nVon:\n",
     "changelog": "Changelog",
@@ -164,6 +164,7 @@
     "batch_copy": "Mehrere Dateien kopieren",
     "batch_copy_not_found": "Die folgenden Dateien wurden nicht gefunden und konnten nicht kopiert werden:\n",
     "batch_copy_config_not_found": "Dieses Tool erlaubt dir, Dateien zu anderen Orten zu kopieren, was vielleicht für bootloader/trinket gebraucht wird. Lade copy_files.txt von 'https://github.com/Switch-Bros/nx-links/releases/download/1/copy_files.txt' herunter und entpacke es in deinen config Ordner. Wird auch nach Updates ausgeführt.",
+    "getting_payload": "payload holen",
     "language": "Sprache ändern",
     "outdated_titles": "Aktualisierung für folgende Spiele verfügbar",
     "latest_version_not_found": "Infos zur Aktualisierung konnten nicht gefunden werden",
@@ -172,8 +173,8 @@
   "utils": {
     "fw_warning": "Wegen der Größe der Firmwarearchive werden Downloads im Applet Mode nicht unterstützt. Bitte öffne die App mit vollem RAM Zugriff (Title-Override).",
     "overwrite": " Möchtest du die folgende Datei überschreiben: ",
-    "not_an_archive": "Bei der heruntergeladenen Datei handelt es sich nicht um ein Zip-Archiv. Dies ist höchstwahrscheinlich auf einen defekten Link zurückzuführen. Wenn das Problem nach mehr als 30 Minuten immer noch besteht, erstelle bitte ein Ticket auf unserem Discord Server:\n\nhttps://discord.gg/switchbros",
     "overwrite_inis": "Möchtest du die vorhandene .ini Konfigurationsdatei überschreiben?",
+    "not_an_archive": "Bei der heruntergeladenen Datei handelt es sich nicht um ein Zip-Archiv. Dies ist höchstwahrscheinlich auf einen defekten Link zurückzuführen. Wenn das Problem nach mehr als 30 Minuten immer noch besteht, erstelle bitte ein Ticket auf unserem Discord Server:\n\nhttps://discord.gg/switchbros",
     "set_hekate_reboot_payload": "Möchtest du die hekate payload `{}` nach `{}` kopieren?"
   },
   "ams_update": {
@@ -201,11 +202,11 @@
     "add_custom_link": "Eigenen Link einfügen",
     "delete_custom_link": "Eigenen link löschen"
   },
-  "firmware": {
-    "launch_daybreak": "Soll Daybreak gestartet werden, um die heruntergeladene Firmware zu installieren?"
-  },
   "net": {
     "title": "Interneteinstellungen"
+  },
+  "firmware": {
+    "launch_daybreak": "Soll Daybreak gestartet werden, um die heruntergeladene Firmware zu installieren?"
   },
   "errors": {
     "insufficient_storage": "Auf der SD-Karte ist nicht genügend Speicherplatz vorhanden, um diesen Vorgang durchzuführen.",

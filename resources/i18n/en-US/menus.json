@@ -179,7 +179,7 @@
     "delete_contents": "Would you like to remove the existing '/atmosphere/contents/' directory? This will prevent crashes if you have sysmodules that do not support the latest Atmosphère. Please note that it will delete all your existing sysmodules, mods and cheats.",
     "delete_sysmodules_flags": "Would you like to delete all the custom sysmodules startup flags? This will turn off all your sysmodules and prevent crashes if you have sysmodules that do not support the latest Atmosphère.",
     "current_ams": "\u25c6 Current Atmosphère:",
-    "current_kefir": "Current version: \n\ue016 SwitchBros: ",
+    "current_switchbros": "Current version: \n\ue016 SwitchBros: ",
     "erista_rev": "\u25c6 Erista revision",
     "mariko_rev": "\u25c6 Mariko revision",
     "deepsea_builder": "DeepSea builder",

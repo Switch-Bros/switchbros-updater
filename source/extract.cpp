@@ -216,18 +216,6 @@ namespace extract {
                 chdir(AMS_PATH);
                 return std::string(CONTENTS_PATH).length();
                 break;
-            case CFW::rnx:
-                std::filesystem::create_directory(REINX_PATH);
-                std::filesystem::create_directory(REINX_CONTENTS);
-                chdir(REINX_PATH);
-                return std::string(CONTENTS_PATH).length();
-                break;
-            case CFW::sxos:
-                std::filesystem::create_directory(SXOS_PATH);
-                std::filesystem::create_directory(SXOS_TITLES);
-                chdir(SXOS_PATH);
-                return std::string(TITLES_PATH).length();
-                break;
         }
         return 0;
     }

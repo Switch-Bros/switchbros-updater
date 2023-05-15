@@ -86,7 +86,7 @@ ToolsTab::ToolsTab(const std::string& tag, const nlohmann::ordered_json& payload
     browser->getClickEvent()->subscribe([](brls::View* view) {
         std::string url;
         if (brls::Swkbd::openForText([&url](std::string text) { url = text; }, "cheatslips.com E-Mail", "", 256, "https://duckduckgo.com", 0, "Submit", "https://website.tld")) {
-                util::showDialogBoxInfo(error);
+            util::openWebBrowser(url);
         }
     });
     browser->setHeight(LISTITEM_HEIGHT);

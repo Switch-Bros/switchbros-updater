@@ -3,4 +3,4 @@
 	url = https://github.com/HamletDuFromage/borealis
 [submodule "sbu-rcm"]
 	path = sbu-rcm
-	url = https://github.com/HamletDuFromage/aiosu-rcm
+	url = https://github.com/HamletDuFromage/sbu-rcm

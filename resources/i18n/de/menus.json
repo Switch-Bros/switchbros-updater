@@ -175,7 +175,8 @@
     "overwrite": " Möchtest du die folgende Datei überschreiben: ",
     "overwrite_inis": "Möchtest du die vorhandene .ini Konfigurationsdatei überschreiben?",
     "not_an_archive": "Bei der heruntergeladenen Datei handelt es sich nicht um ein Zip-Archiv. Dies ist höchstwahrscheinlich auf einen defekten Link zurückzuführen. Wenn das Problem nach mehr als 30 Minuten immer noch besteht, erstelle bitte ein Ticket auf unserem Discord Server:\n\nhttps://discord.gg/switchbros",
-    "set_hekate_reboot_payload": "Möchtest du die hekate payload `{}` nach `{}` kopieren?"
+    "set_hekate_reboot_payload": "Möchtest du die hekate payload `{}` nach `{}` kopieren?",
+    "applet_webbrowser": "Läuft im Eingeschränkter Modus/über Forwarder.\n\uE016 Bitte starte hbmenu über ein Spiel mit gedrückter [R-Taste] = Title-Override"
   },
   "ams_update": {
     "reboot_rcm": "Die Switch führt einen Neustart in den TegraExplorer aus, um die Installation zu beginnen.\nSolltest du in hekate landen dann starte einfach in die CFW!\nWenn nichts passiert, dann starte die Konsole über den Power-Button neu.",

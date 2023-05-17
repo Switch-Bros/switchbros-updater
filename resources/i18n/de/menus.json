@@ -86,7 +86,7 @@
     "select": " Wähle ein Payload zum neustarten aus.",
     "set_reboot_payload": "Als reboot_payload.bin festlegen",
     "set_update_bin": "Als /bootloader/update.bin festlegen",
-    "copy_success": "Erfolgreich kopiert `{}` nach `{}`."
+    "copy_success": "Erfolgreich kopiert `{}` nach `{}`.",
     "to": "' zu '"
   },
   "joy_con": {
@@ -103,9 +103,9 @@
     "desc": "Du kannst die Farbe deines Pro Controllers ändern. Stelle sicher, dass er als Spieler 1 erkannt wird.",
     "label": "Pro Controller Farbwechsler",
     "backing_up": "Derzeitiges Profil sichern",
-    "all_done": "Abgeschlossen! Du musst den Pro Controller vielleicht trennen und neu anschließen um den Effekt zu sehen."
+    "all_done": "Abgeschlossen! Du musst den Pro Controller vielleicht trennen und neu anschließen um den Effekt zu sehen.",
     "warning": "SwitchBros-Updater unterstützt derzeit nicht das ändern der Grifffarbe des Pro-Controllers. Verwende stattdessen das JoyCon Toolkit auf dem PC.",
-    "changing": "Ändern der Farbe. Stelle sicher, dass der Pro-Con auf Spieler 1 eingestellt ist.",
+    "changing": "Ändern der Farbe. Stelle sicher, dass der Pro-Con auf Spieler 1 eingestellt ist."
   },
   "main": {
     "getting": "Herunterladen: {}",

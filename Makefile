@@ -22,7 +22,7 @@ DATA		:=	data
 INCLUDES	:=	include /lib/borealis/library/include/borealis/extern/nlohmann
 APP_TITLE	:=	SwitchBros Updater
 APP_AUTHOR	:=	HamletDuFromage, forked by SwitchBros
-APP_VERSION :=  2.22.2-SB
+APP_VERSION :=  2.23.0-SB
 TARGET		:=	$(notdir $(CURDIR))
 
 ROMFS				:=	resources
@@ -50,7 +50,7 @@ CFLAGS	+=	$(INCLUDE) -D__SWITCH__ \
 			-DAPP_TITLE="\"$(APP_TITLE)\"" -DAPP_TITLE_LOWER="\"$(TARGET)\""
 
 
-CXXFLAGS	:= $(CFLAGS) -std=gnu++20 -fexceptions -Wno-reorder
+CXXFLAGS	:= $(CFLAGS) -std=gnu++23 -fexceptions -Wno-reorder
 
 ASFLAGS	:=	-g $(ARCH)
 LDFLAGS	=	-specs=$(DEVKITPRO)/libnx/switch.specs -g $(ARCH) -Wl,-Map,$(notdir $*.map)

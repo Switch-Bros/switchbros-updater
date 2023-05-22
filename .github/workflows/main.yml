@@ -14,6 +14,9 @@ jobs:
 
     - name: update repo
       run: |
+        git config --global --add safe.directory /__w/switchbros-updater/switchbros-updater/lib/borealis
+        git config --global --add safe.directory /__w/switchbrosh-updater/switchbros-updater
+        git config --global --add safe.directory /__w/switchbros-updater/switchbros-updater/sbu-rcm
         git submodule update --init --recursive
         
     - name: Building switchbros-updater

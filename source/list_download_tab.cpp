@@ -30,6 +30,7 @@ ListDownloadTab::ListDownloadTab(const contentType type, const nlohmann::ordered
             true);
         this->addView(cheatsLabel);
         this->creategbatempItem();
+        this->createGfxItem();
         this->createCheatSlipItem();
     }
 
@@ -206,7 +207,7 @@ void ListDownloadTab::createCheatSlipItem()
     this->addView(cheatslipsItem);
 }
 
-void ListDownloadTab::creategbatempItem()
+void ListDownloadTab::createGbatempItem()
 {
     brls::ListItem* gbatempItem = new brls::ListItem("menus/cheats/get_gbatemp"_i18n);
     gbatempItem->setHeight(LISTITEM_HEIGHT);
@@ -216,3 +217,13 @@ void ListDownloadTab::creategbatempItem()
     });
     this->addView(gbatempItem);
 }
+
+void ListDownloadTab::createGfxItem()
+{
+    brls::ListItem* gfxItem = new brls::ListItem("menus/cheats/get_gfx"_i18n);
+    gfxItem->setHeight(LISTITEM_HEIGHT);
+    gfxItem->getClickEvent()->subscribe([](brls::View* view) {
+        brls::Application::pushView(new AppPage_Gfx());
+        return true;
+    });
+    this->addView(gfxItem);

@@ -162,11 +162,11 @@ ToolsTab::ToolsTab(const std::string& tag, const nlohmann::ordered_json& payload
     });
     hideTabs->setHeight(LISTITEM_HEIGHT);
 
-    brls::ListItem* changelog = new brls::ListItem("menus/tools/changelog"_i18n);
-    changelog->getClickEvent()->subscribe([](brls::View* view) {
-        util::openWebBrowser(CHANGELOG_URL);
-    });
-    changelog->setHeight(LISTITEM_HEIGHT);
+    // brls::ListItem* changelog = new brls::ListItem("menus/tools/changelog"_i18n);
+    // changelog->getClickEvent()->subscribe([](brls::View* view) {
+    //     util::openWebBrowser(CHANGELOG_URL);
+    // });
+    // changelog->setHeight(LISTITEM_HEIGHT);
 
     if (!util::getBoolValue(hideStatus, "cheats")) this->addView(cheats);
     if (!util::getBoolValue(hideStatus, "outdatedtitles")) this->addView(outdatedTitles);

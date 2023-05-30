@@ -29,7 +29,7 @@ ListDownloadTab::ListDownloadTab(const contentType type, const nlohmann::ordered
             "menus/cheats/cheats_label"_i18n,
             true);
         this->addView(cheatsLabel);
-        this->creategbatempItem();
+        this->createGbatempItem();
         this->createGfxItem();
         this->createCheatSlipItem();
     }
@@ -227,3 +227,4 @@ void ListDownloadTab::createGfxItem()
         return true;
     });
     this->addView(gfxItem);
+}

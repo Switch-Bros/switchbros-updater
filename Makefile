@@ -22,7 +22,7 @@ DATA		:=	data
 INCLUDES	:=	include /lib/borealis/library/include/borealis/extern/nlohmann
 APP_TITLE	:=	Kefir Updater
 APP_AUTHOR	:=	HamletDuFromage, forked by xHR
-APP_VERSION :=  2.22.1-ku
+APP_VERSION :=  2.22.2-ku
 TARGET		:=	$(notdir $(CURDIR))
 
 ROMFS				:=	resources
@@ -182,7 +182,7 @@ else
 endif
 
 nxlink:
-	nxlink -a 192.168.0.103 -p /kefir-updater/kefir-updater.nro output/kefir-updater.nro
+	nxlink -a 192.168.50.28 -p /kefir-updater/kefir-updater.nro output/kefir-updater.nro
 
 copy:
 	@cp $(CURDIR)/output/kefir-updater.nro ~/dev/_kefir/kefir/switch/kefir-updater/kefir-updater.nro

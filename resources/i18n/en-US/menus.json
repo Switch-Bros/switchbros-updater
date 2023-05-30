@@ -56,10 +56,13 @@
     "gfx_title": "Graphics enhancing cheats",
     "get_gfx": "Download individual graphics enhancing cheat codes"
   },
+  "kefir":{
+    "all_done": "All done!\nThe changes will take effect after the console is rebooted."
+  },
   "common": {
     "downloading": "Downloading…",
     "extracting": "Extracting…",
-    "all_done": " All done!",
+    "all_done": "All done!",
     "back": "Back",
     "continue": "Continue",
     "download": "Downloading:\n",
@@ -153,8 +156,8 @@
     "dl_payloads": "Download payloads to ",
     "inject_payloads": "Inject payload",
     "getting_payload": "Getting payload",
-    "update_app": "Update the app (v{})",
-    "dl_app": "Downloading:\nAIO-switch-updater\n\nFrom:\n",
+    "update_app": "Update DBI v{}",
+    "dl_app": "Downloading:\nDBI\n\nFrom:\n",
     "changelog": "Changelog",
     "clean_up": "Clean up downloaded files",
     "hide_tabs": "Hide tabs",

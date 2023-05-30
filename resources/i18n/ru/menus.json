@@ -54,10 +54,13 @@
     "cheatslips_logout": "Выйти"
 
   },
+  "kefir":{
+    "all_done": "Всё готово!\nИзменения вступят в силу после перезагрузки консоли"
+  },
   "common": {
     "downloading": "Загрузка...",
     "extracting": "Распаковка...",
-    "all_done": " Всё готово!\nИзменения вступят в силу после перезагрузки консоли",
+    "all_done": "Всё готово!",
     "back": "Назад",
     "continue": "Продолжить",
     "download": "Загрузка:\n",
@@ -149,8 +152,8 @@
     "pro_cons": "Change the Pro Controller color",
     "dl_payloads": "Download payloads to ",
     "inject_payloads": "Inject payload",
-    "update_app": "Update the app (v",
-    "dl_app": "Downloading:\nKefir Updater\n\nFrom:\n",
+    "update_app": "Обновить DBI v{}",
+    "dl_app": "Загрузка:\nDBI\n\nИсточник:\n",
     "changelog": "Список изменений",
     "clean_up": "Удалить загруженные файлы",
     "hide_tabs": "Настроить скрытие пунктов меню",

@@ -26,25 +26,23 @@ namespace {
 
 ToolsTab::ToolsTab(const std::string& tag, const nlohmann::ordered_json& payloads, bool erista, const nlohmann::ordered_json& hideStatus) : brls::List()
 {
-    // if (!tag.empty() && tag != AppVersion) {
-    //     brls::ListItem* updateApp = new brls::ListItem(fmt::format("menus/tools/update_app"_i18n, tag));
-    //     std::string text("menus/tools/dl_app"_i18n + std::string(APP_URL));
-    //     updateApp->getClickEvent()->subscribe([text, tag](brls::View* view) {
-    //         brls::StagedAppletFrame* stagedFrame = new brls::StagedAppletFrame();
-    //         stagedFrame->setTitle("menus/common/updating"_i18n);
-    //         stagedFrame->addStage(
-    //             new ConfirmPage(stagedFrame, text));
-    //         stagedFrame->addStage(
-    //             new WorkerPage(stagedFrame, "menus/common/downloading"_i18n, []() { util::downloadArchive(APP_URL, contentType::app); }));
-    //         stagedFrame->addStage(
-    //             new WorkerPage(stagedFrame, "menus/common/extracting"_i18n, []() { util::extractArchive(contentType::app); }));
-    //         stagedFrame->addStage(
-    //             new ConfirmPage_AppUpdate(stagedFrame, "menus/common/all_done"_i18n));
-    //         brls::Application::pushView(stagedFrame);
-    //     });
-    //     updateApp->setHeight(LISTITEM_HEIGHT);
-    //     this->addView(updateApp);
-    // }
+    {
+        brls::ListItem* updateApp = new brls::ListItem(fmt::format("menus/tools/update_app"_i18n, tag));
+        std::string text("menus/tools/dl_app"_i18n + std::string(APP_URL));
+        updateApp->getClickEvent()->subscribe([text, tag](brls::View* view) {
+            brls::StagedAppletFrame* stagedFrame = new brls::StagedAppletFrame();
+            stagedFrame->setTitle("menus/common/updating"_i18n);
+            stagedFrame->addStage(
+                new ConfirmPage(stagedFrame, text));
+            stagedFrame->addStage(
+                new WorkerPage(stagedFrame, "menus/common/downloading"_i18n, []() { util::downloadArchive(APP_URL, contentType::app); }));
+            stagedFrame->addStage(
+                new ConfirmPage_Done(stagedFrame, "menus/common/all_done"_i18n));
+            brls::Application::pushView(stagedFrame);
+        });
+        updateApp->setHeight(LISTITEM_HEIGHT);
+        this->addView(updateApp);
+    }
 
     brls::ListItem* cheats = new brls::ListItem("menus/tools/cheats"_i18n);
     cheats->getClickEvent()->subscribe([](brls::View* view) {

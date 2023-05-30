@@ -118,7 +118,7 @@
     "app": "app",
     "cfw": "CFW",
     "ams": "Kefir",
-    "ams_text": "\u25c6 From this menu, you can download and update the Atmosphère custom firmware necessary to run homebrew software.",
+    "ams_text": "\u25c6 From this menu, you can download and update the Kefir custom firmware necessary to run homebrew software.",
     "kefir_text": "\u25c6 From this menu, you can download and update the Kefir custom firmware necessary to run homebrew software.",
     "cfw_text": "\u25c6 Alternative CFWs, bootloaders.",
     "bootloaders_text": "\u25c6 Download and update bootloaders.",
@@ -142,7 +142,7 @@
   "hide": {
     "title": "Hide tabs",
     "desc": "Hide tabs from the main menu",
-    "update_ams_deepsea": "Atmosphère and DeepSea downloads"
+    "update_ams_deepsea": "Kefir and DeepSea downloads"
   },
   "tools": {
     "cheats": "Cheats menu",
@@ -176,9 +176,9 @@
   "ams_update": {
     "reboot_rcm": "The Switch will now reboot to a special payload in order to finalise the install.",
     "install_hekate": "Do you want to also download hekate?\nIf not, the Switch will now reboot to a special payload in order to finalise the install.",
-    "delete_contents": "Would you like to remove the existing '/atmosphere/contents/' directory? This will prevent crashes if you have sysmodules that do not support the latest Atmosphère. Please note that it will delete all your existing sysmodules, mods and cheats.",
-    "delete_sysmodules_flags": "Would you like to delete all the custom sysmodules startup flags? This will turn off all your sysmodules and prevent crashes if you have sysmodules that do not support the latest Atmosphère.",
-    "current_ams": "\u25c6 Current Atmosphère:",
+    "delete_contents": "Would you like to remove the existing '/atmosphere/contents/' directory? This will prevent crashes if you have sysmodules that do not support the latest Kefir. Please note that it will delete all your existing sysmodules, mods and cheats.",
+    "delete_sysmodules_flags": "Would you like to delete all the custom sysmodules startup flags? This will turn off all your sysmodules and prevent crashes if you have sysmodules that do not support the latest Kefir.",
+    "current_ams": "\u25c6 Current Kefir:",
     "current_kefir": "Current version: \n\ue016 Kefir: ",
     "erista_rev": "\u25c6 Erista revision",
     "mariko_rev": "\u25c6 Mariko revision",
@@ -187,13 +187,13 @@
     "depends_on": "The following modules will also be installed:",
     "download_custom_deepsea": "Download this custom DeepSea package",
     "get_custom_deepsea": "Get custom DeepSea package",
-    "deepsea_label": "\u25c6 DeepSea by Team Neptune is a CFW pack that includes Atmosphère, hekate, and various homebrew apps.",
+    "deepsea_label": "\u25c6 DeepSea by Team Neptune is a CFW pack that includes Kefir, hekate, and various homebrew apps.",
     "download_deepsea_package": "Compile and download",
     "cant_fetch_deepsea": "Couldn't fetch packages. Open a Github issue if this persists.",
     "build_your_deepsea": "Build your own custom DeepSea package by selecting packages",
-    "getting_ams": "Getting Atmosphère",
+    "getting_ams": "Getting Kefir",
     "custom_packs_label": "\u25c6 Here are packs listed in the {} file. Be aware that those are not endorsed by AIO-Switch-Updater so make sure you trust their source.",
-    "custom_packs_ams": "\u25c6 Downloads containing the Atmosphère custom firmware.",
+    "custom_packs_ams": "\u25c6 Downloads containing the Kefir custom firmware.",
     "custom_packs_misc": "\u25c6 Downloads containing homebrew and tools.",
     "custom_download" : "Custom download",
     "add_custom_link": "Add a custom link",
@@ -208,6 +208,6 @@
   "errors": {
     "insufficient_storage": "There isn't enough space available on your SD card to perform this operation.",
     "error_message": "{}\nPlease try again in a little while. If the problem persists, open an issue on GitHub.",
-    "mariko_payload_missing": "In order to update Atmosphère on patched Switches, your payload needs to be named \"payload.bin\" and should be at the root of your SD card."
+    "mariko_payload_missing": "In order to update Kefir on patched Switches, your payload needs to be named \"payload.bin\" and should be at the root of your SD card."
   }
 }

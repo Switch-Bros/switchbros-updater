@@ -56,6 +56,9 @@
     "old_cheats_found": "Zu diesem/r BID passende Cheats gefunden - [ {}].",
     "cheatslips_logout": "Ausloggen"
   },
+  "switchbros":{
+    "all_done": "Abgeschlossen!\nStarte die Konsole neu damit die Änderungen wirksam werden."
+  },
   "common": {
     "downloading": "Wird heruntergeladen…",
     "extracting": "Wird entpackt…",
@@ -154,8 +157,8 @@
     "pro_cons": "Ändere die Farbe deines Pro Controllers",
     "dl_payloads": "payloads herunterladen nach: ",
     "inject_payloads": "Injiziere payload",
-    "update_app": "Aktualisiere die App (v{})",
-    "dl_app": "Lade herunter:\nSwitchBros-Updater\n\nVon:\n",
+    "update_app": "DBI aktualisieren v{}",
+    "dl_app": "Lade herunter:\nDBI\n\nVon:\n",
     "changelog": "Changelog",
     "clean_up": "Heruntergeladene Dateien löschen",
     "hide_tabs": "Tabs verstecken",

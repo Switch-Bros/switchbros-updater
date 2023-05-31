@@ -54,6 +54,9 @@
     "old_cheats_found": "Cheat codes matching BID(s) [ {}] exist.",
     "cheatslips_logout": "Log out"
   },
+  "switchbros":{
+    "all_done": "All done!\nThe changes will take effect after the console is rebooted."
+  },
   "common": {
     "downloading": "Downloading…",
     "extracting": "Extracting…",
@@ -151,8 +154,8 @@
     "dl_payloads": "Download payloads to ",
     "inject_payloads": "Inject payload",
     "getting_payload": "Getting payload",
-    "update_app": "Update the app (v{})",
-    "dl_app": "Downloading:\nAIO-switch-updater\n\nFrom:\n",
+    "update_app": "Update DBI v{}",
+    "dl_app": "Downloading:\nDBI\n\nFrom:\n",
     "changelog": "Changelog",
     "clean_up": "Clean up downloaded files",
     "hide_tabs": "Hide tabs",

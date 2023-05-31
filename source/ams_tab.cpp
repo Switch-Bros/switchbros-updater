@@ -77,7 +77,7 @@ void AmsTab::CreateStagedFrames(const std::string& text, const std::string& url,
     if (ams)
         stagedFrame->addStage(new ConfirmPage_AmsUpdate(stagedFrame, "menus/ams_update/reboot_rcm"_i18n, erista));
     else
-        stagedFrame->addStage(new ConfirmPage_Done(stagedFrame, "menus/common/all_done"_i18n));
+        stagedFrame->addStage(new ConfirmPage_Done(stagedFrame, "menus/switchbros/all_done"_i18n));
     brls::Application::pushView(stagedFrame);
 }
 

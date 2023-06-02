@@ -194,7 +194,7 @@
     "depends_on": "Die folgenden Module werden ebenfalls installiert",
     "download_custom_deepsea": "Benutzerdefiniertes DeepSea-Paket herunterladen",
     "get_custom_deepsea": "Benutzerdefiniertes DeepSea-Paket erhalten",
-    "switchbros_dev_label": "\u25c6 WARNUNG!!!\nDies ist die nächste Version des SwitchBros_BasisPakets welches sich noch in ENTWICKLUNG befindet!!!\n\nNur wenn du richtig experimentierfreudig bist und gerne FEEDBACK geben möchtest zu FEHLERN (die bestimmt da sind), dann kannst du es auf EIGENE Verantwortung gerne tun!\n\nDas Paket ist nicht besser, geiler oder sonstwas sondern wie der Name schon sagt: In Entwicklung damit wir TESTEN können bevor es offiziell ist!!!.",
+    "switchbros_dev_label": "\u25c6 WARNUNG!!!\nDies ist die nächste Version des SwitchBros_BasisPakets welches sich noch in ENTWICKLUNG befindet!!!\n\nNur wenn du richtig experimentierfreudig bist und dich gerne an der Entwicklung beteiligen möchtest um uns FEEDBACK zu FEHLERN (die bestimmt da sind) zu geben, dann kannst du es auf EIGENE Verantwortung gerne tun!\nEs hilft uns das Paket immer weiter zu verbessern!\n\nDas Paket ist jedoch nicht besser, geiler oder sonst etwas, sondern wie der Name schon sagt: Eine Entwicklungsversion, damit wir es TESTEN können, bevor es offiziell ist/wird!!!.",
     "download_deepsea_package": "Kompilieren und herunterladen",
     "cant_fetch_deepsea": "Es konnten keine Pakete geholt werden. Wenn das Problem bestehen bleibt, öffne bitte eine 'Ticket' auf unserem Discord Server:\n\nhttps://discord.gg/switchbros",
     "build_your_deepsea": "Baue dein eigenes DeepSea Paket durch Auswählen von Paketen",

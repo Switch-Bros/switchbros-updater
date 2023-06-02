@@ -118,8 +118,7 @@ void AmsTab_Regular::CreateLists()
         brls::LabelStyle::DESCRIPTION,
         "menus/ams_update/switchbros_dev_label"_i18n,
         true));
-    this->addView(listItem);
-    CreateDownloadItems(util::getValueFromKey(cfws, "entwicklung"), false);
+    CreateDownloadItems(util::getValueFromKey(cfws, "entwicklung"));
 }
 
 std::string AmsTab_Regular::GetRepoName(const std::string& repo)

@@ -114,19 +114,12 @@ void AmsTab_Regular::CreateLists()
     this->addView(new brls::Label(brls::LabelStyle::MEDIUM, (CurrentCfw::running_cfw == CFW::ams ? "menus/ams_update/current_switchbros"_i18n + CurrentCfw::getAmsInfo() : "") + (erista ? "\n" + "menus/ams_update/erista_rev"_i18n : "\n" + "menus/ams_update/mariko_rev"_i18n), true));
     CreateDownloadItems(util::getValueFromKey(cfws, "Atmosphere"));
 
-    // this->addView(new brls::Label(
-    //     brls::LabelStyle::DESCRIPTION,
-    //     "menus/ams_update/deepsea_label"_i18n,
-    //     true));
-    // listItem = new brls::ListItem("menus/ams_update/get_custom_deepsea"_i18n);
-    // listItem->setHeight(LISTITEM_HEIGHT);
-    // listItem->getClickEvent()->subscribe([this](brls::View* view) {
-    //     nlohmann::ordered_json modules;
-    //     download::getRequest(DEEPSEA_META_JSON, modules);
-    //     this->ShowCustomDeepseaBuilder(modules);
-    // });
-    // this->addView(listItem);
-    // CreateDownloadItems(util::getValueFromKey(cfws, "DeepSea"), false);
+    this->addView(new brls::Label(
+        brls::LabelStyle::DESCRIPTION,
+        "menus/ams_update/switchbros_dev_label"_i18n,
+        true));
+    this->addView(listItem);
+    CreateDownloadItems(util::getValueFromKey(cfws, "entwicklung"), false);
 }
 
 std::string AmsTab_Regular::GetRepoName(const std::string& repo)

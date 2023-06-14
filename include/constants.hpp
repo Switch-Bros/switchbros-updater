@@ -14,9 +14,9 @@ constexpr const char MARIKO_PAYLOAD_PATH_TEMP[] = "/payload.bin.sbu";
 
 constexpr const char CHANGELOG_URL[] = "https://github.com/Switch-Bros/switchbros-updater/releases";
 
-constexpr const char APP_URL[] =            "https://github.com/rashevskyv/DBI/releases/latest/download/DBI.nro";
-constexpr const char TAGS_INFO[] =          "https://api.github.com/repos/rashevskyv/DBI/releases/latest";
-constexpr const char APP_FILENAME[] =       "/switch/DBI/DBI.nro";
+constexpr const char APP_URL[] =            "https://github.com/Switch-Bros/switchbros-updater/releases/latest/download/switchbros-updater.nro";
+constexpr const char TAGS_INFO[] =          "https://api.github.com/repos/Switch-Bros/switchbros-updater/releases/latest";
+constexpr const char APP_FILENAME[] =       "/switch/switchbros-updater/switchbros-updater.nro";
 
 constexpr const char NXLINKS_URL[] =        "https://raw.githubusercontent.com/Switch-Bros/nx-links/master/nx-links.json";
 constexpr const char CUSTOM_FILENAME[] =    "/config/switchbros-updater/switchbros.zip";

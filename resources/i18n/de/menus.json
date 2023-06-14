@@ -217,9 +217,8 @@
     "error_message": "{}\\nBitte versuche es in Kürze erneut. Wenn das Problem bestehen bleibt, öffne bitte eine 'Ticket' auf unserem Discord Server:\n\nhttps://discord.gg/switchbros",
     "mariko_payload_missing": "Um SwitchBros-O-Sphere auf gepatchten Switches zu aktualisieren, muss sich die \"payload.bin\" im Root-Verzeichnis der SD-Karte befinden."
   },
-  "language": {
-    "system_default": "Systemstandard",
-    "de": "Deutsch (de-DE)",
-    "en-US": "American English (en-US)"
+  "worker": {
+    "of": "von",
+    "remaining": "verbleibende Zeit"
   }
 }

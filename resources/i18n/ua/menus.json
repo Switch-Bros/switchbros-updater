@@ -202,5 +202,10 @@
     "en-US": "American English (en-US)",
     "ru": "Russian (ru)",
     "ua": "Ukrainian (ua)"
+  },
+  "worker": {
+    "of": "із",
+    "download_progress": "({:.1f} MB із {:.1f} MB - {:.1f} MB/s)",
+    "time_left": "({} залишилось)"
   }
 }

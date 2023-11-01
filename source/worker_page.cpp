@@ -32,6 +32,7 @@ WorkerPage::WorkerPage(brls::StagedAppletFrame* frame, const std::string& text, 
     this->registerAction("", brls::Key::A, [this] { return true; });
     this->registerAction("", brls::Key::PLUS, [this] { return true; });
 }
+
 std::string formatLabelText(double speed, double fileSizeCurrent, double fileSizeFinal)
 {
     double fileSizeCurrentMB = fileSizeCurrent / 0x100000;
@@ -57,6 +58,7 @@ std::string formatLabelText(double speed, double fileSizeCurrent, double fileSiz
 
     return labelText;
 }
+
 void WorkerPage::draw(NVGcontext* vg, int x, int y, unsigned width, unsigned height, brls::Style* style, brls::FrameContext* ctx)
 {
     if (this->draw_page) {

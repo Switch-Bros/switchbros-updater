@@ -1,7 +1,7 @@
 {
   "about": {
-    "title": "Kefir Updater",
-    "copyright": "Kefir Updater (AIO-Switch-Updater fork) is licensed under GPL-3.0",
+    "title": "SwitchBros Updater",
+    "copyright": "SwitchBros Updater (AIO-Switch-Updater fork) is licensed under GPL-3.0",
     "disclaimers_title": "Disclaimers",
     "disclaimers": "\u25c6 Aside from cheat codes that are mirrored from the main GBAtemp thread, HamletDuFromage isn't hosting anything. All credits go to respective owners.\n\u25c6 Links are refreshed every 30 minutes. If a link remains broken after 30 minutes have passed, please open a Github issue.",
     "donate": "\u25c6 Like the app? Consider donating to support my efforts: 'https://git.io/donate_homlet'"
@@ -33,7 +33,7 @@
     "kb_error": "If they keyboard did not show up, try running the app with full RAM access (title override)",
     "cheatslips_see_more": "See more",
     "cheatslips_dl_cheats": "Download cheats and go back",
-    "bid_not_found": "Couldn't obtain build ID. Try launching AIO-Switch-Updater in applet mode while the game is running.",
+    "bid_not_found": "Couldn't obtain build ID. Try launching SwitchBros-Updater in applet mode while the game is running.",
     "exclude_titles": "Exclude titles",
     "exclude_titles_desc": "You can turn off cheat updates with this menu",
     "exclude_titles_save": "Save choice and return",
@@ -43,7 +43,7 @@
     "bid_tid_info": "Those cheats will be added to the end of your existing cheat file.",
     "dl_cheatcodes": "Download cheat code",
     "dl_successful": "Successfully downloaded the following cheat code:\n{}",
-    "applet_mode_not_supported": "Due to memory constraints, in applet mode you may only fetch cheat codes for the game you're currently playing. Please launch AIO-Switch-Updater through title override to download cheat codes for any game you own.",
+    "applet_mode_not_supported": "Due to memory constraints, in applet mode you may only fetch cheat codes for the game you're currently playing. Please launch SwitchBros-Updater through title override to download cheat codes for any game you own.",
     "cheatfile_label": "Here are the cheat codes listed in file {}",
     "not_found": "No proper cheat codes could be found for this game",
     "show_existing": "Show existing",
@@ -56,13 +56,13 @@
     "gfx_title": "Graphics enhancing cheats",
     "get_gfx": "Download individual graphics enhancing cheat codes"
   },
-  "kefir":{
+  "switchbros":{
     "all_done": "All done!\nThe changes will take effect after the console is rebooted."
   },
   "common": {
     "downloading": "Downloading…",
     "extracting": "Extracting…",
-    "all_done": "All done!",
+    "all_done": " All done!",
     "back": "Back",
     "continue": "Continue",
     "download": "Downloading:\n",
@@ -78,7 +78,7 @@
     "cancel": "Cancel",
     "off": "Off",
     "selected": "Selected",
-    "applet_mode_not_supported": "This feature isn't available in applet mode. Please launch AIO-Switch-Updater through title override to access it.",
+    "applet_mode_not_supported": "This feature isn't available in applet mode. Please launch SwitchBros-Updater through title override to access it.",
     "nothing_to_see": "Nothing to see here!"
   },
   "changelog": {
@@ -103,7 +103,7 @@
   "pro_con": {
     "title": "Pro controller color swapper",
     "desc": "You can change the internal color of your Pro controller. Make sure it's set to player 1.",
-    "warning": "Kefir Updater does not currently support changing Pro controller grip color. Use Joy-Con Toolkit on PC instead.",
+    "warning": "SwitchBros Updater does not currently support changing Pro controller grip color. Use Joy-Con Toolkit on PC instead.",
     "label": "Pro controller color swapper",
     "backing_up": "Backing up the color profile.",
     "all_done": "All done! You may need to turn your controller on and off for the change to take effect.",
@@ -111,7 +111,7 @@
   },
   "main": {
     "getting": "Getting {}",
-    "firmware_text": "\u25c6 Firmware dumps from 'https://darthsternie.net/switch-firmwares/'. Once downloaded, it will be extracted in '/firmware'. You can then install the update through Daybreak.",
+    "firmware_text": "\u25c6 Firmware dumps from 'https://darthsternie.net/switch-firmwares/'. Once downloaded, it will be extracted in '/firmware'. You can then install the update through Daybreak.\n\u25c6 Current FW: ",
     "firmware_version": "\ue016  Current firmware version: ",
     "cheats_text": "\u25c6 This will download a daily updated archive of cheat codes from 'gbatemp.net'. Cheat codes for games you don't have installed won't be extracted to your SD card. You can turn off cheat updates for specific games in 'Tools→Cheat menu'.\n\u25c6 Current cheats version: ",
     "get_cheats": "Download GBAtemp.net cheat archive (ver {})",
@@ -122,16 +122,16 @@
     "latest_cheats": "Latest version",
     "app": "app",
     "cfw": "CFW",
-    "ams": "Kefir",
-    "ams_text": "\u25c6 From this menu, you can download and update the Kefir custom firmware necessary to run homebrew software.",
-    "kefir_text": "\u25c6 From this menu, you can download and update the Kefir custom firmware necessary to run homebrew software.",
+    "ams": "SwitchBros",
+    "ams_text": "\u25c6 From this menu, you can download and update the SwitchBros Pack custom firmware necessary to run homebrew software.",
+    "switchbros_text": "\u25c6 From this menu, you can download and update the SwitchBros Pack which provides a complete CFW.",
     "cfw_text": "\u25c6 Alternative CFWs, bootloaders.",
     "bootloaders_text": "\u25c6 Download and update bootloaders.",
     "cheats": "cheats",
     "links_not_found": "Could not find a download link, make sure the Switch has access to the internet.\nIf this problem persists, please open an issue on Github.",
     "new_update": " - New app update available",
     "about": "About",
-    "update_ams": "Update Kefir",
+    "update_ams": "Update SB-Pack",
     "custom_downloads": "Custom downloads",
     "update_cfw": "Update CFW",
     "update_bootloaders": "Update bootloaders",
@@ -146,8 +146,7 @@
   },
   "hide": {
     "title": "Hide tabs",
-    "desc": "Hide tabs from the main menu",
-    "update_ams_deepsea": "Kefir and DeepSea downloads"
+    "desc": "Hide tabs from the main menu"
   },
   "tools": {
     "cheats": "Cheats menu",
@@ -156,7 +155,7 @@
     "dl_payloads": "Download payloads to ",
     "inject_payloads": "Inject payload",
     "getting_payload": "Getting payload",
-    "update_app": "Update DBI v{}",
+    "update_app": "Update DBI {}",
     "dl_app": "Downloading:\nDBI\n\nFrom:\n",
     "changelog": "Changelog",
     "clean_up": "Clean up downloaded files",
@@ -182,24 +181,18 @@
   "ams_update": {
     "reboot_rcm": "The Switch will now reboot to a special payload in order to finalise the install.",
     "install_hekate": "Do you want to also download hekate?\nIf not, the Switch will now reboot to a special payload in order to finalise the install.",
-    "delete_contents": "Would you like to remove the existing '/atmosphere/contents/' directory? This will prevent crashes if you have sysmodules that do not support the latest Kefir. Please note that it will delete all your existing sysmodules, mods and cheats.",
-    "delete_sysmodules_flags": "Would you like to delete all the custom sysmodules startup flags? This will turn off all your sysmodules and prevent crashes if you have sysmodules that do not support the latest Kefir.",
-    "current_ams": "\u25c6 Current Kefir:",
-    "current_kefir": "Current version: \n\ue016 Kefir: ",
+    "delete_contents": "Would you like to remove the existing '/atmosphere/contents/' directory? This will prevent crashes if you have sysmodules that do not support the latest SwitchBros-O-Sphere. Please note that it will delete all your existing sysmodules, mods and cheats.",
+    "delete_sysmodules_flags": "Would you like to delete all the custom sysmodules startup flags? This will turn off all your sysmodules and prevent crashes if you have sysmodules that do not support the latest SwitchBros-O-Sphere.",
+    "current_ams": "\u25c6 Current SwitchBros-O-Sphere:",
+    "current_switchbros": "Current version: \n\ue016 SwitchBros Pack: ",
     "erista_rev": "\u25c6 Erista revision",
     "mariko_rev": "\u25c6 Mariko revision",
-    "deepsea_builder": "DeepSea builder",
     "show_module_description": "Show module's description",
     "depends_on": "The following modules will also be installed:",
-    "download_custom_deepsea": "Download this custom DeepSea package",
-    "get_custom_deepsea": "Get custom DeepSea package",
-    "deepsea_label": "\u25c6 DeepSea by Team Neptune is a CFW pack that includes Kefir, hekate, and various homebrew apps.",
-    "download_deepsea_package": "Compile and download",
-    "cant_fetch_deepsea": "Couldn't fetch packages. Open a Github issue if this persists.",
-    "build_your_deepsea": "Build your own custom DeepSea package by selecting packages",
-    "getting_ams": "Getting Kefir",
-    "custom_packs_label": "\u25c6 Here are packs listed in the {} file. Be aware that those are not endorsed by AIO-Switch-Updater so make sure you trust their source.",
-    "custom_packs_ams": "\u25c6 Downloads containing the Kefir custom firmware.",
+    "switchbros_dev_label": "\u25c6 WARNING!!!\nThis is the next Version of our SwitchBros-Pack still in DEVELOPMENT!!!\n\nOnly if you are truly adventurous and enjoy providing FEEDBACK on ERRORS (which are bound to exist), you are welcome to try it OUT at your OWN risk!\n\nThe package is not better, cooler, or anything else, but as the name suggests: It's in development so that we can TEST it before it becomes official!!!",
+    "getting_ams": "Getting SwitchBros. BasisPaket",
+    "custom_packs_label": "\u25c6 Here are packs listed in the {} file. Be aware that those are not endorsed by SwitchBros-Updater so make sure you trust their source.",
+    "custom_packs_ams": "\u25c6 Downloads for Packs (CFW).",
     "custom_packs_misc": "\u25c6 Downloads containing homebrew and tools.",
     "custom_download" : "Custom download",
     "add_custom_link": "Add a custom link",
@@ -214,8 +207,8 @@
   "errors": {
     "insufficient_storage": "There isn't enough space available on your SD card to perform this operation.",
     "error_message": "{}\nPlease try again in a little while. If the problem persists, open an issue on GitHub.",
-    "mariko_payload_missing": "In order to update Kefir on patched Switches, your payload needs to be named \"payload.bin\" and should be at the root of your SD card."
-  },
+    "mariko_payload_missing": "In order to update SwitchBros-O-Sphere on patched Switches, your payload needs to be named \"payload.bin\" and should be at the root of your SD card."
+ },
   "worker": {
     "of": "of",
     "download_progress": "({:.1f} MB of {:.1f} MB - {:.1f} MB/s)",

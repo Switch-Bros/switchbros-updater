@@ -52,6 +52,6 @@ public:
 class UnTogglableListItem : public brls::ToggleListItem
 {
 public:
-    UnTogglableListItem(const std::string& label, bool initialValue, std::string description = "", std::string onValue = "On", std::string offValue = "Off") : ToggleListItem(label, initialValue, description, onValue, offValue) {}
+    UnTogglableListItem(const std::string& label, bool initialValue, std::string description = "", std::string onValue = "An", std::string offValue = "Aus") : ToggleListItem(label, initialValue, description, onValue, offValue) {}
     virtual bool onClick() override;
 };

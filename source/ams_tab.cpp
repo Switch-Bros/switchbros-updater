@@ -77,7 +77,7 @@ void AmsTab::CreateStagedFrames(const std::string& text, const std::string& url,
     if (ams)
         stagedFrame->addStage(new ConfirmPage_AmsUpdate(stagedFrame, "menus/ams_update/reboot_rcm"_i18n, erista));
     else
-        stagedFrame->addStage(new ConfirmPage_Done(stagedFrame, "menus/kefir/all_done"_i18n));
+        stagedFrame->addStage(new ConfirmPage_Done(stagedFrame, "menus/switchbros/all_done"_i18n));
     brls::Application::pushView(stagedFrame);
 }
 
@@ -105,28 +105,20 @@ void AmsTab_Regular::CreateLists()
     this->type = contentType::ams_cfw;
     auto cfws = util::getValueFromKey(this->nxlinks, "cfws");
 
-    brls::Label* kefText = new brls::Label(
+    brls::Label* sbText = new brls::Label(
     brls::LabelStyle::DESCRIPTION,
-        fmt::format("menus/main/kefir_text"_i18n), true);
-    kefText->setHorizontalAlign(NVG_ALIGN_LEFT);
+        fmt::format("menus/main/switchbros_text"_i18n), true);
+    sbText->setHorizontalAlign(NVG_ALIGN_LEFT);
 
-    this->addView(kefText);
-    this->addView(new brls::Label(brls::LabelStyle::MEDIUM, (CurrentCfw::running_cfw == CFW::ams ? "menus/ams_update/current_kefir"_i18n + CurrentCfw::getAmsInfo() : "") + (erista ? "\n" + "menus/ams_update/erista_rev"_i18n : "\n" + "menus/ams_update/mariko_rev"_i18n), true));
+    this->addView(sbText);
+    this->addView(new brls::Label(brls::LabelStyle::MEDIUM, (CurrentCfw::running_cfw == CFW::ams ? "menus/ams_update/current_switchbros"_i18n + CurrentCfw::getAmsInfo() : "") + (erista ? "\n" + "menus/ams_update/erista_rev"_i18n : "\n" + "menus/ams_update/mariko_rev"_i18n), true));
     CreateDownloadItems(util::getValueFromKey(cfws, "Atmosphere"));
 
-    // this->addView(new brls::Label(
-    //     brls::LabelStyle::DESCRIPTION,
-    //     "menus/ams_update/deepsea_label"_i18n,
-    //     true));
-    // listItem = new brls::ListItem("menus/ams_update/get_custom_deepsea"_i18n);
-    // listItem->setHeight(LISTITEM_HEIGHT);
-    // listItem->getClickEvent()->subscribe([this](brls::View* view) {
-    //     nlohmann::ordered_json modules;
-    //     download::getRequest(DEEPSEA_META_JSON, modules);
-    //     this->ShowCustomDeepseaBuilder(modules);
-    // });
-    // this->addView(listItem);
-    // CreateDownloadItems(util::getValueFromKey(cfws, "DeepSea"), false);
+    this->addView(new brls::Label(
+        brls::LabelStyle::DESCRIPTION,
+        "menus/ams_update/switchbros_dev_label"_i18n,
+        true));
+    CreateDownloadItems(util::getValueFromKey(cfws, "entwicklung"));
 }
 
 std::string AmsTab_Regular::GetRepoName(const std::string& repo)
@@ -247,7 +239,7 @@ void AmsTab_Custom::CreateLists()
         brls::LabelStyle::DESCRIPTION,
         "menus/ams_update/custom_packs_ams"_i18n,
         true));
-    CreateDownloadItems(util::getValueFromKey(this->custom_packs, "ams"), true);
+    CreateDownloadItems(util::getValueFromKey(this->custom_packs, "Paket"), true);
     this->AddLinkCreator();
 
     this->type = contentType::custom;
@@ -255,19 +247,19 @@ void AmsTab_Custom::CreateLists()
         brls::LabelStyle::DESCRIPTION,
         "menus/ams_update/custom_packs_misc"_i18n,
         true));
-    CreateDownloadItems(util::getValueFromKey(this->custom_packs, "misc"), false, false);
+    CreateDownloadItems(util::getValueFromKey(this->custom_packs, "Sonstiges"), false, false);
     this->AddLinkCreator();
 }
 
 void AmsTab_Custom::AddLinkCreator()
 {
-    std::string category = this->type == contentType::ams_cfw ? "ams" : "misc";
+    std::string category = this->type == contentType::ams_cfw ? "Paket" : "Sonstiges";
     listItem = new brls::ListItem("menus/ams_update/add_custom_link"_i18n);
     listItem->setHeight(LISTITEM_HEIGHT);
     listItem->getClickEvent()->subscribe([this, category](brls::View* view) {
         std::string title, link;
-        brls::Swkbd::openForText([&title](std::string text) { title = text; }, "Enter title", "", 256, "", 0, "Submit", "Title");
-        brls::Swkbd::openForText([&link](std::string text) { link = text; }, "Enter direct link", "", 256, "", 0, "Submit", "https://site/download.zip");
+        brls::Swkbd::openForText([&title](std::string text) { title = text; }, "Titel eingeben", "", 64, "", 0, "Bestaetigen", "Titel");
+        brls::Swkbd::openForText([&link](std::string text) { link = text; }, "Direktlink eingeben", "", 256, "", 0, "Bestaetigen", "https://seite/download.zip");
         auto links = util::getValueFromKey(this->custom_packs, category);
         links[title] = link;
         this->custom_packs[category] = links;
@@ -280,7 +272,7 @@ void AmsTab_Custom::AddLinkCreator()
 void AmsTab_Custom::RegisterListItemAction(brls::ListItem* listItem)
 {
     std::string label = listItem->getLabel();
-    std::string category = this->type == contentType::ams_cfw ? "ams" : "misc";
+    std::string category = this->type == contentType::ams_cfw ? "Paket" : "Sonstiges";
     listItem->registerAction("menus/ams_update/delete_custom_link"_i18n, brls::Key::X, [this, label, category] {
         auto& links = this->custom_packs.at(category);
         links.erase(label);

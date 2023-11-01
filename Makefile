@@ -20,9 +20,9 @@ SOURCES		:=	source
 RESOURCES	:=	resources
 DATA		:=	data
 INCLUDES	:=	include /lib/borealis/library/include/borealis/extern/nlohmann
-APP_TITLE	:=	Kefir Updater
-APP_AUTHOR	:=	HamletDuFromage, forked by xHR
-APP_VERSION :=  2.23.1-ku
+APP_TITLE	:=	SwitchBros Updater
+APP_AUTHOR	:=	HamletDuFromage, forked by SwitchBros
+APP_VERSION :=  2.24.1-SB
 TARGET		:=	$(notdir $(CURDIR))
 
 ROMFS				:=	resources
@@ -50,7 +50,7 @@ CFLAGS	+=	$(INCLUDE) -D__SWITCH__ \
 			-DAPP_TITLE="\"$(APP_TITLE)\"" -DAPP_TITLE_LOWER="\"$(TARGET)\""
 
 
-CXXFLAGS := $(CFLAGS) -std=gnu++23 -fexceptions -Wno-reorder
+CXXFLAGS	:= $(CFLAGS) -std=gnu++23 -fexceptions -Wno-reorder
 
 ASFLAGS	:=	-g $(ARCH)
 LDFLAGS	=	-specs=$(DEVKITPRO)/libnx/switch.specs -g $(ARCH) -Wl,-Map,$(notdir $*.map)
@@ -168,8 +168,8 @@ $(BUILD): $(ROMFS)
 	[ -d $(CURDIR)/output ] || mkdir -p $(CURDIR)/output
 	@[ -d $@ ] || mkdir -p $@
 	@MSYS2_ARG_CONV_EXCL="-D;$(MSYS2_ARG_CONV_EXCL)" $(MAKE) --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile
-	@cp $(OUTPUT).nro $(CURDIR)/output/kefir-updater.nro
-	@cp $(CURDIR)/output/kefir-updater.nro ~/dev/_kefir/kefir/switch/kefir-updater/kefir-updater.nro
+	@cp $(OUTPUT).nro $(CURDIR)/output/switchbros-updater.nro
+	@cp $(CURDIR)/output/switchbros-updater.nro $(CURDIR)/../SwitchBros_BasisPaket/switch/switchbros-updater/switchbros-updater.nro
 
 #---------------------------------------------------------------------------------
 clean:
@@ -182,11 +182,11 @@ else
 endif
 
 nxlink:
-	nxlink -a 192.168.50.28 -p /kefir-updater/kefir-updater.nro output/kefir-updater.nro
+	nxlink -a 192.168.178.223 -p /switchbros-updater/switchbros-updater.nro output/switchbros-updater.nro
 
 copy:
-	@cp $(CURDIR)/output/kefir-updater.nro ~/dev/_kefir/kefir/switch/kefir-updater/kefir-updater.nro
-	@cp $(CURDIR)/../TegraExplorer/output/TegraExplorer_small.bin ~/dev/_kefir/kefir/switch/kefir-updater/kefir-updater.bin
+	@cp $(CURDIR)/output/switchbros-updater.nro $(CURDIR)/../SwitchBros_BasisPaket/switch/switchbros-updater/switchbros-updater.nro
+	@cp $(CURDIR)/../TegraExplorer/output/TegraExplorer_small.bin $(CURDIR)/../SwitchBros_BasisPaket/switch/switchbros-updater/switchbros-updater.bin
 
 #---------------------------------------------------------------------------------
 else

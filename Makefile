@@ -22,7 +22,7 @@ DATA		:=	data
 INCLUDES	:=	include /lib/borealis/library/include/borealis/extern/nlohmann
 APP_TITLE	:=	Kefir Updater
 APP_AUTHOR	:=	HamletDuFromage, forked by xHR
-APP_VERSION :=  2.23.1-ku
+APP_VERSION :=  2.23.3-ku
 TARGET		:=	$(notdir $(CURDIR))
 
 ROMFS				:=	resources
@@ -186,7 +186,7 @@ nxlink:
 
 copy:
 	@cp $(CURDIR)/output/kefir-updater.nro ~/dev/_kefir/kefir/switch/kefir-updater/kefir-updater.nro
-	@cp $(CURDIR)/../TegraExplorer/output/TegraExplorer_small.bin ~/dev/_kefir/kefir/switch/kefir-updater/kefir-updater.bin
+	@cp $(CURDIR)/../TegraExplorer/output/TegraExplorer_small.bin ~/dev/_kefir/kefir/bootloader/payloads/TegraExplorer.bin
 
 #---------------------------------------------------------------------------------
 else

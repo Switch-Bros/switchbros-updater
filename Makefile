@@ -22,7 +22,7 @@ DATA		:=	data
 INCLUDES	:=	include /lib/borealis/library/include/borealis/extern/nlohmann
 APP_TITLE	:=	SwitchBros Updater
 APP_AUTHOR	:=	HamletDuFromage, forked by SwitchBros
-APP_VERSION :=  2.24.1-SB
+APP_VERSION :=  2.24.3-SB
 TARGET		:=	$(notdir $(CURDIR))
 
 ROMFS				:=	resources
@@ -50,7 +50,7 @@ CFLAGS	+=	$(INCLUDE) -D__SWITCH__ \
 			-DAPP_TITLE="\"$(APP_TITLE)\"" -DAPP_TITLE_LOWER="\"$(TARGET)\""
 
 
-CXXFLAGS	:= $(CFLAGS) -std=gnu++23 -fexceptions -Wno-reorder
+CXXFLAGS := $(CFLAGS) -std=gnu++23 -fexceptions -Wno-reorder
 
 ASFLAGS	:=	-g $(ARCH)
 LDFLAGS	=	-specs=$(DEVKITPRO)/libnx/switch.specs -g $(ARCH) -Wl,-Map,$(notdir $*.map)
@@ -186,7 +186,7 @@ nxlink:
 
 copy:
 	@cp $(CURDIR)/output/switchbros-updater.nro $(CURDIR)/../SwitchBros_BasisPaket/switch/switchbros-updater/switchbros-updater.nro
-	@cp $(CURDIR)/../TegraExplorer/output/TegraExplorer_small.bin $(CURDIR)/../SwitchBros_BasisPaket/switch/switchbros-updater/switchbros-updater.bin
+	@cp $(CURDIR)/../TegraExplorer/output/TegraExplorer_small.bin $(CURDIR)/../SwitchBros_BasisPaket/bootloader/payloads/TegraExplorer.bin
 
 #---------------------------------------------------------------------------------
 else

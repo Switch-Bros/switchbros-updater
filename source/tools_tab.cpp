@@ -119,6 +119,7 @@ ToolsTab::ToolsTab(const std::string& tag, const nlohmann::ordered_json& payload
     });
     cleanUp->setHeight(LISTITEM_HEIGHT);
 
+
     brls::ListItem* language = new brls::ListItem("menus/tools/language"_i18n);
     language->getClickEvent()->subscribe([](brls::View* view) {
         std::vector<std::pair<std::string, std::string>> languages{

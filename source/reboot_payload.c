@@ -44,7 +44,7 @@ static void clear_iram(void)
 
 static void inject_payload(void)
 {
-    printf("injecting\n");
+    // printf("injecting\n");
     spsmInitialize();
     smExit();
     if (R_SUCCEEDED(amsBpcInitialize()) && R_SUCCEEDED(amsBpcSetRebootPayload(g_reboot_payload, 0x24000))) {
@@ -54,7 +54,7 @@ static void inject_payload(void)
 
 static void inject_payload_legacy(void)
 {
-    printf("injecting (legacy)\n");
+    // printf("injecting (legacy)\n");
     clear_iram();
     for (size_t i = 0; i < IRAM_PAYLOAD_MAX_SIZE; i += 0x1000) {
         copy_to_iram(IRAM_PAYLOAD_BASE + i, &g_reboot_payload[i], 0x1000);

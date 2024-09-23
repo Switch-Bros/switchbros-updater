@@ -44,11 +44,11 @@ namespace util {
 
     void downloadArchive(const std::string& url, contentType type, long& status_code)
     {
-	if (std::filesystem::exists("/bootloader/hekate_ipl.ini")) {
-		fs::copyFile("/bootloader/update.bin", "/payload.bin");
-        fs::copyFile("/bootloader/hekate_ipl.ini", "/backup/SB/bootloader/hekate_ipl.ini");
-		fs::copyFile("/bootloader/nyx.ini", "/backup/SB/bootloader/nyx.ini");
-    }
+//	if (std::filesystem::exists("/bootloader/hekate_ipl.ini")) {
+//		fs::copyFile("/bootloader/update.bin", "/payload.bin");
+//        fs::copyFile("/bootloader/hekate_ipl.ini", "/backup/SB/bootloader/hekate_ipl.ini");
+//		fs::copyFile("/bootloader/nyx.ini", "/backup/SB/bootloader/nyx.ini");
+//    }
         fs::createTree(DOWNLOAD_PATH);
         cleanup();
         switch (type) {

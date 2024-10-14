@@ -1,0 +1,2 @@
+/quelle/pfad/zur/datei|/ziel/pfad/zur/datei
+/bootloader/update.bin|/bootloader/payloads/hekate.bin

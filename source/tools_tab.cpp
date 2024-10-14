@@ -83,7 +83,7 @@ ToolsTab::ToolsTab(const std::string& tag, const nlohmann::ordered_json& payload
     brls::ListItem* browser = new brls::ListItem("menus/tools/browser"_i18n);
     browser->getClickEvent()->subscribe([](brls::View* view) {
         std::string url;
-        if (brls::Swkbd::openForText([&url](std::string text) { url = text; }, "cheatslips.com e-mail", "", 256, "https://duckduckgo.com", 0, "Submit", "https://website.tld")) {
+        if (brls::Swkbd::openForText([&url](std::string text) { url = text; }, "cheatslips.com E-Mail", "", 256, "https://duckduckgo.com", 0, "Submit", "https://website.tld")) {
             util::openWebBrowser(url);
         }
     });
@@ -124,8 +124,7 @@ ToolsTab::ToolsTab(const std::string& tag, const nlohmann::ordered_json& payload
     language->getClickEvent()->subscribe([](brls::View* view) {
         std::vector<std::pair<std::string, std::string>> languages{
             std::make_pair("American English ({})", "en-US"),
-            std::make_pair("Русский ({})", "ru"),
-            std::make_pair("Українська ({})", "ua")};
+            std::make_pair("Deutsch ({})", "de")};
         brls::AppletFrame* appView = new brls::AppletFrame(true, true);
         brls::List* list = new brls::List();
         brls::ListItem* listItem;

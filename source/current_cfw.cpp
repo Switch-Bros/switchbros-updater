@@ -2,6 +2,7 @@
 #include "fs.hpp"
 
 #include <switch.h>
+
 namespace CurrentCfw {
 
     namespace {
@@ -61,20 +62,20 @@ namespace CurrentCfw {
     {
         u64 version;
         std::string res;
-        std::string kefir_version = fs::readLine("/switch/kefir-updater/version");
+        std::string switchbros_version = fs::readLine("/switch/switchbros-updater/version");
 
         if (R_SUCCEEDED(splGetConfig((SplConfigItem)65000, &version))) {
-            res += kefir_version + ";\n\ue016 Atmosphere: " + 
+            res += switchbros_version + ";\n\ue016 SwitchBros-O-Sphere: " + 
                     std::to_string((version >> 56) & ((1 << 8) - 1)) + "." +
                     std::to_string((version >> 48) & ((1 << 8) - 1)) + "." +
                     std::to_string((version >> 40) & ((1 << 8) - 1));
             if (R_SUCCEEDED(splGetConfig((SplConfigItem)65007, &version)))
-                res += version ? "|E" : "|S";
+                res += version ? " | E" : " | S";
                 res += ";";
             return res;
         }
         else
-            return "Couldn't retrieve AMS version";
+            return "SBOS-Version konnte nicht abgerufen werden";
     }
 
 }  // namespace CurrentCfw

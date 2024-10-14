@@ -16,7 +16,7 @@ AboutTab::AboutTab()
     // Copyright
     brls::Label* copyright = new brls::Label(
         brls::LabelStyle::DESCRIPTION,
-        "menus/about/copyright"_i18n + "\n© 2020-2022 HamletDuFromage, forked by xHR",
+        "menus/about/copyright"_i18n + "\n© 2020-2023 HamletDuFromage, fork by SwitchBros.",
         true);
     copyright->setHorizontalAlign(NVG_ALIGN_CENTER);
     this->addView(copyright);

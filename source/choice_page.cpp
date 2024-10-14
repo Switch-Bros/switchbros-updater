@@ -4,9 +4,9 @@ namespace i18n = brls::i18n;
 using namespace i18n::literals;
 ChoicePage::ChoicePage(brls::StagedAppletFrame* frame, const std::string text)
 {
-    this->yes = (new brls::Button(brls::ButtonStyle::BORDERLESS))->setLabel("yes");
+    this->yes = (new brls::Button(brls::ButtonStyle::BORDERLESS))->setLabel("Ja");
     this->yes->setParent(this);
-    this->no = (new brls::Button(brls::ButtonStyle::BORDERLESS))->setLabel("no");
+    this->no = (new brls::Button(brls::ButtonStyle::BORDERLESS))->setLabel("Nein");
     this->no->setParent(this);
 
     this->label = new brls::Label(brls::LabelStyle::DIALOG, text, true);

@@ -32,7 +32,7 @@ NetPage::NetPage() : AppletFrame(true, true)
     std::string labelText;
 
     if (!uuid || !profile.ip_setting_data.mtu) {
-        labelText = "Please connect to internet to use this feature.";
+        labelText = "Bitte eine Internetverbindung herstellen, um diese Funktion zu nutzen.";
         label = new brls::Label(brls::LabelStyle::DESCRIPTION, labelText, true);
         list->addView(label);
         cancel = new brls::ListItem("menus/common/go_back"_i18n);
@@ -41,19 +41,19 @@ NetPage::NetPage() : AppletFrame(true, true)
     }
     else {
         if (profile.ip_setting_data.ip_address_setting.is_automatic) {
-            labelText = "IP Adress: Automatic";
+            labelText = "IP Adresse: Automatisch";
         }
         else {
             labelText = fmt::format(
-                "IP Adress: {}\nSubnet Mask: {}\nGateway: {}",
+                "IP Adresse: {}\nSubnetz Maske: {}\nGateway: {}",
                 ipToString(profile.ip_setting_data.ip_address_setting.current_addr.addr),
                 ipToString(profile.ip_setting_data.ip_address_setting.subnet_mask.addr),
                 ipToString(profile.ip_setting_data.ip_address_setting.gateway.addr));
         }
-        labelText = fmt::format("{}\nLocal IP addr: {}\nMTU: {}", labelText, std::string(inet_ntoa({(in_addr_t)gethostid()})), std::to_string(unsigned(profile.ip_setting_data.mtu)));
+        labelText = fmt::format("{}\nLokale IP Adresse: {}\nMTU: {}", labelText, std::string(inet_ntoa({(in_addr_t)gethostid()})), std::to_string(unsigned(profile.ip_setting_data.mtu)));
 
         if (profile.ip_setting_data.dns_setting.is_automatic) {
-            labelText = fmt::format("{}\nDNS: Automatic", labelText);
+            labelText = fmt::format("{}\nDNS: Automatisch", labelText);
         }
         else {
             labelText = fmt::format(
@@ -81,36 +81,36 @@ NetPage::NetPage() : AppletFrame(true, true)
         }
 
         profiles.push_back(
-            json::object({{"name", "lan-play"},
+            json::object({{"name", "LAN-Play"},
                           {"ip_addr", fmt::format("10.13.{}.{}", std::rand() % 256, std::rand() % 253 + 2)},
                           {"subnet_mask", "255.255.0.0"},
-                          {"gateway", "10.13.37.1"}}));
+                          {"gateway", "10.13.37.1"},
+                          {"mtu", 1500}}));
 
         profiles.push_back(
-            json::object({{"name", "Automatic IP Address"},
-                          {"ip_auto", true}}));
+            json::object({{"name", "Automatische IP Addresse"},
+                          {"ip_auto", true},
+                          {"mtu", 1500}}));
 
         profiles.push_back(
-            json::object({{"name", "Automatic DNS"},
-                          {"dns_auto", true}}));
+            json::object({{"name", "Automatische DNS"},
+                          {"dns_auto", true},
+                          {"mtu", 1500}}));
 
         profiles.push_back(
-            json::object({{"name", "90DNS (Europe)"},
-                          {"dns1", "163.172.141.219"},
-                          {"dns2", "207.246.121.77"}}));
-
-        profiles.push_back(
-            json::object({{"name", "90DNS (USA)"},
-                          {"dns1", "207.246.121.77"},
-                          {"dns2", "163.172.141.219"}}));
+            json::object({{"name", "Cloudflare DNS"},
+                          {"dns1", "1.1.1.1"},
+                          {"dns2", "1.0.0.1"},
+                          {"mtu", 1500}}));
 
         profiles.push_back(
             json::object({{"name", "Google DNS"},
                           {"dns1", "8.8.8.8"},
-                          {"dns2", "8.8.4.4"}}));
+                          {"dns2", "8.8.4.4"},
+                          {"mtu", 1500}}));
 
         profiles.push_back(
-            json::object({{"name", "ACNH mtu"},
+            json::object({{"name", "ACNH MTU"},
                           {"mtu", 1500}}));
 
         for (const auto& p : profiles.items()) {

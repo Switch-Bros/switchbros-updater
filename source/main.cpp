@@ -42,7 +42,7 @@ int main(int argc, char* argv[])
     plInitialize(PlServiceType_User);
     nsInitialize();
     socketInitializeDefault();
-    // nxlinkStdio();
+    nxlinkStdio();
     pmdmntInitialize();
     pminfoInitialize();
     splInitialize();
@@ -55,15 +55,15 @@ int main(int argc, char* argv[])
     brls::Logger::setLogLevel(brls::LogLevel::DEBUG);
     brls::Logger::debug("Start");
 
-
-    if (std::filesystem::exists(HIDDEN_AIO_FILE)) {
+    if (std::filesystem::exists(HIDDEN_SBU_FILE)) {
         brls::Application::pushView(new MainFrame());
     }
     else {
         brls::Application::pushView(new WarningPage("menus/main/launch_warning"_i18n));
     }
 
-    while (brls::Application::mainLoop());
+    while (brls::Application::mainLoop())
+        ;
 
     romfsExit();
     splExit();

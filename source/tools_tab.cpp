@@ -26,7 +26,7 @@ namespace {
 
 ToolsTab::ToolsTab(const std::string& tag, const nlohmann::ordered_json& payloads, bool erista, const nlohmann::ordered_json& hideStatus) : brls::List()
 {
-    {
+    if (!tag.empty() && tag != AppVersion) {
         brls::ListItem* updateApp = new brls::ListItem(fmt::format("menus/tools/update_app"_i18n, tag));
         std::string text("menus/tools/dl_app"_i18n + std::string(APP_URL));
         updateApp->getClickEvent()->subscribe([text, tag](brls::View* view) {
@@ -37,7 +37,9 @@ ToolsTab::ToolsTab(const std::string& tag, const nlohmann::ordered_json& payload
             stagedFrame->addStage(
                 new WorkerPage(stagedFrame, "menus/common/downloading"_i18n, []() { util::downloadArchive(APP_URL, contentType::app); }));
             stagedFrame->addStage(
-                new ConfirmPage_Done(stagedFrame, "menus/common/all_done"_i18n));
+                new WorkerPage(stagedFrame, "menus/common/extracting"_i18n, []() { util::extractArchive(contentType::app); }));
+            stagedFrame->addStage(
+                new ConfirmPage_AppUpdate(stagedFrame, "menus/common/all_done"_i18n));
             brls::Application::pushView(stagedFrame);
         });
         updateApp->setHeight(LISTITEM_HEIGHT);
@@ -119,7 +121,6 @@ ToolsTab::ToolsTab(const std::string& tag, const nlohmann::ordered_json& payload
     });
     cleanUp->setHeight(LISTITEM_HEIGHT);
 
-
     brls::ListItem* language = new brls::ListItem("menus/tools/language"_i18n);
     language->getClickEvent()->subscribe([](brls::View* view) {
         std::vector<std::pair<std::string, std::string>> languages{
@@ -176,7 +177,6 @@ ToolsTab::ToolsTab(const std::string& tag, const nlohmann::ordered_json& payload
     if (!util::getBoolValue(hideStatus, "move")) this->addView(move);
     if (!util::getBoolValue(hideStatus, "cleanup")) this->addView(cleanUp);
     if (!util::getBoolValue(hideStatus, "language")) this->addView(language);
-
     // this->addView(hideTabs);
     // this->addView(changelog);
 }

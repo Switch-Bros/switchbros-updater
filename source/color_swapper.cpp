@@ -171,7 +171,7 @@ namespace JC {
         ProgressEvent::instance().setStep(1);
         int res = setColor(values);
         if (res != 0) {
-            util::showDialogBoxBlocking("Die Farbe der Joy-Cons konnte nicht geaendert werden. Bitte andocken, und erneut versuchen.\nFehler :" + std::to_string(res), "OK");
+            util::showDialogBoxBlocking("Joy-Con Farbe konnte nicht geaendert werden. Bitte andocken, und erneut versuchen.\nFehler :" + std::to_string(res), "OK");
         }
         hiddbgExit();
         hidsysExit();
@@ -329,7 +329,7 @@ namespace PC {
         ProgressEvent::instance().setStep(1);
         int res = setColor(values);
         if (res != 0) {
-            util::showDialogBoxBlocking("Die Farbe des Pro-Controllers konnte nicht geaendert werden. Bitte als P1 verbinden. Moeglicherweise funktioniert es nicht mit inoffiziellen Controllern. \nFehler :" + std::to_string(res), "Ok");
+            util::showDialogBoxBlocking("Pro-Controller Farbe konnte nicht geaendert werden. Bitte als P1 verbinden. Moeglicherweise funktioniert es nicht mit inoffiziellen Controllern. \nFehler :" + std::to_string(res), "Ok");
         }
         hiddbgExit();
         hidsysExit();

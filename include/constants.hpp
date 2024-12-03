@@ -15,9 +15,9 @@ constexpr const char MARIKO_PAYLOAD_PATH_TEMP[] = "/payload.bin.sbu";
 
 constexpr const char CHANGELOG_URL[] = "https://github.com/Switch-Bros/switchbros-updater/releases";
 
-constexpr const char APP_URL[] =            "https://github.com/rashevskyv/DBI/releases/latest/download/DBI.nro";
-constexpr const char TAGS_INFO[] =          "https://api.github.com/repos/rashevskyv/DBI/releases/latest";
-constexpr const char APP_FILENAME[] =       "/switch/DBI/DBI.nro";
+constexpr const char APP_URL[] =            "https://github.com/Switch-Bros/switchbros-updater/releases/latest/download/switchbros-updater.zip";
+constexpr const char TAGS_INFO[] =          "https://api.github.com/repos/Switch-Bros/switchbros-updater/releases/latest";
+constexpr const char APP_FILENAME[] =       "/config/switchbros-updater/app.zip";
 
 constexpr const char NXLINKS_URL[] =        "https://raw.githubusercontent.com/Switch-Bros/nx-links/master/nx-links.json";
 constexpr const char CUSTOM_FILENAME[] =    "/config/switchbros-updater/switchbros.zip";
@@ -29,12 +29,11 @@ constexpr const char FIRMWARE_PATH[] =      "/firmware/";
 
 constexpr const char CFW_URL[] =            "https://raw.githubusercontent.com/Switch-Bros/nx-links/master/bootloaders.json";
 constexpr const char CFW_FILENAME[] =       "/config/switchbros-updater/ams.zip";
-constexpr const char BOOTLOADER_FILENAME[] ="/config/switchbros-updater/ams.zip";
-
-constexpr const char AMS_FILENAME[] =       "/config/switchbros-updater/ams.zip";
+constexpr const char BOOTLOADER_FILENAME[] ="/config/switchbros-updater/bootloader.zip";
 
 constexpr const char AMS_URL[] =            "https://raw.githubusercontent.com/Switch-Bros/nx-links/master/cfws.json";
 constexpr const char SXOS_URL[] =           "https://raw.githubusercontent.com/Switch-Bros/nx-links/master/sxos.json";
+constexpr const char AMS_FILENAME[] =       "/config/switchbros-updater/ams.zip";
 
 constexpr const char HEKATE_URL[] =         "https://raw.githubusercontent.com/Switch-Bros/nx-links/master/hekate.json";
 
@@ -105,7 +104,7 @@ constexpr const char FORWARDER_PATH[] =    "/config/switchbros-updater/sbu-forwa
 
 constexpr const char DAYBREAK_PATH[] =     "/switch/daybreak/daybreak.nro";
 
-constexpr const char HIDDEN_AIO_FILE[] =    "/config/switchbros-updater/.switchbros-updater";
+constexpr const char HIDDEN_SBU_FILE[] =    "/config/switchbros-updater/.switchbros-updater";
 
 constexpr const char LOCALISATION_FILE[] = "romfs:/i18n/{}/menus.json";
 

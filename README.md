@@ -23,7 +23,7 @@ Sollte deine Konsole in der app bleiben und nicht automatisch neu starten, dann 
 
 ### ⬦ Cheat Downloads
 - Herunterladen und extrahieren täglich aktualisierter Cheats. Die App extrahiert nur die Cheats von Spielen die installiert sind. Standardmäßig, überschreibt diese App vorhandene Cheats. Wenn du deine eigene Cheats hast die unverändert bleiben sollen, dann kannst du Cheat updates für bestimmte Titel in `Tools->Cheat Menü` ausstellen.
-- Seit Version 2.0.0, kann aio-switch-updater Cheat Seiten von  [`CheatSlips.com`](https://www.cheatslips.com/) herunterladen. 
+- Seit Version 2.0.0, kann switchbros-updater Cheat Seiten von  [`CheatSlips.com`](https://www.cheatslips.com/) herunterladen. 
 
 ## Extras (im Reiter `Tools`)
 - Schau nach welche Spiele Cheats besitzen.

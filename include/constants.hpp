@@ -3,7 +3,7 @@
 constexpr const char ROOT_PATH[] =         "/";
 constexpr const char APP_PATH[] =          "/switch/switchbros-updater/";
 constexpr const char NRO_PATH[] =          "/switch/switchbros-updater/switchbros-updater.nro";
-constexpr const char NRO_PATH_REGEX[] =    ".*(/switch/switchbros-updater.*switchbros-updater.nro).*";
+constexpr const char NRO_PATH_REGEX[] =    ".*(/switch/.*switchbros-updater.nro).*";
 constexpr const char DOWNLOAD_PATH[] =     "/config/switchbros-updater/";
 constexpr const char CONFIG_PATH[] =       "/config/switchbros-updater/";
 constexpr const char CONFIG_FILE[] =       "/config/switchbros-updater/config.json";
@@ -17,7 +17,7 @@ constexpr const char CHANGELOG_URL[] = "https://github.com/Switch-Bros/switchbro
 
 constexpr const char APP_URL[] =            "https://github.com/Switch-Bros/switchbros-updater/releases/latest/download/switchbros-updater.nro";
 constexpr const char TAGS_INFO[] =          "https://api.github.com/repos/Switch-Bros/switchbros-updater/releases/latest";
-constexpr const char APP_FILENAME[] =       "/config/switchbros-updater/switchbros-updater.nro";
+constexpr const char APP_FILENAME[] =       "/config/switchbros-updater/switchbros-updater.zip";
 
 constexpr const char NXLINKS_URL[] =        "https://raw.githubusercontent.com/Switch-Bros/nx-links/master/nx-links.json";
 constexpr const char CUSTOM_FILENAME[] =    "/config/switchbros-updater/switchbros.zip";

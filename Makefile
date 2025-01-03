@@ -165,7 +165,7 @@ $(ROMFS):
 	@$(MAKE) -C $(CURDIR)/TegraExplorer -f $(CURDIR)/TegraExplorer/Makefile
 	@cp $(CURDIR)/TegraExplorer/output/TegraExplorer.bin $(CURDIR)/$(ROMFS)/switchbros-updater.bin
 # @$(MAKE) -C $(CURDIR)/sbu-forwarder -f $(CURDIR)/sbu-forwarder/Makefile
-	@cp $(CURDIR)/sbu-forwarder/sbu-forwarder.nro $(CURDIR)/$(ROMFS)/sbu-forwarder.nro
+#	@cp $(CURDIR)/sbu-forwarder/sbu-forwarder.nro $(CURDIR)/$(ROMFS)/sbu-forwarder.nro
 
 $(BUILD): $(ROMFS)
 	@[ -d $@ ] || mkdir -p $@

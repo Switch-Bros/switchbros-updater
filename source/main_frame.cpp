@@ -27,8 +27,8 @@ MainFrame::MainFrame() : TabFrame()
 
     s64 freeStorage;
     std::string tag = util::getLatestTag(TAGS_INFO);
-    this->setFooterText(fmt::format("menus/main/footer_text"_i18n, AppVersion,
-//                                    (!tag.empty() && tag != AppVersion) ? AppVersion + "menus/main/new_update"_i18n : AppVersion,
+    this->setFooterText(fmt::format("menus/main/footer_text"_i18n,
+                                    (!tag.empty() && tag != AppVersion) ? AppVersion + "menus/main/new_update"_i18n : AppVersion,
                                     R_SUCCEEDED(fs::getFreeStorageSD(freeStorage)) ? (float)freeStorage / 0x40000000 : -1));
 
     json hideStatus = fs::parseJsonFile(HIDE_TABS_JSON);

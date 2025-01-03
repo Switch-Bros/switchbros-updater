@@ -28,7 +28,7 @@
     "quota": "Limit für heute erreicht!\nGehe auf 'https://www.cheatslips.com/subscriptions' um zu sehen, wie du es erhöhen kannst.",
     "sheet_content": "Cheat-Datei Inhalt",
     "cheatslips_select": "Wähle ein Spiel aus, um Cheats herunter zu laden.",
-    "cheatslips_wrong_id": "Token konnte nicht abgerufen werden. Stelle sicher, dass die Logindaten richtig sind.",
+    "cheatslips_wrong_id": "Token konnte nicht abgerufen werden. Stelle sicher, dass die Logindaten richtig sind!",
     "kb_error": "Wenn die Tastatur nicht auftaucht, starte die App mit vollem RAM-Zugriff. (Title-Override)",
     "cheatslips_see_more": "Zeige mehr...",
     "cheatslips_dl_cheats": "Lade Cheats & gehe zurück",
@@ -86,7 +86,7 @@
   },
   "payloads": {
     "dl_payloads": "Payloads herunterladen",
-    "select": " Wähle ein Payload zum neustarten aus.",
+    "select": "Wähle ein Payload zum neustarten aus.",
     "set_reboot_payload": "Als reboot_payload.bin festlegen",
     "set_update_bin": "Als /bootloader/update.bin festlegen",
     "copy_success": "Erfolgreich kopiert `{}` nach `{}`.",
@@ -128,7 +128,7 @@
     "cfw_text": "\u25c6 SwitchBros auf die neueste Version aktualisieren",
     "cheats": "Cheats",
     "links_not_found": "Konnte keinen Downloadlink finden. Stelle sicher, dass deine Switch Internetzugriff hat.\nWenn das Problem bestehen bleibt, öffne bitte eine 'Ticket' auf unserem Discord Server:\n\nhttps://discord.gg/switchbros",
-    "new_update": " - Neues App-Update verfügbar",
+    "new_update": "- Neues App-Update verfügbar",
     "about": "Über die App",
     "update_ams": "SwitchBros OS Update",
     "custom_downloads": "SB Entwicklung",
@@ -171,7 +171,7 @@
     "language": "Sprache ändern",
     "outdated_titles": "Aktualisierung für folgende Spiele verfügbar",
     "latest_version_not_found": "Infos zur Aktualisierung konnten nicht gefunden werden",
-    "outdated_titles_desc": "Es gibt Aktualisierungen für folgende Spiele:"
+    "outdated_titles_desc": "Die folgende Spiele haben verfügbare Aktualisierungen:"
   },
   "utils": {
     "fw_warning": "Wegen der Größe der Firmwarearchive werden Downloads im Applet Mode nicht unterstützt. Bitte öffne die App mit vollem RAM Zugriff (Title-Override).",
@@ -182,7 +182,7 @@
     "applet_webbrowser": "Läuft im Eingeschränkter Modus/über Forwarder.\n\uE016 Bitte starte hbmenu über ein Spiel mit gedrückter [R-Taste] = Title-Override"
   },
   "ams_update": {
-    "reboot_rcm": "Die Switch führt einen Neustart in den TegraExplorer aus, um die Installation zu beginnen.\nSolltest du in hekate landen dann starte einfach in die CFW!\nWenn nichts passiert, dann starte die Konsole über den Power-Button neu.",
+    "reboot_rcm": "Die Switch führt einen Neustart in den TegraExplorer aus, um die Installation zu beginnen.\nSolltest du in hekate landen dann starte einfach dort den TegraExplorer!\nWenn nichts passiert, dann starte die Konsole über den Power-Button neu.",
     "install_hekate": "Möchtest du auch Hekate herunterladen?\nFalls nein, wird die Switch nun in den TegraExplorer neustarten, um die Installation zu beginnen.",
     "delete_contents": "Möchtest du den bestehenden Ordner - '/atmosphere/contents/' wirklich löschen? Dies wird Abstürze vorbeugen, falls ein Sys-Modul die neueste SwitchBros-O-Sphere Version nicht unterstützt.\nACHTUNG, damit löschst du alle deine Sys-Module, Mods, Cheats und auch gesetzte Icons!",
     "delete_sysmodules_flags": "Möchtest du den Autostart von allen Sys-Modulen verhindern? Dies wird Abstürze vorbeugen, falls ein Sys-Modul die neueste SwitchBros-O-Sphere Version nicht unterstützt.",
@@ -202,7 +202,7 @@
     "custom_packs_label": "\u25c6 Hier sind CFW Pakete aus der {} Datei. Man kann eigene hinzufügen oder löschen!",
     "custom_packs_ams": "\u25c6 Downloads für Pakete (CFW).",
     "custom_packs_misc": "\u25c6 Downloads für Apps und Tools.",
-    "custom_download" : "Eigener Download",
+    "custom_download": "Eigener Download",
     "add_custom_link": "Eigenen Link einfügen",
     "delete_custom_link": "Eigenen link löschen"
   },

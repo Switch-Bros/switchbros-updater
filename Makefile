@@ -171,7 +171,7 @@ $(BUILD): $(ROMFS)
 	@[ -d $@ ] || mkdir -p $@
 	@MSYS2_ARG_CONV_EXCL="-D;$(MSYS2_ARG_CONV_EXCL)" $(MAKE) --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile
 	@cp $(OUTPUT).nro $(CURDIR)/output/switchbros-updater.nro
-	@cp $(CURDIR)/output/switchbros-updater.nro $(CURDIR)/../SwitchBros_BasisPaket/switch/switchbros-updater/switchbros-updater.nro
+#	@cp $(CURDIR)/output/switchbros-updater.nro $(CURDIR)/../SwitchBros_BasisPaket/switch/switchbros-updater/switchbros-updater.nro
 
 #---------------------------------------------------------------------------------
 clean:

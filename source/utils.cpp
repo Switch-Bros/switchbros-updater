@@ -15,7 +15,6 @@
 #include "progress_event.hpp"
 #include "reboot_payload.h"
 #include "unistd.h"
-#include "utils.hpp"
 
 namespace i18n = brls::i18n;
 using namespace i18n::literals;
@@ -50,7 +49,6 @@ namespace util {
   		fs::copyFile("/bootloader/nyx.ini", "/backup/SB/bootloader/nyx.ini");
     }
         fs::createTree(DOWNLOAD_PATH);
-        cleanup();
         switch (type) {
             case contentType::custom:
                 status_code = download::downloadFile(url, CUSTOM_FILENAME, OFF);
@@ -442,19 +440,3 @@ namespace util {
     }
 
 }  // namespace util
-
-void cleanup()
-{
-    std::filesystem::remove(AMS_FILENAME);
-    std::filesystem::remove(APP_FILENAME);
-    std::filesystem::remove(FIRMWARE_FILENAME);
-    std::filesystem::remove(CHEATS_FILENAME);
-    std::filesystem::remove(BOOTLOADER_FILENAME);
-    std::filesystem::remove(CHEATS_VERSION);
-    std::filesystem::remove(CUSTOM_FILENAME);
-    std::filesystem::remove(CFW_FILENAME);
-    fs::removeDir(AMS_DIRECTORY_PATH);
-    fs::removeDir(SEPT_DIRECTORY_PATH);
-    fs::removeDir(FW_DIRECTORY_PATH);
-    fs::removeDir(SWITCHBROS_DIRECTORY_PATH);
-}

@@ -21,7 +21,7 @@ int main(int argc, char* argv[])
 {
     // Init the app
     if (!brls::Application::init(APP_TITLE)) {
-        brls::Logger::error("Unable to init Borealis application");
+        brls::Logger::error("Konnte Borealis nicht initialsieren");
         return EXIT_FAILURE;
     }
 

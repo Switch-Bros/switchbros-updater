@@ -142,3 +142,55 @@ void DialoguePage_fw::draw(NVGcontext* vg, int x, int y, unsigned width, unsigne
     this->button1->frame(ctx);
     this->button2->frame(ctx);
 }
+
+void DialoguePage_confirm::instantiateButtons()
+{
+    this->button1->getClickEvent()->subscribe([this](View* view) {
+        if (!frame->isLastStage())
+            frame->nextStage();
+        else {
+            brls::Application::pushView(new MainFrame());
+        }
+    });
+
+    this->button2->getClickEvent()->subscribe([this](View* view) {
+        brls::Application::pushView(new MainFrame());
+    });
+
+    this->label = new brls::Label(brls::LabelStyle::DIALOG, this->text, true);
+}
+
+void DialoguePage_restart::instantiateButtons()
+{
+    this->button1->getClickEvent()->subscribe([this](View* view) {
+        util::rebootToPayload(REBOOT_PAYLOAD_PATH);
+        brls::Application::popView();
+    });
+
+    this->button2->getClickEvent()->subscribe([this](View* view) {
+        brls::Application::popView();
+    });
+
+    this->label = new brls::Label(brls::LabelStyle::DIALOG, "menus/cheat_settings/restart_confirm"_i18n + "\n\n" + this->text, true);
+    start = std::chrono::high_resolution_clock::now() + std::chrono::milliseconds(150);
+}
+
+void DialoguePage_restart::draw(NVGcontext* vg, int x, int y, unsigned width, unsigned height, brls::Style* style, brls::FrameContext* ctx)
+{
+    this->label->frame(ctx);
+    this->button2->frame(ctx);
+
+    auto end = std::chrono::high_resolution_clock::now();
+    auto missing = std::max(1l - std::chrono::duration_cast<std::chrono::seconds>(end - start).count(), 0l);
+    auto text = std::string("menus/common/yes"_i18n);
+    if (missing > 0) {
+        this->button1->setLabel(text + " (" + std::to_string(missing) + ")");
+        this->button1->setState(brls::ButtonState::DISABLED);
+    }
+    else {
+        this->button1->setLabel(text);
+        this->button1->setState(brls::ButtonState::ENABLED);
+    }
+    this->button1->invalidate();
+    this->button1->frame(ctx);
+}

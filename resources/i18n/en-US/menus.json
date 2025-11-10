@@ -14,6 +14,7 @@
     "getting_cheats": "Getting cheat codes",
     "menu": "Cheat menu",
     "view": "View installed cheats",
+    "settings": "Cheat settings",
     "exclude": "Exclude games from receiving cheat updates",
     "delete_existing": "Delete all existing cheat codes",
     "delete_orphaned": "Delete orphaned cheat codes",
@@ -22,12 +23,10 @@
     "gbatemp_title": "GBAtemp.net cheats",
     "get_gbatemp": "Download individual cheat codes",
     "get_cheatslips": "Download Cheat Slips cheat sheets",
-    "cheats_label": "\u25c6 Download individual cheat codes from the GBAtemp.net database or cheat sheets from Cheat Slips",
+    "cheats_label": "◆ Download individual cheat codes from the GBAtemp.net database or cheat sheets from Cheat Slips",
     "cheatslips_dl": "Download a selection of cheat sheets from Cheat Slips.\nThose cheat codes will be added to the end of your existing cheat file.",
-    "delete_file": "Delete existing cheat file",
     "cheatslips_error": "Could not fetch selected cheat codes/invalid token.",
     "quota": "Quota exceeded for today!\nHead on to 'https://www.cheatslips.com/subscriptions' to see how to increase it.",
-    "sheet_content": "Cheatsheet content",
     "cheatslips_select": "Select a game to download cheats for.",
     "cheatslips_wrong_id": "Couldn't retrieve token, make sure you enter your login properly",
     "kb_error": "If they keyboard did not show up, try running the app with full RAM access (title override)",
@@ -43,7 +42,6 @@
     "bid_tid_info": "Those cheats will be added to the end of your existing cheat file.",
     "dl_cheatcodes": "Download cheat code",
     "dl_successful": "Successfully downloaded the following cheat code:\n{}",
-    "applet_mode_not_supported": "Due to memory constraints, in applet mode you may only fetch cheat codes for the game you're currently playing. Please launch AIO-Switch-Updater through title override to download cheat codes for any game you own.",
     "cheatfile_label": "Here are the cheat codes listed in file {}",
     "not_found": "No proper cheat codes could be found for this game",
     "show_existing": "Show existing",
@@ -56,8 +54,19 @@
     "gfx_title": "Graphics enhancing cheats",
     "get_gfx": "Download individual graphics enhancing cheat codes"
   },
-  "kefir":{
-    "all_done": "All done!\nThe changes will take effect after the console is rebooted."
+  "cheat_settings": {
+    "title": "Cheat Settings",
+    "current_status": "Configuration Status",
+    "config_ready": "Settings ready for configuration",
+    "auto_enable_cheats": "Auto-enable cheats by default",
+    "remember_state": "Remember cheat state between reboots",
+    "create_config": "Create default configuration file",
+    "config_created": "Configuration file created successfully!",
+    "config_create_failed": "Failed to create configuration file!",
+    "restart_to_payload": "Restart to Payload",
+    "restart_confirm": "Restart system to apply cheat settings?",
+    "info": "Information",
+    "info_desc": "Configure Atmosphere cheat settings. Changes require restart."
   },
   "common": {
     "downloading": "Downloading…",
@@ -78,7 +87,12 @@
     "cancel": "Cancel",
     "off": "Off",
     "selected": "Selected",
-    "applet_mode_not_supported": "This feature isn't available in applet mode. Please launch AIO-Switch-Updater through title override to access it.",
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "unknown": "Unknown",
+    "found": "Found",
+    "missing": "Missing",
+    "applet_mode_not_supported": "This feature isn't available in applet mode. Please launch AIO-Switch-Updater-Reborn through title override to access it.",
     "nothing_to_see": "Nothing to see here!"
   },
   "changelog": {
@@ -111,7 +125,7 @@
   },
   "main": {
     "getting": "Getting {}",
-    "firmware_text": "\u25c6 Firmware dumps from 'https://darthsternie.net/switch-firmwares/'. Once downloaded, it will be extracted in '/firmware'. You can then install the update through Daybreak.",
+    "firmware_text": "\u25c6 Once downloaded, firmware will be extracted in '/firmware'. You can then install the update through Daybreak.",
     "firmware_version": "\ue016  Current firmware version: ",
     "cheats_text": "\u25c6 This will download a daily updated archive of cheat codes from 'gbatemp.net'. Cheat codes for games you don't have installed won't be extracted to your SD card. You can turn off cheat updates for specific games in 'Tools→Cheat menu'.\n\u25c6 Current cheats version: ",
     "get_cheats": "Download GBAtemp.net cheat archive (ver {})",

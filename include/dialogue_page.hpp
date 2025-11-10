@@ -48,3 +48,25 @@ private:
 public:
     DialoguePage_ams(brls::StagedAppletFrame* frame, const std::string& text, bool erista = true) : DialoguePage(), erista(erista), text(text), frame(frame) { CreateView(); }
 };
+
+class DialoguePage_confirm : public DialoguePage
+{
+private:
+    void instantiateButtons() override;
+    std::string text;
+    brls::StagedAppletFrame* frame;
+public:
+    DialoguePage_confirm(brls::StagedAppletFrame* frame, const std::string& text) : DialoguePage(), text(text), frame(frame) { CreateView(); }
+};
+
+
+class DialoguePage_restart : public DialoguePage
+{
+private:
+    std::chrono::system_clock::time_point start = std::chrono::high_resolution_clock::now();
+    void instantiateButtons() override;
+    std::string text;
+public:
+    DialoguePage_restart(const std::string& text) : DialoguePage(), text(text) { CreateView(); }
+    void draw(NVGcontext* vg, int x, int y, unsigned width, unsigned height, brls::Style* style, brls::FrameContext* ctx) override;
+};

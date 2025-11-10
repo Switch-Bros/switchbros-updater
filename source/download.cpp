@@ -19,7 +19,7 @@
 namespace i18n = brls::i18n;
 using namespace i18n::literals;
 
-constexpr const char API_AGENT[] = "HamletDuFromage";
+constexpr const char API_AGENT[] = "exploitz86";
 constexpr int _1MiB = 0x100000;
 
 using json = nlohmann::ordered_json;

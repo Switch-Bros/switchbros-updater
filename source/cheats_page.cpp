@@ -1,6 +1,7 @@
 #include "cheats_page.hpp"
 
 #include "app_page.hpp"
+#include "cheat_settings_page.hpp"
 #include "confirm_page.hpp"
 #include "constants.hpp"
 #include "current_cfw.hpp"
@@ -20,6 +21,12 @@ CheatsPage::CheatsPage() : AppletFrame(true, true)
     item = new brls::ListItem("menus/cheats/view"_i18n);
     item->getClickEvent()->subscribe([](brls::View* view) {
         brls::Application::pushView(new AppPage_DownloadedCheats());
+    });
+    list->addView(item);
+
+    item = new brls::ListItem("menus/cheats/settings"_i18n);
+    item->getClickEvent()->subscribe([](brls::View* view) {
+        brls::Application::pushView(new CheatSettingsPage());
     });
     list->addView(item);
 

@@ -125,7 +125,8 @@ ToolsTab::ToolsTab(const std::string& tag, const nlohmann::ordered_json& payload
         std::vector<std::pair<std::string, std::string>> languages{
             std::make_pair("American English ({})", "en-US"),
             std::make_pair("Русский ({})", "ru"),
-            std::make_pair("Українська ({})", "ua")};
+            std::make_pair("Українська ({})", "ua"),
+            std::make_pair("Korean ({})", "ko")};
         brls::AppletFrame* appView = new brls::AppletFrame(true, true);
         brls::List* list = new brls::List();
         brls::ListItem* listItem;

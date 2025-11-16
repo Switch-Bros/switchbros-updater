@@ -441,7 +441,6 @@ namespace util {
 void cleanup()
 {
     std::filesystem::remove(AMS_FILENAME);
-    std::filesystem::remove(APP_FILENAME);
     std::filesystem::remove(FIRMWARE_FILENAME);
     std::filesystem::remove(CHEATS_FILENAME);
     std::filesystem::remove(BOOTLOADER_FILENAME);

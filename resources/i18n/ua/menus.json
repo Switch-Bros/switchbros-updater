@@ -19,6 +19,7 @@
     "delete_orphaned": "Видалити чити для відсутніх ігор",
     "delete_all": "Видалити всі чити",
     "deleting": "Видалення...",
+    "settings": "Налаштування",
     "cheastlips_title": "Чити з сайту CheatSlips.com",
     "get_cheatslips": "Завантажити чити з CheatSlips.com",
     "get_gbatemp": "Завантажити чити з GBAtemp.net",
@@ -53,6 +54,20 @@
     "old_cheats_found": "Знайдено чити, що відповідають цьому/цім BID - [ {}].",
     "cheatslips_logout": "Вийти"
   },
+  "cheat_settings": {
+    "title": "Налаштування чітів",
+    "current_status": "Статус конфігурації",
+    "config_ready": "Готово до налаштування",
+    "auto_enable_cheats": "Автоматично вмикати чіти",
+    "remember_state": "Запам'ятовувати стан чітів після перезавантаження",
+    "create_config": "Створити файл конфігурації",
+    "config_created": "Файл конфігурації успішно створено!",
+    "config_create_failed": "Не вдалося створити файл конфігурації!",
+    "restart_to_payload": "Перезавантаження у Payload",
+    "restart_confirm": "Перезавантажити систему, щоб застосувати налаштування чітів?",
+    "info": "Інформація",
+    "info_desc": "Налаштування чітів Atmosphere. Зміни потребують перезавантаження."
+  },
   "kefir":{
     "all_done": "Все готово!\nЗміни набудуть чинності після перезавантаження консолі"
   },
@@ -63,6 +78,8 @@
     "back": "Повернутися",
     "continue": "Продовжити",
     "download": "Завантаження:\n",
+    "start_download": "Завантажити",
+    "low_fw_warning": "WARNING!!!\n\nПри пониженні версії системного ПЗ приставка може не завантажуватися,\nдоки не буде скинута до заводських налаштувань. Це можна зробити через\n'hekate > Payloads > TegraExplorer',\n обравши скрипт 'SD:/congig/DowngradeFix.te',\nабо вручну за відеоінструкцією: https://bit.ly/fw_downgrade\n\n",
     "from": "\n\nДжерело:\n",
     "ok": "ОК",
     "shut_down": "Вимкнення",
@@ -72,7 +89,7 @@
     "yes": "Так",
     "go_back": "Повернутися",
     "confirm": "Підтвердити",
-    "cancel": "Відміна",
+    "cancel": "Відмінити",
     "applet_mode_not_supported": "Ця функція недоступна в аплеті (через альбоми). Перезапустіть програму в режимі тайтла (через форвардер або гру), щоб скористатися нею.",
     "nothing_to_see": "Оновлення не знайдено!"
   },
@@ -200,7 +217,7 @@
   "language": {
     "system_default": "System default",
     "en-US": "American English (en-US)",
-    "ko": "Korean (ko)",
+    "ko": "한국어 (ko)",
     "ru": "Russian (ru)",
     "ua": "Ukrainian (ua)"
   },

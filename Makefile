@@ -182,7 +182,7 @@ else
 endif
 
 nxlink:
-	nxlink -a 192.168.50.28 -p /kefir-updater/kefir-updater.nro output/kefir-updater.nro
+	nxlink -a 192.168.50.186 -p /kefir-updater/kefir-updater.nro output/kefir-updater.nro
 
 copy:
 	@cp $(CURDIR)/output/kefir-updater.nro ~/dev/_kefir/kefir/switch/kefir-updater/kefir-updater.nro

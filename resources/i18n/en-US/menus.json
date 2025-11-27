@@ -75,6 +75,7 @@
     "back": "Back",
     "continue": "Continue",
     "download": "Downloading:\n",
+    "start_download": "Download",
     "from": "\n\nFrom:\n",
     "ok": "OK",
     "shut_down": "Shut down",
@@ -93,7 +94,8 @@
     "found": "Found",
     "missing": "Missing",
     "applet_mode_not_supported": "This feature isn't available in applet mode. Please launch AIO-Switch-Updater-Reborn through title override to access it.",
-    "nothing_to_see": "Nothing to see here!"
+    "nothing_to_see": "Nothing to see here!",
+    "low_fw_warning": "WARNING!!!\n\nDowngrading system firmware may prevent the console from booting until a factory reset is performed. This can be done via\n`hekate > Payloads > TegraExplorer`,\nby selecting the script at `SD:/config/DowngradeFix.te`/,\nor manually by following the video guide: https://bit.ly/fw_downgrade\n\n"
   },
   "changelog": {
     "changelog": "Changelog"
@@ -234,5 +236,12 @@
     "of": "of",
     "download_progress": "({:.1f} MB of {:.1f} MB - {:.1f} MB/s)",
     "time_left": "({} left)"
+  },
+  "language": {
+    "system_default": "System default",
+    "en-US": "American English (en-US)",
+    "ko": "한국어 (ko)",
+    "ru": "Russian (ru)",
+    "ua": "Ukrainian (ua)"
   }
 }

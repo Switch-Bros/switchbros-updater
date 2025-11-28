@@ -1,12 +1,5 @@
 # Kefir-updater
 
-<a href="https://liberapay.com/HamletDuFromage/donate"><img alt="Donate using Liberapay to switch-aio-updater's author HamletDuFromage" src="https://liberapay.com/assets/widgets/donate.svg"></a>
-[![btc](https://img.shields.io/badge/BTC-1CoFc1bY5AHLP6Noe1zmqnJnp7ZWBxyo79-yellow?logo=bitcoin)](https://github.com/HamletDuFromage/aio-switch-updater#like-the-app)
-[![eth](https://img.shields.io/badge/ETH-0xf68f568e21a15934e0e9a6949288c3ca009140ba-purple?logo=ethereum)](https://github.com/HamletDuFromage/aio-switch-updater#like-the-app)
-[![xmr](https://img.shields.io/badge/XMR-88wjCuhHX3oNhVpEdYeUx3LvrkdTvcTHx7v7L5fQpjCg7QiAReJUVR4LPase5Byj2UhdVdLtvysJaXTFKq2EnuvuLjvQMGL-orange?logo=monero)](https://github.com/HamletDuFromage/aio-switch-updater#like-the-app)
-
-<!-- ([![ko-fi](https://img.shields.io/badge/ko--fi-buy%20me%20a%20coffee-ff69b4)](https://ko-fi.com/hamletdufromage)) -->
-
 <p align="center">
 <img src = "https://user-images.githubusercontent.com/18294541/119040795-8880cf80-b9be-11eb-88bd-6dac1d24ebe6.jpg"\><br>
 </p>
@@ -87,9 +80,51 @@ I do not own, host nor distribute any of the files that can be downloaded with t
 - [fennectech](https://github.com/fennectech) for helping test the app and providing suggestions.
 - Iliak for cheatslips.com.
 
-### Like the app?
+## Donate to kefir's dev
+### Paypal
+[![PayPal](https://github.com/rashevskyv/kefir/assets/18294541/5e8a41b1-a15e-4e2c-a1fc-9230379ca1fa)](https://www.paypal.com/donate/?hosted_button_id=S5BLF972J8G92)
 
-- Liberapay : <a href="https://liberapay.com/HamletDuFromage/donate"><img alt="Donate using Liberapay to switch-aio-updater's author HamletDuFromage" src="https://liberapay.com/assets/widgets/donate.svg"></a>
-- BTC: 1CoFc1bY5AHLP6Noe1zmqnJnp7ZWBxyo79
-- ETH: 0xf68f568e21a15934e0e9a6949288c3ca009140ba
-- Monero (XMR): 88wjCuhHX3oNhVpEdYeUx3LvrkdTvcTHx7v7L5fQpjCg7QiAReJUVR4LPase5Byj2UhdVdLtvysJaXTFKq2EnuvuLjvQMGL
+### Банка monobank
+[![mono](https://github.com/user-attachments/assets/adc1d908-c511-4e03-8d63-f0370a7752bd)](https://send.monobank.ua/jar/9PwYEXHYbs)
+
+## Donate for support Ukraine
+### 🇺🇦 UKRAINE NEEDS YOUR HELP NOW!
+>
+> I'm the creator of this project and I'm Ukrainian.
+>
+> **My country, Ukraine, [is being invaded by the Russian Federation, right now](https://www.bbc.com/news/world-europe-60504334)**. I've fled Ivano-Frankivs'k and now I'm safe with my family in the western part of Ukraine. At least for now.
+> Russia is hitting target all over my country by ballistic missiles.
+>
+> **Please, save me and help to save my country!**
+>
+> Ukrainian National Bank opened [an account to Raise Funds for Ukraine’s Armed Forces](https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi):
+>
+> ```
+> SWIFT Code NBU: NBUA UA UX
+> JP MORGAN CHASE BANK, New York
+> SWIFT Code: CHASUS33
+> Account: 400807238
+> 383 Madison Avenue, New York, NY 10179, USA
+> IBAN: UA843000010000000047330992708
+> ```
+> 
+> [Come Back and Alive found (savelife.in.ua)](https://savelife.in.ua/)
+> 
+> ```
+> BITCOIN
+> bc1qkd5az2ml7dk5j5h672yhxmhmxe9tuf97j39fm6
+> 
+> ETHEREUM (eth, usdt, usdc)
+> 0xa1b1bbB8070Df2450810b8eB2425D543cfCeF79b
+> 0x93Bda139023d582C19D70F55561f232D3CA6a54c
+> 
+> TRC20 (tether)
+> TX9aNri16bSxVYi6oMnKDj5RMKAMBXWzon
+> 
+> Solana (sol)
+> 8icxpGYCoR8SRKqLYsSarcAjBjBPuXAuHkeJjJx5ju7a
+> ```
+>
+> You can also donate to [charity supporting Ukrainian army](https://savelife.in.ua/en/donate/).
+>
+> **THANK YOU!**

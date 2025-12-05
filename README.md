@@ -1,48 +1,60 @@
-# Kefir-updater
+# SwitchBros-Updater
+<img alt="GitHub" src="https://img.shields.io/github/license/Switch-Bros/switchbros-updater?label=Lizenz&style=plastic"> [![Github Release](https://img.shields.io/github/v/release/Switch-Bros/switchbros-updater?label=Aktuelle%20Version&style=plastic)](https://github.com/Switch-Bros/switchbros-updater) [![Downloads latest](https://img.shields.io/github/downloads/Switch-Bros/switchbros-updater/total?label=Alle%20Downloads&style=plastic)](https://github.com/Switch-Bros/switchbros-updater/releases/tag/2.21.4-SB) [![Chat on Discord](https://img.shields.io/discord/322458533880659969?label=SB%20Discord&style=plastic)](https://discord.com/invite/switchbros)
 
 <p align="center">
-<img src = "https://user-images.githubusercontent.com/18294541/119040795-8880cf80-b9be-11eb-88bd-6dac1d24ebe6.jpg"\><br>
+<img src = "https://i.imgur.com/R2NRQ1g.jpg"\><br>
 </p>
 
-A Nintendo Switch homebrew app to download and update Kefir, FWs and cheat codes. Based on [AiO-switch-updater](https://github.com/HamletDuFromage/aio-switch-updater) by [HamletDuFromage](https://github.com/HamletDuFromage)
+Eine Nintendo Switch Homebrew App um das Switch Bros. Paket, Firmwares und Cheats herunterzuladen und zu aktualisieren.
 
-## How to install
-Copy the `kefir-updater.nro` directory to `/switch/kefir-updater` on your sdcard.
+Basiert stark auf [kefir-updater](https://github.com/rashevskyv/kefir-updater) von [rashevskyv](https://github.com/rashevskyv) der wiederrum stark auf [AiO-switch-updater](https://github.com/HamletDuFromage/aio-switch-updater) von [HamletDuFromage](https://github.com/HamletDuFromage) basiert (Original)!
 
-## Description of the features
-### ⬦ Update Kefir
-- Download the [Kefir](https://github.com/rashevskyv/kefir). After downloading the CFW archive, the program will extract it and launch [TegraExplorer](https://github.com/suchmememanyskill/TegraExplorer/releases/) for installing CFW in a proper way
+## Installation
+Kopiere den Inhalt der `switchbros-updater.zip`in das 'root' deiner SD-Karte!
+Jetzt kannst du im hbmenu (nicht über das Album bitte) die switchbros-updater app starten! 
 
-### ⬦ Download firmwares
-- Download firmare files to `/firmware` that can then be installed using DayBreak.
+## Beschreibung der Funktionen
+### ⬦ Switch Bros. aktualisieren
+- Lade unser [Switch Bros. Basis Paket](https://github.com/Switch-Bros/Switch-Bros.-Pack/releases/tag/1.1.0) herunter. Nach dem herunterladen unseres Pakets, wird es entpackt und deine Switch in die Payload [TegraExplorer](https://github.com/suchmememanyskill/TegraExplorer/releases/) gestartet um das Paket korrekt zu installieren/aktualisieren.
+Sollte deine Konsole in der app bleiben und nicht automatisch neu starten, dann halte einfach die POWER-Taste gedrückt (ca. 5 sek.) und wähle 'Neustart'!
 
-### ⬦ Download cheats
-- Downloads and extracts daily-updated cheat code. The program will only extract cheat codes for the games you own. By default, this homebrew will overwrite the existing cheats. If you have your own cheat files that you'd like to keep as is, you can turn off cheat updates for specific titles in `Tools->Cheat Menu`.
-- Since v2.0.0, aio-switch-updater can also download cheat sheets from [`CheatSlips.com`](https://www.cheatslips.com/). 
+### ⬦ Firmware Downloads
+- Lade Firmwares in den `/firmware` Ordner runter und installiere sie mit der App DayBreak.
 
-## Extras (in the `Tools` tab)
-- View which of your games got cheat codes from the app.
-- Launch the Switch's web browser.
+### ⬦ Cheat Downloads
+- Herunterladen und extrahieren täglich aktualisierter Cheats. Die App extrahiert nur die Cheats von Spielen die installiert sind. Standardmäßig, überschreibt diese App vorhandene Cheats. Wenn du deine eigene Cheats hast die unverändert bleiben sollen, dann kannst du Cheat updates für bestimmte Titel in `Tools->Cheat Menü` ausstellen.
+- Seit Version 2.0.0, kann aio-switch-updater Cheat Seiten von  [`CheatSlips.com`](https://www.cheatslips.com/) herunterladen. 
+
+## Extras (im Reiter `Tools`)
+- Schau nach welche Spiele Cheats besitzen.
+- Starte den Internet Browser der Switch.
 
 ## Screenshots
-![2021052023004100](https://user-images.githubusercontent.com/18294541/119041468-5754cf00-b9bf-11eb-9b98-9583f11445ed.jpg)
-![2021052023004600](https://user-images.githubusercontent.com/18294541/119041470-57ed6580-b9bf-11eb-80ce-05649d640432.jpg)
-![2021052023004800](https://user-images.githubusercontent.com/18294541/119041471-5885fc00-b9bf-11eb-8c9a-0944bc54afb3.jpg)
-![2021052023005100](https://user-images.githubusercontent.com/18294541/119041472-5885fc00-b9bf-11eb-93bb-9105c7441132.jpg)
-![2021052023005400](https://user-images.githubusercontent.com/18294541/119041473-591e9280-b9bf-11eb-82bc-bbf3364ca9a0.jpg)
-![2021052023005500](https://user-images.githubusercontent.com/18294541/119041474-591e9280-b9bf-11eb-8c0e-f668505cd6ce.jpg)
-![2021052023010100](https://user-images.githubusercontent.com/18294541/119041476-591e9280-b9bf-11eb-85e3-451d940bbd0c.jpg)
+<details><summary>Ausklappen um die Screenshots zu sehen</summary>
+  
+![1](https://user-images.githubusercontent.com/13203024/209908913-be40876e-dbfd-4719-9341-880128932374.jpg)
+![2](https://user-images.githubusercontent.com/13203024/209908959-937e87c9-7f2f-40ad-b7c6-78e4ef7b9afc.jpg)
+![3](https://user-images.githubusercontent.com/13203024/209908962-de5b431f-6cc8-46da-a35a-d1b1c4f52b35.jpg)
+![4](https://user-images.githubusercontent.com/13203024/209908967-599ef915-6f67-4895-a418-d4240ae1a3e7.jpg)
+![5](https://user-images.githubusercontent.com/13203024/209908975-091ef5b5-43f3-403d-afc4-5ad0090b2e00.jpg)
+![6](https://user-images.githubusercontent.com/13203024/209908978-41e2c7ad-53ba-4449-8d40-c8e143d8d23f.jpg)
 
-## Build
-You need to have installed devkitPro and devkitARM in order to compile this project.
+</details>
 
-Install the required dependencies:
+## Kompilieren
+
+<details><summary>Ausklappen um Instruktionen anzuzeigen</summary>
+
+Du musst devkitPro und devkitARM installiert haben um dieses Projekt zu kompilieren.
+
+Installiere die benötigten Zusatzmodule:
 ```bash
 $ sudo (dkp-)pacman -Sy
 ```
 ```bash
 $ sudo (dkp-)pacman -S  switch-glfw \
                         switch-curl \
+                        switch-glad \
                         switch-glm \
                         switch-mbedtls \
                         switch-zlib
@@ -51,80 +63,44 @@ Use [`switch-ex-curl`](https://github.com/eXhumer/switch-ex-curl) instead of `sw
 
 Use portlibs and build with libnx provided in this repository
 
-Clone the repository
+Repository klonen
 ```bash
-$ git clone --recursive https://github.com/HamletDuFromage/aio-switch-updater
-$ cd aio-switch-updater
+$ git clone --recursive https://github.com/Switch-Bros/TegraExplorer
+$ git clone --recursive https://github.com/Switch-Bros/switchbros-updater
+$ cd switchbros-updater
 ```
 
-Compile 
+Kompilieren 
 ```bash
-$ cd aiosu-forwarder
-$ make
+$ export DEVKITPRO=/opt/devkitpro
+$ export DEVKITARM=/opt/devkitpro/devkitARM
+$ export DEVKITPPC=/opt/devkitpro/devkitPPC
+
+$ cd sbu-forwarder
+$ make -j
 $ cd ..
-$ make
+$ make -j
 ```
 
-## Disclaimer
-I do not own, host nor distribute any of the files that can be downloaded with this homebrew tool. At the owner's request, I will immediately remove the ability to download any problematic file.
+</details>
 
-## Special thanks
-- [natinusala](https://github.com/natinusala) for the Borealis library.
-- [tiansongyu](https://github.com/tiansongyu) for bringing support for multi-language and for his Chinese translation.
-- [yyoossk](https://github.com/yyoossk) for the Japanese locale.
-- [sergiou87](https://github.com/sergiou87) for the Spanish locale.
-- [pedruhb](https://github.com/pedruhb) for the Brazilian locale.
-- [AD2076](https://github.com/AD2076) for the Italian locale.
-- [qazrfv1234](https://github.com/qazrfv1234) for the Traditional Chinese locale.
-- [Team Neptune](https://github.com/Team-Neptune) whose rcm code I used.
-- [fennectech](https://github.com/fennectech) for helping test the app and providing suggestions.
-- Iliak for cheatslips.com.
+## Haftungsausschluss
+Ich besitze, hoste oder vertreibe keine der Dateien, die mit diesem Homebrew-Tool heruntergeladen werden können. Auf Anfrage des Eigentümers werde ich die Möglichkeit, problematische Dateien herunterzuladen, sofort entfernen.
 
-## Donate to kefir's dev
-### Paypal
-[![PayPal](https://github.com/rashevskyv/kefir/assets/18294541/5e8a41b1-a15e-4e2c-a1fc-9230379ca1fa)](https://www.paypal.com/donate/?hosted_button_id=S5BLF972J8G92)
+## Besonderer Dank an
+- [natinusala](https://github.com/natinusala) für die Borealis Bibliothek.
+- [tiansongyu](https://github.com/tiansongyu) für die Unterstützung von mehreren Sprachen und der Chinesischen Übersetzung.
+- [yyoossk](https://github.com/yyoossk) für die japanische Übersetzung.
+- [sergiou87](https://github.com/sergiou87) für die spanische Übersetzung.
+- [pedruhb](https://github.com/pedruhb) für die brasilianische Übersetzung.
+- [AD2076](https://github.com/AD2076) für die italienische Übersetzung.
+- [qazrfv1234](https://github.com/qazrfv1234) für die Übersetzung in traditionellen chinesisch.
+- [Team Neptune](https://github.com/Team-Neptune) dessen rcm code ich nutze.
+- [fennectech](https://github.com/fennectech) dabei zu helfen die App zu testen und für seine Vorschläge.
+- Iliak für cheatslips.com.
 
-### Банка monobank
-[![mono](https://github.com/user-attachments/assets/adc1d908-c511-4e03-8d63-f0370a7752bd)](https://send.monobank.ua/jar/9PwYEXHYbs)
-
-## Donate for support Ukraine
-### 🇺🇦 UKRAINE NEEDS YOUR HELP NOW!
->
-> I'm the creator of this project and I'm Ukrainian.
->
-> **My country, Ukraine, [is being invaded by the Russian Federation, right now](https://www.bbc.com/news/world-europe-60504334)**. I've fled Ivano-Frankivs'k and now I'm safe with my family in the western part of Ukraine. At least for now.
-> Russia is hitting target all over my country by ballistic missiles.
->
-> **Please, save me and help to save my country!**
->
-> Ukrainian National Bank opened [an account to Raise Funds for Ukraine’s Armed Forces](https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi):
->
-> ```
-> SWIFT Code NBU: NBUA UA UX
-> JP MORGAN CHASE BANK, New York
-> SWIFT Code: CHASUS33
-> Account: 400807238
-> 383 Madison Avenue, New York, NY 10179, USA
-> IBAN: UA843000010000000047330992708
-> ```
-> 
-> [Come Back and Alive found (savelife.in.ua)](https://savelife.in.ua/)
-> 
-> ```
-> BITCOIN
-> bc1qkd5az2ml7dk5j5h672yhxmhmxe9tuf97j39fm6
-> 
-> ETHEREUM (eth, usdt, usdc)
-> 0xa1b1bbB8070Df2450810b8eB2425D543cfCeF79b
-> 0x93Bda139023d582C19D70F55561f232D3CA6a54c
-> 
-> TRC20 (tether)
-> TX9aNri16bSxVYi6oMnKDj5RMKAMBXWzon
-> 
-> Solana (sol)
-> 8icxpGYCoR8SRKqLYsSarcAjBjBPuXAuHkeJjJx5ju7a
-> ```
->
-> You can also donate to [charity supporting Ukrainian army](https://savelife.in.ua/en/donate/).
->
-> **THANK YOU!**
+### Gefällt dir die App? Unterstütze den Original Entwickler!
+- Liberapay : <a href="https://liberapay.com/HamletDuFromage/donate"><img alt="Spenden mit Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a>
+- BTC: 1CoFc1bY5AHLP6Noe1zmqnJnp7ZWBxyo79
+- ETH: 0xf68f568e21a15934e0e9a6949288c3ca009140ba
+- CHAINLINK: 0xf68f568e21a15934e0e9a6949288c3ca009140ba

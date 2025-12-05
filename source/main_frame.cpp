@@ -27,8 +27,7 @@ MainFrame::MainFrame() : TabFrame()
 
     s64 freeStorage;
     std::string tag = util::getLatestTag(TAGS_INFO);
-    this->setFooterText(fmt::format("menus/main/footer_text"_i18n,
-                                    (!tag.empty() && tag != AppVersion) ? AppVersion + "menus/main/new_update"_i18n : AppVersion,
+    this->setFooterText(fmt::format("menus/main/footer_text"_i18n, AppVersion,
                                     R_SUCCEEDED(fs::getFreeStorageSD(freeStorage)) ? (float)freeStorage / 0x40000000 : -1));
 
     json hideStatus = fs::parseJsonFile(HIDE_TABS_JSON);
@@ -36,9 +35,6 @@ MainFrame::MainFrame() : TabFrame()
     download::getRequest(NXLINKS_URL, nxlinks);
 
     bool erista = util::isErista();
-
-    if (!util::getBoolValue(hideStatus, "about"))
-        this->addTab("menus/main/about"_i18n, new AboutTab());
 
     if (!util::getBoolValue(hideStatus, "atmosphere"))
         this->addTab("menus/main/update_ams"_i18n, new AmsTab_Regular(nxlinks, erista));
@@ -57,6 +53,9 @@ MainFrame::MainFrame() : TabFrame()
 
     if (!util::getBoolValue(hideStatus, "tools"))
         this->addTab("menus/main/tools"_i18n, new ToolsTab(tag, util::getValueFromKey(nxlinks, "payloads"), erista, hideStatus));
+
+    if (!util::getBoolValue(hideStatus, "about"))
+        this->addTab("menus/main/about"_i18n, new AboutTab());
 
     this->registerAction("", brls::Key::B, [this] { return true; });
 }

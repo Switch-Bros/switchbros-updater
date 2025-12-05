@@ -28,7 +28,7 @@ ConfirmPage::ConfirmPage(brls::StagedAppletFrame* frame, const std::string& text
 
 ConfirmPage_Done::ConfirmPage_Done(brls::StagedAppletFrame* frame, const std::string& text) : ConfirmPage(frame, text)
 {
-    this->button->setLabel("menus/common/back"_i18n);
+    this->button->setLabel("menus/common/continue"_i18n);
     this->done = true;
 }
 

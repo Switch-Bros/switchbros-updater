@@ -1,9 +1,8 @@
 {
-    "ams": {
-        "Name of Atmosphère pack": "link_to_zip",
-        "Name of another pack": "link_to_zip"
+    "Paket": {
+        "SwitchBros. DevPaket": "https://github.com/Switch-Bros/nx-links/releases/download/2/SwitchBros_BasisPaket.zip"
     },
-    "misc": {
-        "name of download": "link"
+    "Sonstiges": {
+        "Downloadname": "link"
     }
 }

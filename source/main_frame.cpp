@@ -36,9 +36,6 @@ MainFrame::MainFrame() : TabFrame()
 
     bool erista = util::isErista();
 
-    if (!util::getBoolValue(hideStatus, "about"))
-        this->addTab("menus/main/about"_i18n, new AboutTab());
-
     if (!util::getBoolValue(hideStatus, "atmosphere"))
         this->addTab("menus/main/update_ams"_i18n, new AmsTab_Regular(nxlinks, erista));
 
@@ -56,6 +53,9 @@ MainFrame::MainFrame() : TabFrame()
 
     if (!util::getBoolValue(hideStatus, "tools"))
         this->addTab("menus/main/tools"_i18n, new ToolsTab(tag, util::getValueFromKey(nxlinks, "payloads"), erista, hideStatus));
+
+    if (!util::getBoolValue(hideStatus, "about"))
+        this->addTab("menus/main/about"_i18n, new AboutTab());
 
     this->registerAction("", brls::Key::B, [this] { return true; });
 }

@@ -21,4 +21,4 @@ resources/inter
 resources/.gitignore
 rcm/output/
 rcm/build/
-
+/output

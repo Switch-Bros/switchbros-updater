@@ -3,7 +3,7 @@
     "title": "SwitchBros Updater",
     "copyright": "SwitchBros Updater (AIO-Switch-Updater fork) is licensed under GPL-3.0",
     "disclaimers_title": "Disclaimers",
-    "disclaimers": "\u25c6 Aside from cheat codes that are mirrored from the main GBAtemp thread, HamletDuFromage isn't hosting anything. All credits go to respective owners.\n\u25c6 Links are refreshed every 30 minutes. If a link remains broken after 30 minutes have passed, please open a Github issue.",
+    "disclaimers": "\u25c6 Aside from cheat codes that are mirrored from the main GBAtemp thread, HamletDuFromage isn't hosting anything. All credits go to respective owners.\n\u25c6 Links are refreshed every 30 minutes. If a link remains broken after 30 minutes have passed, please open a 'Ticket' on our Discord Server:\n\nhttps://discord.gg/FqRs3CdnSW",
     "donate": "\u25c6 Like the app? Consider donating to support my efforts: 'https://git.io/donate_homlet'"
   },
   "cheats": {
@@ -57,7 +57,7 @@
     "get_gfx": "Download individual graphics enhancing cheat codes"
   },
   "switchbros":{
-    "all_done": "All done!\nThe changes will take effect after the console is rebooted."
+    "all_done": "Completed!\nRestart your console to apply all changes."
   },
   "common": {
     "downloading": "Downloading…",
@@ -86,7 +86,7 @@
   },
   "payloads": {
     "dl_payloads": "Download payloads",
-    "select": " Select a payload to reboot to.",
+    "select": "Select a payload to reboot to.",
     "set_reboot_payload": "Set as reboot_payload.bin",
     "set_update_bin": "Set as /bootloader/update.bin",
     "copy_success": "Successfully copied `{}` to `{}`."
@@ -103,7 +103,7 @@
   "pro_con": {
     "title": "Pro controller color swapper",
     "desc": "You can change the internal color of your Pro controller. Make sure it's set to player 1.",
-    "warning": "SwitchBros Updater does not currently support changing Pro controller grip color. Use Joy-Con Toolkit on PC instead.",
+    "warning": "SwitchBros-Updater does not currently support changing Pro controller grip color. Use Joy-Con Toolkit on PC instead.",
     "label": "Pro controller color swapper",
     "backing_up": "Backing up the color profile.",
     "all_done": "All done! You may need to turn your controller on and off for the change to take effect.",
@@ -123,13 +123,14 @@
     "app": "app",
     "cfw": "CFW",
     "ams": "SwitchBros",
-    "ams_text": "\u25c6 From this menu, you can download and update the SwitchBros Pack custom firmware necessary to run homebrew software.",
-    "switchbros_text": "\u25c6 From this menu, you can download and update the SwitchBros Pack which provides a complete CFW.",
-    "cfw_text": "\u25c6 Alternative CFWs, bootloaders.",
+    "ams_text": "\u25c6 Download the SwitchBros. package and update it to the latest version.\n\u25c6 After downloading and extracting, the console will reboot into the SwitchBros. payload to execute the update script.\nIf Hekate appears, simply launch TegraExplorer.\n\nPlease do not interrupt the SwitchBros. update or the payload to avoid issues!",
+    "switchbros": "Current SwitchBros Version: ",
+    "switchbros_text": "\u25c6 Download the SwitchBros_BasisPaket and update it to the newest Version.\n\u25c6 After downloading and extracting your console reboots into the SwitchBros. payload to start the update script.\nIf it boots into hekate, just start TegraExplorer.\n\nPlease do not interrupt the SwitchBros. update or the payload to avoid issues!",
+    "cfw_text": "\u25c6 Update SwitchBros to the current Version",
     "bootloaders_text": "\u25c6 Download and update bootloaders.",
     "cheats": "cheats",
-    "links_not_found": "Could not find a download link, make sure the Switch has access to the internet.\nIf this problem persists, please open an issue on Github.",
-    "new_update": " - New app update available",
+    "links_not_found": "Could not find a download link, make sure the Switch has access to the internet.\nIf this problem persists, please open a 'Ticket' on our Discord Server:\n\nhttps://discord.gg/FqRs3CdnSW",
+    "new_update": "- New app update available",
     "about": "About",
     "update_ams": "Update SB-Pack",
     "custom_downloads": "Custom downloads",
@@ -138,15 +139,16 @@
     "download_firmware": "Download firmwares",
     "download_cheats": "Download cheats",
     "tools": "Tools",
-    "launch_warning": "Please pay attention to the following points before using the app:\n\n\u25c6 Read up on how to manually update your Switch first. This will help you understand the app better and you'll know what to do in case something goes wrong.\n\u25c6 In order to avoid any risk of data corruption, using this app on an exFAT SD card is STRONGLY discouraged.\n\n\u25c6 The latest information about features that have been introduced and/or changed is available in the  Tools→Changelog menu.\n\nThis screen won't show again.",
+    "launch_warning": "Please keep the following points in mind before using the app:\n\n\u25c6 First, read how to manually update your Switch. This will help you better understand the app and know what to do if something goes wrong.\n\u25c6 Please note that using this app on an exFAT SD card is STRONGLY discouraged, as it is highly likely to corrupt your data over time.\n\n\u25c6 Some changes regarding the current features may have been introduced. Check them out via the Tools→Changelog menu.\nYou can also get help on our Discord server:\n\nhttps://discord.gg/FqRs3CdnSW\n\nThis screen will not be shown again.",
     "footer_text": "v{} | {:.1f}GB available",
-    "theme_warning": "It seems like you have a custom theme installed, this may cause your system to fail to boot after upgrading your firmware.\nPlease consider deleting it before upgrading.",
+    "theme_warning": "It seems like you have a custom theme installed, this may cause your system to fail to boot after upgrading your firmware.\nPlease consider deleting it before upgrading.\n\nDo you wish to proceed regardless?",
     "payloads_label": "\u25c6 Download RCM payloads to {}",
     "hekate_ipl_label": "\u25c6 Download a stripped down \"just works\" hekate_ipl.ini config file. This will overwrite your current hekate_ipl.ini."
   },
   "hide": {
     "title": "Hide tabs",
-    "desc": "Hide tabs from the main menu"
+    "desc": "Hide tabs from the main menu",
+    "update_ams_deepsea": "Atmosphère and DeepSea downloads"
   },
   "tools": {
     "cheats": "Cheats menu",
@@ -155,8 +157,8 @@
     "dl_payloads": "Download payloads to ",
     "inject_payloads": "Inject payload",
     "getting_payload": "Getting payload",
-    "update_app": "Update DBI {}",
-    "dl_app": "Downloading:\nDBI\n\nFrom:\n",
+    "update_app": "Update the app (v{})",
+    "dl_app": "Downloading:\nSwitchBros-updater\n\nFrom:\n",
     "changelog": "Changelog",
     "clean_up": "Clean up downloaded files",
     "hide_tabs": "Hide tabs",
@@ -168,23 +170,23 @@
     "language": "Change app language",
     "outdated_titles": "Missing updates",
     "latest_version_not_found": "Couldn't find updates info",
-    "outdated_titles_desc": "The following titles have available updates:"
+    "outdated_titles_desc": "Updates are available for the following titles:"
   },
   "utils": {
     "fw_warning": "Because of the size of FW archives, downloading firmwares in Applet Mode is not supported. Please launch the app with full RAM access.",
-    "overwrite": " Do you want to overwrite existing ",
-    "not_an_archive": "The downloaded file is not a zip archive. This is most likely due to a broken link. If the problem persists after more than 30 minutes, please open an issue on Github.",
+    "overwrite": "Do you want to overwrite existing ",
+    "not_an_archive": "The downloaded file is not a zip archive. This is most likely due to a broken link. If the problem persists after more than 30 minutes, please open a 'Ticket' on our Discord Server:\n\nhttps://discord.gg/FqRs3CdnSW",
     "overwrite_inis": "Do you want to overwrite existing .ini config files?",
     "set_hekate_reboot_payload": "Do you want to copy the Hekate payload `{}` to `{}`?",
-    "applet_webbrowser": "Running in applet mode/through a forwarder.\n\uE016 Please launch hbmenu by holding [R] on a game"
+    "applet_webbrowser": "SwitchBros-Updater is running in applet mode or through a forwarder.\n\uE016 Please relaunch AIO-Switch-Updater through hbmenu: on the Switch's main menu, hold [R] while selecting a game."
   },
   "ams_update": {
-    "reboot_rcm": "The Switch will now reboot to a special payload in order to finalise the install.",
+    "reboot_rcm": "The Switch will now reboot into TegraExplorer to finalise the install.\nIf it's booting hekate just start TegraExplorer payload!\nIf nothing happens restart your console with the POWER-Button.",
     "install_hekate": "Do you want to also download hekate?\nIf not, the Switch will now reboot to a special payload in order to finalise the install.",
-    "delete_contents": "Would you like to remove the existing '/atmosphere/contents/' directory? This will prevent crashes if you have sysmodules that do not support the latest SwitchBros-O-Sphere. Please note that it will delete all your existing sysmodules, mods and cheats.",
-    "delete_sysmodules_flags": "Would you like to delete all the custom sysmodules startup flags? This will turn off all your sysmodules and prevent crashes if you have sysmodules that do not support the latest SwitchBros-O-Sphere.",
-    "current_ams": "\u25c6 Current SwitchBros-O-Sphere:",
-    "current_switchbros": "Current version: \n\ue016 SwitchBros Pack: ",
+    "delete_contents": "Would you like to remove the existing '/atmosphere/contents/' directory? This will prevent crashes if you have sysmodules that do not support the latest SwitchBros-O-Sphere. Please note that it will delete all your existing sysmodules, mods and cheats and also game Icons.",
+    "delete_sysmodules_flags": "Would you like to delete all the custom sysmodules startup flags? This will turn off all your sysmodules and prevent crashes if you have sysmodules that do not support the latest Atmosphère.",
+    "current_ams": "\u25c6 Current Version of SwitchBros-O-Sphere:",
+    "current_switchbros": "Current Version: \n\u25c6 SwitchBros_BasisPaket: ",
     "erista_rev": "\u25c6 Erista revision",
     "mariko_rev": "\u25c6 Mariko revision",
     "show_module_description": "Show module's description",
@@ -193,8 +195,18 @@
     "getting_ams": "Getting SwitchBros. BasisPaket",
     "custom_packs_label": "\u25c6 Here are packs listed in the {} file. Be aware that those are not endorsed by SwitchBros-Updater so make sure you trust their source.",
     "custom_packs_ams": "\u25c6 Downloads for Packs (CFW).",
+    "download_custom_deepsea": "Download this custom DeepSea package",
+    "get_custom_deepsea": "Get custom DeepSea package",
+    "deepsea_label": "\u25c6 DeepSea by Team Neptune is a CFW pack that includes Atmosphère, hekate, and various homebrew apps.",
+    "switchbros_dev_label": "\u25c6 WARNING!!!\nThis is the next version of the SwitchBros_BasisPaket, which is still in DEVELOPMENT!!!\n\nOnly if you are truly adventurous and willing to contribute to the development by providing us with FEEDBACK on BUGS (which are definitely present), you can use it AT YOUR OWN RISK!\nIt helps us continuously improve the package!\n\nHowever, this package is not better, cooler, or anything like that. As the name suggests: It’s a development version for TESTING purposes before it becomes official!!!.",
+    "download_deepsea_package": "Compile and download",
+    "cant_fetch_deepsea": "Couldn't fetch packages. If the Problem persists, please open a 'Ticket' on our Discord Server:\n\nhttps://discord.gg/FqRs3CdnSW",
+    "build_your_deepsea": "Build your own custom DeepSea package by selecting packages",
+    "getting_ams": "Getting Atmosphère",
+    "custom_packs_label": "\u25c6 Here are packs listed in the {} file. Be aware that those are not endorsed by SwitchBros-Updater so make sure you trust their source.",
+    "custom_packs_ams": "\u25c6 Downloads containing the SwitchBros-O-Sphere custom firmware.",
     "custom_packs_misc": "\u25c6 Downloads containing homebrew and tools.",
-    "custom_download" : "Custom download",
+    "custom_download": "Custom download",
     "add_custom_link": "Add a custom link",
     "delete_custom_link": "Delete"
   },

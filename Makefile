@@ -22,7 +22,7 @@ DATA		:=	data
 INCLUDES	:=	include /lib/borealis/library/include/borealis/extern/nlohmann
 APP_TITLE	:=	0 SwitchBros Updater
 APP_AUTHOR	:=	HamletDuFromage, forked by SwitchBros
-APP_VERSION :=  2.24.3-SB
+APP_VERSION :=	2.25-SB
 TARGET		:=	$(notdir $(CURDIR))
 
 ROMFS				:=	resources
@@ -50,7 +50,7 @@ CFLAGS	+=	$(INCLUDE) -D__SWITCH__ \
 			-DAPP_TITLE="\"$(APP_TITLE)\"" -DAPP_TITLE_LOWER="\"$(TARGET)\""
 
 
-CXXFLAGS := $(CFLAGS) -std=gnu++23 -fexceptions -Wno-reorder
+CXXFLAGS	:= $(CFLAGS) -std=gnu++23 -fexceptions -Wno-reorder
 
 ASFLAGS	:=	-g $(ARCH)
 LDFLAGS	=	-specs=$(DEVKITPRO)/libnx/switch.specs -g $(ARCH) -Wl,-Map,$(notdir $*.map)
@@ -162,32 +162,33 @@ $(ROMFS):
 	@echo Merging ROMFS...
 	@cp -ruf $(CURDIR)/$(BOREALIS_PATH)/resources/i18n/. $(CURDIR)/$(ROMFS)/i18n/
 	@rm -rf $(CURDIR)/$(ROMFS)/i18n/*/installer.json $(CURDIR)/$(ROMFS)/i18n/*/main.json $(CURDIR)/$(ROMFS)/i18n/*/popup.json $(CURDIR)/$(ROMFS)/i18n/*/custom_layout.json
+	@$(MAKE) -C $(CURDIR)/TegraExplorer -f $(CURDIR)/TegraExplorer/Makefile
+	@cp $(CURDIR)/TegraExplorer/output/TegraExplorer.bin $(CURDIR)/$(ROMFS)/switchbros-updater.bin
+# @$(MAKE) -C $(CURDIR)/sbu-forwarder -f $(CURDIR)/sbu-forwarder/Makefile
+	@cp $(CURDIR)/sbu-forwarder/sbu-forwarder.nro $(CURDIR)/$(ROMFS)/sbu-forwarder.nro
 
 $(BUILD): $(ROMFS)
-	@$(MAKE) -C $(CURDIR)/../TegraExplorer -f $(CURDIR)/../TegraExplorer/Makefile
-	[ -d $(CURDIR)/output ] || mkdir -p $(CURDIR)/output
 	@[ -d $@ ] || mkdir -p $@
 	@MSYS2_ARG_CONV_EXCL="-D;$(MSYS2_ARG_CONV_EXCL)" $(MAKE) --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile
 	@cp $(OUTPUT).nro $(CURDIR)/output/switchbros-updater.nro
-	@cp $(CURDIR)/output/switchbros-updater.nro $(CURDIR)/../SwitchBros_BasisPaket/switch/switchbros-updater/switchbros-updater.nro
+#	@cp $(CURDIR)/output/switchbros-updater.nro $(CURDIR)/../SwitchBros_BasisPaket/switch/switchbros-updater/switchbros-updater.nro
 
 #---------------------------------------------------------------------------------
 clean:
 	@echo clean ...
 ifeq ($(strip $(APP_JSON)),)
 	@rm -fr $(BUILD) $(notdir $(CURDIR))*.nro $(notdir $(CURDIR))*.nacp $(notdir $(CURDIR))*.elf
-# @rm -fr $(CURDIR)/aiosu-forwarder/build $(CURDIR)/aiosu-forwarder/*.nro $(CURDIR)/aiosu-forwarder/*.nacp $(CURDIR)/aiosu-forwarder/*.elf
+# @rm -fr $(CURDIR)/sbu-forwarder/build $(CURDIR)/sbu-forwarder/*.nro $(CURDIR)/sbu-forwarder/*.nacp $(CURDIR)/sbu-forwarder/*.elf
 else
 	@rm -fr $(BUILD) $(TARGET).nsp $(TARGET).nso $(TARGET).npdm $(TARGET).elf
 endif
 
-nxlink:
-	nxlink -a 192.168.178.223 -p /switchbros-updater/switchbros-updater.nro output/switchbros-updater.nro
-
-copy:
-	@cp $(CURDIR)/output/switchbros-updater.nro $(CURDIR)/../SwitchBros_BasisPaket/switch/switchbros-updater/switchbros-updater.nro
-	@cp $(CURDIR)/../TegraExplorer/output/TegraExplorer_small.bin $(CURDIR)/../SwitchBros_BasisPaket/bootloader/payloads/TegraExplorer.bin
-
+# nxlink:
+#	nxlink -a 192.168.178.223 -p /switchbros-updater/switchbros-updater.nro output/switchbros-updater.nro
+#
+# copy:
+#	@cp $(CURDIR)/output/switchbros-updater.nro $(CURDIR)/../SwitchBros_BasisPaket/switch/switchbros-updater/switchbros-updater.nro
+#	@cp $(CURDIR)/TegraExplorer/output/TegraExplorer_small.bin $(CURDIR)/../SwitchBros_BasisPaket/switch/switchbros-updater/switchbros-updater.bin
 #---------------------------------------------------------------------------------
 else
 .PHONY:	all

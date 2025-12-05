@@ -111,14 +111,14 @@ void AmsTab_Regular::CreateLists()
     sbText->setHorizontalAlign(NVG_ALIGN_LEFT);
 
     this->addView(sbText);
-    this->addView(new brls::Label(brls::LabelStyle::MEDIUM, (CurrentCfw::running_cfw == CFW::ams ? "menus/ams_update/current_switchbros"_i18n + CurrentCfw::getAmsInfo() : "") + (erista ? "\n" + "menus/ams_update/erista_rev"_i18n : "\n" + "menus/ams_update/mariko_rev"_i18n), true));
+    this->addView(new brls::Label(brls::LabelStyle::DESCRIPTION, (CurrentCfw::running_cfw == CFW::ams ? "\n" + "menus/ams_update/current_switchbros"_i18n + CurrentCfw::getAmsInfo() : "") + (erista ? "\n" + "menus/ams_update/erista_rev"_i18n : "\n" + "menus/ams_update/mariko_rev"_i18n), true));
     CreateDownloadItems(util::getValueFromKey(cfws, "Atmosphere"));
 
     this->addView(new brls::Label(
         brls::LabelStyle::DESCRIPTION,
         "menus/ams_update/switchbros_dev_label"_i18n,
         true));
-    CreateDownloadItems(util::getValueFromKey(cfws, "entwicklung"));
+    CreateDownloadItems(util::getValueFromKey(cfws, "Entwicklung"));
 }
 
 std::string AmsTab_Regular::GetRepoName(const std::string& repo)
@@ -258,7 +258,7 @@ void AmsTab_Custom::AddLinkCreator()
     listItem->setHeight(LISTITEM_HEIGHT);
     listItem->getClickEvent()->subscribe([this, category](brls::View* view) {
         std::string title, link;
-        brls::Swkbd::openForText([&title](std::string text) { title = text; }, "Titel eingeben", "", 64, "", 0, "Bestaetigen", "Titel");
+        brls::Swkbd::openForText([&title](std::string text) { title = text; }, "Titel eingeben", "", 256, "", 0, "Bestaetigen", "Titel");
         brls::Swkbd::openForText([&link](std::string text) { link = text; }, "Direktlink eingeben", "", 256, "", 0, "Bestaetigen", "https://seite/download.zip");
         auto links = util::getValueFromKey(this->custom_packs, category);
         links[title] = link;

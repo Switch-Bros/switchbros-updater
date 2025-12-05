@@ -7,7 +7,7 @@ AboutTab::AboutTab()
 {
     // Subtitle
     brls::Label* subTitle = new brls::Label(
-        brls::LabelStyle::DIALOG,
+        brls::LabelStyle::REGULAR,
         "menus/about/title"_i18n,
         true);
     subTitle->setHorizontalAlign(NVG_ALIGN_CENTER);
@@ -16,7 +16,7 @@ AboutTab::AboutTab()
     // Copyright
     brls::Label* copyright = new brls::Label(
         brls::LabelStyle::DESCRIPTION,
-        "menus/about/copyright"_i18n + "\n© 2020-2023 HamletDuFromage, fork by SwitchBros.",
+        "menus/about/copyright"_i18n + "\n© 2020-2025 HamletDuFromage\nfork by SwitchBros.",
         true);
     copyright->setHorizontalAlign(NVG_ALIGN_CENTER);
     this->addView(copyright);

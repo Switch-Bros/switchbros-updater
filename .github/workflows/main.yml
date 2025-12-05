@@ -1,4 +1,4 @@
-name: Build SwitchBros-updater
+name: Build AIO-switch-updater
 
 on: 
   push:
@@ -16,12 +16,12 @@ jobs:
       run: |
         git submodule update --init --recursive
         
-    - name: Building switchbros-updater
+    - name: Building aio-switch-updater
       run: |
         make -C aiosu-forwarder -f Makefile
         make -j$(nproc)
         
     - uses: actions/upload-artifact@master
       with:
-        name: switchbros-updater
-        path: switchbros-updater.nro
+        name: aio-switch-updater
+        path: aio-switch-updater.nro

@@ -3,6 +3,8 @@
 #include <filesystem>
 #include <fstream>
 #include <string>
+#include <sstream>
+#include <chrono>
 
 #include "app_page.hpp"
 #include "confirm_page.hpp"
@@ -16,6 +18,118 @@
 
 namespace i18n = brls::i18n;
 using namespace i18n::literals;
+
+// --- Version Comparison Helpers ---
+
+std::vector<int> parseVersion(const std::string& versionString)
+{
+    std::vector<int> version;
+    std::stringstream ss(versionString);
+    std::string segment;
+    while (std::getline(ss, segment, '.')) {
+        if (segment.empty()) continue;
+        try {
+            size_t idx;
+            int part = std::stoi(segment, &idx);
+            version.push_back(part);
+        } catch (...) {
+            break; 
+        }
+    }
+    return version;
+}
+
+bool isVersionLower(const std::string& target, const std::string& current)
+{
+    std::vector<int> vTarget = parseVersion(target);
+    std::vector<int> vCurrent = parseVersion(current);
+
+    size_t len = std::max(vTarget.size(), vCurrent.size());
+
+    for (size_t i = 0; i < len; ++i) {
+        int t = (i < vTarget.size()) ? vTarget[i] : 0;
+        int c = (i < vCurrent.size()) ? vCurrent[i] : 0;
+
+        if (t < c) return true;
+        if (t > c) return false;
+    }
+    return false;
+}
+
+// --- Downgrade Warning Dialogue ---
+
+class DowngradeDialogue : public DialoguePage
+{
+private:
+    std::function<void()> onDownload;
+    std::chrono::system_clock::time_point startTime;
+    std::string currentVer;
+    std::string targetVer;
+
+public:
+    DowngradeDialogue(const std::string& current, const std::string& target, std::function<void()> cb) 
+        : onDownload(cb), currentVer(current), targetVer(target)
+    {
+        // 5 seconds timer
+        this->startTime = std::chrono::high_resolution_clock::now() + std::chrono::seconds(5);
+        this->CreateView();
+    }
+
+    void instantiateButtons() override
+    {
+        // Warning Label using the requested localization key
+        this->label = new brls::Label(
+            brls::LabelStyle::DIALOG,
+            fmt::format("menus/common/low_fw_warning"_i18n, targetVer, currentVer),
+            true
+        );
+
+        // Button 1: Start Download (Action)
+        this->button1->setLabel("menus/common/start_download"_i18n);
+        
+        // Copy callback to keep it valid
+        auto cb_copy = this->onDownload;
+        
+        this->button1->getClickEvent()->subscribe([cb_copy](brls::View* view) {
+            // Safe execution: just open the next view on top.
+            // DO NOT call popView() here to avoid crashing.
+            cb_copy(); 
+        });
+
+        // Button 2: Cancel (Safety)
+        this->button2->setLabel("menus/common/cancel"_i18n);
+        this->button2->getClickEvent()->subscribe([](brls::View* view) {
+            brls::Application::popView();
+        });
+    }
+
+    void draw(NVGcontext* vg, int x, int y, unsigned width, unsigned height, brls::Style* style, brls::FrameContext* ctx) override
+    {
+        this->label->frame(ctx);
+        this->button2->frame(ctx); // Cancel button always active
+
+        auto now = std::chrono::high_resolution_clock::now();
+        auto missing = std::max(0l, std::chrono::duration_cast<std::chrono::seconds>(this->startTime - now).count());
+
+        if (missing > 0) {
+            this->button1->setLabel(fmt::format("{} ({})", "menus/common/start_download"_i18n, missing));
+            this->button1->setState(brls::ButtonState::DISABLED);
+        } else {
+            this->button1->setLabel("menus/common/start_download"_i18n);
+            this->button1->setState(brls::ButtonState::ENABLED);
+        }
+        
+        this->button1->invalidate();
+        this->button1->frame(ctx);
+    }
+
+    brls::View* getDefaultFocus() override
+    {
+        return this->button2;
+    }
+};
+
+// --- ListDownloadTab Implementation ---
 
 ListDownloadTab::ListDownloadTab(const contentType type, const nlohmann::ordered_json& nxlinks) : brls::List(), type(type), nxlinks(nxlinks)
 {
@@ -64,43 +178,64 @@ void ListDownloadTab::createList(contentType type)
             const std::string text("menus/common/download"_i18n + link.first + "menus/common/from"_i18n + url);
             listItem = new brls::ListItem(link.first);
             listItem->setHeight(LISTITEM_HEIGHT);
+            
             listItem->getClickEvent()->subscribe([this, type, text, url, title](brls::View* view) {
-                brls::StagedAppletFrame* stagedFrame = new brls::StagedAppletFrame();
-                stagedFrame->setTitle(fmt::format("menus/main/getting"_i18n, contentTypeNames[(int)type].data()));
-                stagedFrame->addStage(new ConfirmPage(stagedFrame, text));
+                // Lambda to encapsulate the actual download logic
+                auto startDownloadAction = [this, type, text, url, title]() {
+                    brls::StagedAppletFrame* stagedFrame = new brls::StagedAppletFrame();
+                    stagedFrame->setTitle(fmt::format("menus/main/getting"_i18n, contentTypeNames[(int)type].data()));
+                    stagedFrame->addStage(new ConfirmPage(stagedFrame, text));
+                    if (type != contentType::payloads && type != contentType::hekate_ipl) {
+                        if (type != contentType::cheats || (this->newCheatsVer != this->currentCheatsVer && this->newCheatsVer != "offline")) {
+                            stagedFrame->addStage(new WorkerPage(stagedFrame, "menus/common/downloading"_i18n, [this, type, url]() { util::downloadArchive(url, type); }));
+                        }
+                        stagedFrame->addStage(new WorkerPage(stagedFrame, "menus/common/extracting"_i18n, [this, type]() { util::extractArchive(type, this->newCheatsVer); }));
+                    }
+                    else if (type == contentType::payloads) {
+                        fs::createTree(BOOTLOADER_PL_PATH);
+                        std::string path = std::string(BOOTLOADER_PL_PATH) + title;
+                        stagedFrame->addStage(new WorkerPage(stagedFrame, "menus/common/downloading"_i18n, [url, path]() { download::downloadFile(url, path, OFF); }));
+                    }
+                    else if (type == contentType::hekate_ipl) {
+                        fs::createTree(BOOTLOADER_PATH);
+                        std::string path = std::string(BOOTLOADER_PATH) + title;
+                        stagedFrame->addStage(new WorkerPage(stagedFrame, "menus/common/downloading"_i18n, [url, path]() { download::downloadFile(url, path, OFF); }));
+                    }
+
+                    std::string doneMsg = "menus/common/all_done"_i18n;
+                    switch (type) {
+                        case contentType::fw: {
+                            std::string contentsPath = util::getContentsPath();
+                            if (std::filesystem::exists(DAYBREAK_PATH)) {
+                                stagedFrame->addStage(new DialoguePage_fw(stagedFrame, doneMsg));
+                            }
+                            else {
+                                stagedFrame->addStage(new ConfirmPage_Done(stagedFrame, doneMsg));
+                            }
+                            break;
+                        }
+                        default:
+                            stagedFrame->addStage(new ConfirmPage_Done(stagedFrame, doneMsg));
+                            break;
+                    }
+                    brls::Application::pushView(stagedFrame);
+                };
+
+                // Check for downgrade if downloading firmware
                 if (type == contentType::fw) {
-                    std::string contentsPath = util::getContentsPath();
-                    for (const auto& tid : {"0100000000001000", "0100000000001007", "0100000000001013"}) {
-                        if (std::filesystem::exists(contentsPath + tid) && !std::filesystem::is_empty(contentsPath + tid)) {
-                            stagedFrame->addStage(new DialoguePage_confirm(stagedFrame, "menus/main/theme_warning"_i18n));
+                    SetSysFirmwareVersion ver;
+                    if (R_SUCCEEDED(setsysGetFirmwareVersion(&ver))) {
+                        std::string currentSysVer = ver.display_version;
+                        // title usually contains the version (e.g. "13.2.1")
+                        if (isVersionLower(title, currentSysVer)) {
+                            brls::Application::pushView(new DowngradeDialogue(currentSysVer, title, startDownloadAction));
+                            return; 
                         }
                     }
                 }
-                if (type != contentType::payloads && type != contentType::hekate_ipl) {
-                    if (type != contentType::cheats || (this->newCheatsVer != this->currentCheatsVer && this->newCheatsVer != "offline")) {
-                        stagedFrame->addStage(new WorkerPage(stagedFrame, "menus/common/downloading"_i18n, [this, type, url]() { util::downloadArchive(url, type); }));
-                    }
-                    stagedFrame->addStage(new WorkerPage(stagedFrame, "menus/common/extracting"_i18n, [this, type]() { util::extractArchive(type, this->newCheatsVer); }));
-                }
-                else if (type == contentType::payloads) {
-                    fs::createTree(BOOTLOADER_PL_PATH);
-                    std::string path = std::string(BOOTLOADER_PL_PATH) + title;
-                    stagedFrame->addStage(new WorkerPage(stagedFrame, "menus/common/downloading"_i18n, [url, path]() { download::downloadFile(url, path, OFF); }));
-                }
-                else if (type == contentType::hekate_ipl) {
-                    fs::createTree(BOOTLOADER_PATH);
-                    std::string path = std::string(BOOTLOADER_PATH) + title;
-                    stagedFrame->addStage(new WorkerPage(stagedFrame, "menus/common/downloading"_i18n, [url, path]() { download::downloadFile(url, path, OFF); }));
-                }
 
-                std::string doneMsg = "menus/common/all_done"_i18n;
-                if (type == contentType::fw && std::filesystem::exists(DAYBREAK_PATH)) {
-                        stagedFrame->addStage(new DialoguePage_fw(stagedFrame, doneMsg));
-                }
-                else {
-                    stagedFrame->addStage(new ConfirmPage_Done(stagedFrame, doneMsg));
-                }
-                brls::Application::pushView(stagedFrame);
+                // Normal execution
+                startDownloadAction();
             });
             this->addView(listItem);
         }
@@ -132,7 +267,21 @@ void ListDownloadTab::setDescription(contentType type)
     switch (type) {
         case contentType::fw: {
             SetSysFirmwareVersion ver;
-            description->setText(fmt::format("{}{}", "menus/main/firmware_text"_i18n, R_SUCCEEDED(setsysGetFirmwareVersion(&ver)) ? ver.display_version : "menus/main/not_found"_i18n));
+
+            brls::Label* fwText = new brls::Label(
+            brls::LabelStyle::DESCRIPTION,
+                fmt::format("menus/main/firmware_text"_i18n),
+                true);
+            fwText->setHorizontalAlign(NVG_ALIGN_LEFT);
+            this->addView(fwText);
+
+            brls::Label* fwVersion = new brls::Label(
+            brls::LabelStyle::MEDIUM,
+                fmt::format("{}{}", "menus/main/firmware_version"_i18n, R_SUCCEEDED(setsysGetFirmwareVersion(&ver)) ? ver.display_version : "menus/main/not_found"_i18n),
+                true);
+            fwVersion->setHorizontalAlign(NVG_ALIGN_LEFT);
+            this->addView(fwVersion);
+
             break;
         }
         case contentType::bootloaders:

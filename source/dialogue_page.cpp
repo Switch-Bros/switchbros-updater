@@ -39,6 +39,19 @@ void DialoguePage::draw(NVGcontext* vg, int x, int y, unsigned width, unsigned h
 {
     this->label->frame(ctx);
     this->button1->frame(ctx);
+
+    auto end = std::chrono::high_resolution_clock::now();
+    auto missing = std::max(1l - std::chrono::duration_cast<std::chrono::seconds>(end - start).count(), 0l);
+    auto text = std::string("menus/common/no"_i18n);
+    if (missing > 0) {
+        this->button2->setLabel(text + " (" + std::to_string(missing) + ")");
+        this->button2->setState(brls::ButtonState::DISABLED);
+    }
+    else {
+        this->button2->setLabel(text);
+        this->button2->setState(brls::ButtonState::ENABLED);
+    }
+    this->button2->invalidate();
     this->button2->frame(ctx);
 }
 
@@ -64,6 +77,8 @@ void DialoguePage::layout(NVGcontext* vg, brls::Style* style, brls::FontStash* s
         style->CrashFrame.buttonWidth,
         style->CrashFrame.buttonHeight);
     this->button2->invalidate();
+
+    start = std::chrono::high_resolution_clock::now() + std::chrono::milliseconds(150);
 }
 
 brls::View* DialoguePage::getDefaultFocus()
@@ -91,40 +106,14 @@ void DialoguePage_ams::instantiateButtons()
             util::rebootToPayload(RCM_PAYLOAD_PATH);
         }
         else {
-            if (std::filesystem::exists(UPDATE_BIN_PATH)) {
-                fs::copyFile(UPDATE_BIN_PATH, MARIKO_PAYLOAD_PATH_TEMP);
+            bpcInitialize();
+            bpcRebootSystem();
+            bpcExit();
             }
-            else {
-                fs::copyFile(REBOOT_PAYLOAD_PATH, MARIKO_PAYLOAD_PATH_TEMP);
-            }
-            fs::copyFile(RCM_PAYLOAD_PATH, MARIKO_PAYLOAD_PATH);
-            util::shutDown(true);
-        }
         brls::Application::popView();
     });
 
     this->label = new brls::Label(brls::LabelStyle::DIALOG, "menus/ams_update/install_hekate"_i18n + "\n\n" + this->text, true);
-    start = std::chrono::high_resolution_clock::now() + std::chrono::milliseconds(150);
-}
-
-void DialoguePage_ams::draw(NVGcontext* vg, int x, int y, unsigned width, unsigned height, brls::Style* style, brls::FrameContext* ctx)
-{
-    this->label->frame(ctx);
-    this->button1->frame(ctx);
-
-    auto end = std::chrono::high_resolution_clock::now();
-    auto missing = std::max(1l - std::chrono::duration_cast<std::chrono::seconds>(end - start).count(), 0l);
-    auto text = std::string("menus/common/no"_i18n);
-    if (missing > 0) {
-        this->button2->setLabel(text + " (" + std::to_string(missing) + ")");
-        this->button2->setState(brls::ButtonState::DISABLED);
-    }
-    else {
-        this->button2->setLabel(text);
-        this->button2->setState(brls::ButtonState::ENABLED);
-    }
-    this->button2->invalidate();
-    this->button2->frame(ctx);
 }
 
 void DialoguePage_fw::instantiateButtons()
@@ -138,12 +127,20 @@ void DialoguePage_fw::instantiateButtons()
     });
 
     this->button1->getClickEvent()->subscribe([this](View* view) {
+        fs::removeTheme();
         envSetNextLoad(DAYBREAK_PATH, fmt::format("\"{}\" \"/firmware\"", DAYBREAK_PATH).c_str());
         romfsExit();
         brls::Application::quit();
     });
 
     this->label = new brls::Label(brls::LabelStyle::DIALOG, fmt::format("{}\n\n{}", this->text, "menus/firmware/launch_daybreak"_i18n), true);
+}
+
+void DialoguePage_fw::draw(NVGcontext* vg, int x, int y, unsigned width, unsigned height, brls::Style* style, brls::FrameContext* ctx)
+{
+    this->label->frame(ctx);
+    this->button1->frame(ctx);
+    this->button2->frame(ctx);
 }
 
 void DialoguePage_confirm::instantiateButtons()
@@ -161,4 +158,39 @@ void DialoguePage_confirm::instantiateButtons()
     });
 
     this->label = new brls::Label(brls::LabelStyle::DIALOG, this->text, true);
+}
+
+void DialoguePage_restart::instantiateButtons()
+{
+    this->button1->getClickEvent()->subscribe([this](View* view) {
+        util::rebootToPayload(REBOOT_PAYLOAD_PATH);
+        brls::Application::popView();
+    });
+
+    this->button2->getClickEvent()->subscribe([this](View* view) {
+        brls::Application::popView();
+    });
+
+    this->label = new brls::Label(brls::LabelStyle::DIALOG, "menus/cheat_settings/restart_confirm"_i18n + "\n\n" + this->text, true);
+    start = std::chrono::high_resolution_clock::now() + std::chrono::milliseconds(150);
+}
+
+void DialoguePage_restart::draw(NVGcontext* vg, int x, int y, unsigned width, unsigned height, brls::Style* style, brls::FrameContext* ctx)
+{
+    this->label->frame(ctx);
+    this->button2->frame(ctx);
+
+    auto end = std::chrono::high_resolution_clock::now();
+    auto missing = std::max(1l - std::chrono::duration_cast<std::chrono::seconds>(end - start).count(), 0l);
+    auto text = std::string("menus/common/yes"_i18n);
+    if (missing > 0) {
+        this->button1->setLabel(text + " (" + std::to_string(missing) + ")");
+        this->button1->setState(brls::ButtonState::DISABLED);
+    }
+    else {
+        this->button1->setLabel(text);
+        this->button1->setState(brls::ButtonState::ENABLED);
+    }
+    this->button1->invalidate();
+    this->button1->frame(ctx);
 }

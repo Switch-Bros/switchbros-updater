@@ -1,0 +1,14 @@
+{
+    "hints": {
+        "ok": "확인",
+        "back": "뒤로",
+        "exit": "나가기"
+    },
+    "crash_frame": {
+        "button": "확인"
+    },
+
+    "thumbnail_sidebar": {
+        "save": "저장"
+    }
+}

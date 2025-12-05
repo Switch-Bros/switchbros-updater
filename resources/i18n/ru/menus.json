@@ -1,0 +1,235 @@
+{
+  "about": {
+    "title": "Kefir Updater",
+    "copyright": "Kefir Updater является форком AiO Switch Updater от HamletDuFromage и распространяется по лицензии GPL-3.0",
+    "disclaimers_title": "Важная информация",
+    "disclaimers": "\ue016  HamletDuFromage ничего не распространяет. Файлы с читами, что лежат в репозитории, просто зеркалятся с темы на gbatemp. Все авторские права принадлежат их владельцам.\n\ue016  Ссылки обновляются каждые полчаса. Если спустя полчаса ссылка так и не открывается, пожалуйста откройте issue на GitHub.\n",
+    "donate": "\ue016  Нравится приложение? Вы можете поддержать его автора финансово: 'https://git.io/donate_homlet'"
+  },
+  "cheats": {
+    "installed": "Установленные читы",
+    "label": "Проверка обновления читов. Если скачанный чит не работает, возможно он был создан под версию игры, отличную от установленной у вас!",
+    "downloading": "Загрузка:\nПоследние версии читов\n\nИсточник:\n",
+    "dl_latest": "Обновить установленные читы",
+    "getting_cheats": "Загрузка читов",
+    "menu": "Меню чит-кодов",
+    "view": "Просмотреть установленные читы",
+    "exclude": "Выбор игр для обновления читов",
+    "delete_existing": "Удалить все имеющиеся читы",
+    "delete_orphaned": "Удалить читы отсутствующих игр",
+    "delete_all": "Удалить все читы",
+    "deleting": "Удаление...",
+    "cheastlips_title": "Читы с сайта CheatSlips.com",
+    "get_cheatslips": "Скачать читы с CheatSlips.com",
+    "get_gbatemp": "Скачать читы с GBAtemp.net",
+    "cheatslips_label": "\ue016  Зайти на CheatSlips.com и скачать читы для установленных игр.",
+    "cheatslips_dl": "Скачать выбранные читы с сайта CheatSlips.com.\nСкачанные читы будут добавлены к существующему чит-файлу.",
+    "delete_file": "Удалить существующий чит-файл",
+    "cheatslips_error": "Не удалось получить выбранные чит-коды/недействительный токен.",
+    "quota": "Квота на сегодня превышена!\nЗайдите на https://www.cheatslips.com/subscriptions, чтобы узнать, как ее увеличить.",
+    "sheet_content": "Содержимое файла с читами (?)",
+    "cheatslips_select": "Скачать читы для выбранной игры.",
+    "cheatslips_wrong_id": "Не удалось получить токен.\nУбедитесь, что вы правильно ввели логин.",
+    "kb_error": "\nЕсли не отображалась клавиатура, попробуйте запустить приложение с полным доступом к ОЗУ (через игру или форвардер).",
+    "cheatslips_see_more": "Показать ещё",
+    "cheatslips_dl_cheats": "Скачать читы и вернуться",
+    "bid_not_found": "Не удалось получить идентификатор сборки. Попробуйте запустить Kefir updater с полным доступом к ОЗУ (через игру или форвардер).",
+    "exclude_titles": "Список установленных игр",
+    "exclude_titles_desc": "Вы можете отключить обновление читов для игр из списка ниже ('On' - обновлять читы, 'Off' - не обновлять)",
+    "exclude_titles_save": "Сохранить изменения и вернуться",
+    "dl_all": "Скачать и распаковать весь архив с читами с GBAtemp.net",
+    "gbatemp_dl": "Скачать выбранные читы с сайта GBAtemp. Скачанные читы будут добавлены к существующему чит-файлу.",
+    "gbatemp_dl_cheatcode": "Скачать читы",
+    "gbatemp_dl_successful_dl": "Выбранный читкод скачан успешно:\n{}",
+    "applet_mode_not_supported": "Из-за ограничений памяти в режиме апплета вы можете получать чит-коды только для игры, в которую вы сейчас играете. Пожалуйста, запустите Kefir-updater в режиме тайтла (через игру или форвардер), чтобы загрузить чит-коды для любой установленной игры.",
+    "cheatfile_label": "Список читов в файле {}",
+    "not_found": "Не найдено подходящих этой игре читов",
+    "show_existing": "Показать имеющиеся",
+    "delete_cheats": "Удалить читы для этой игры",
+    "deletion_error": "Невозможно удалить читы для этой игры:\n{}",
+    "cheats_label": "\ue016  Скачать читы для конкретной игры с сайта GBAtemp.net или CheatSlips.com",
+    "show_cheat_files": "Показать все файлы читов",
+    "cheats_not_found": "Не могу найти читы, соответствующие текущему build ID игры. Возможно, текущая версия игры еще не поддерживается",
+    "old_cheats_found": "Найдены читы, соответствующие этому/этим BID - [ {}].",
+    "cheatslips_logout": "Выйти"
+
+  },
+  "kefir":{
+    "all_done": "Всё готово!\nИзменения вступят в силу после перезагрузки консоли"
+  },
+  "common": {
+    "downloading": "Загрузка...",
+    "extracting": "Извлечение...",
+    "all_done": "Готово!",
+    "back": "Назад",
+    "continue": "Продолжить",
+    "download": "Загрузка:\n",
+    "from": "\n\n\nИз:\n",
+    "ok": "ОК",
+    "shut_down": "Выключение",
+    "reboot": "Перезагрузка",
+    "update": "Обновление приложения",
+    "no": "Нет",
+    "yes": "Да",
+    "go_back": "Назад",
+    "confirm": "Подтвердить",
+    "cancel": "Отменить",
+    "off": "Выкл.",
+    "selected": "Выбрано",
+    "enabled": "Включено",
+    "disabled": "Отключено",
+    "unknown": "Неизвестно",
+    "found": "Найдено",
+    "missing": "Отсутствует",
+    "applet_mode_not_supported": "Эта функция недоступна в режиме апплета, для доступа перезапустите AIO через игру.",
+    "nothing_to_see": "Здесь живут драконы."
+  },
+  "changelog": {
+    "changelog": "Изменения"
+  },
+  "sigpatches": {
+    "reboot": "Изменения вступят в силу после перезагрузки приставки."
+  },
+  "payloads": {
+    "dl_payloads": "Download payloads",
+    "select": " Select a payload to reboot to.",
+    "not_found": "Невозможно найти ссылку на скачивание. Убедитесь, что на консоли есть доступ к сети Интернет.",
+    "reboot_title": "Reboot menu",
+    "set_reboot_payload": "Set as reboot_payload.bin",
+    "set_update_bin": "Set as /bootloader/update.bin",
+    "copy_success": "Successfully copied '",
+    "to": "' to '"
+  },
+  "joy_con": {
+    "title": "Joy-Con color swapper",
+    "desc_1": "You can change the internal color of your Joy-Cons. Make sure they're docked.\nColor profiles are stored in '",
+    "desc_2": "'. Go to 'http://bit.ly/JC-color' ",
+    "desc_3": "to generate your own custom profiles.",
+    "backup": "Backup current color profile",
+    "label": "Joy-Con color swapper",
+    "backing_up": "Backing up the current color profile. Make sure the Joy-Con are docked. If the process hangs, try docking/undocking the JCs.",
+    "changing": "Changing color. Make sure the Joy-Con are docked. If the process hangs, try docking/undocking the JCs.",
+    "all_done": "All done! You may need to dock/undock your Joy-Cons for the change to take effect."
+  },
+  "pro_con": {
+    "title": "Pro-Con color swapper",
+    "desc": "You can change the internal color of your Pro Controller. Make sure it's set to Player 1.",
+    "label": "Pro Controller color swapper",
+    "backing_up": "Backing up the color profile",
+    "all_done": "All done! You may need to turn your controller on and off for the change to take effect.",
+    "changing": "Changing color. Make sure the Pro-Con is set to player 1."
+  },
+  "main": {
+    "getting": "Загрузка ",
+    "firmware_text": "\ue016  После загрузки, прошивка будет распакована в папку '/firmware'. Распакованную прошивку можно установить с помощью Daybreak.",
+    "firmware_version": "\ue016  Текущая версия прошивки: ",
+    "cheats_text": "\uE016  Загрузка обновлений читов с сайта 'gbatemp.net'. Читы для игр, которые у вас не установлены не будут распаковываться на карту памяти. Вы можете отключить обновления читов для определённых игр через меню 'Инструменты → Управление читами'.\n\uE016  Для активации читов, удерживайте кнопку (L) во время запуска игры!\n\n\uE016  Текущая версия читов: ",
+    "get_cheats": "Скачать читы с GBAtemp.net (ver {})",
+    "get_cheats_gfx": "Загрузить читы для улучшения графики",
+    "sigpatches": "sigpatches",
+    "sigpatches_text": "\ue016  Sigpatches allow your Switch to install and run unofficial NSP file. Make sure you pick the correct sigpatches for your setup (pure Atmosph\u00e8re or Hekate+Atmosph\u00e8re). Reboot the console to apply patches.",
+    "firmware": "firmware",
+    "not_found": "not found",
+    "latest_cheats": "Latest version",
+    "app": "app",
+    "kefir": "Текущая версия Kefir: ",
+    "ams": "Kefir",
+    "kefir_text": "\ue016  Загрузить и обновить Kefir до последней версии. Kefir - это Atmosph\u00e8re последней версии и программы, которые оттестированы и настроены для работы с ней.\n\ue016  После загрузки и распаковки свежей версии Kefir, приставка будет перезагружена в специальный пейлоад, который уже и выполнит обновление кефира.\n\nПожалуйста не прерывайте работу Kefir Updater и пейлоада во избежание проблем!",
+    "cfw_text": "\ue016  Обновить Kefir до последней версии",
+    "cheats": "читов",
+    "links_not_found": "Could not find a download link, make sure the Switch has access to the internet.\nIf this problem persists, please open an issue on Github.",
+    "new_update": " - доступна новая версия апдейтера",
+    "about": "О программе",
+    "update_ams": "Обновить Kefir",
+    "update_cfw": "Обновить Kefir",
+    "update_sigpatches": "Update sigpatches",
+    "download_firmware": "Скачать прошивку",
+    "download_cheats": "Скачать читы",
+    "tools": "Инструменты",
+    "launch_warning": "Перед тем как пользоваться программой прочтите следующие замечания::\n\n\ue016  Перед использованием программы ознакомьтесь со способами обновления Kefir вручную. Это поможет вам лучше понимать что делать, если что-то пойдёт не так.\n\ue016  Не рекомендуется использовать карты в формате exFAT на Nintendo Switch! Используйте FAT32, если не хотите потерять ваши данные!\n\ue016  Внимательно прочитайте замечания к релизу Kefir на его официальной странице: kefir.customfw.xyz\n\nЭто сообщение не будет показано при следующих запусках программы.",
+    "footer_text" : "v{} | {:.1f} Гб свободно"
+  },
+  "hide": {
+    "title": "Hide tabs",
+    "desc": "Hide tabs from the main menu"
+  },
+  "tools": {
+    "cheats": "Управление читами",
+    "joy_cons": "Change the Joy-Cons color",
+    "pro_cons": "Change the Pro Controller color",
+    "dl_payloads": "Download payloads to ",
+    "inject_payloads": "Inject payload",
+    "update_app": "Обновить DBI v{}",
+    "dl_app": "Загрузка:\nDBI\n\nИсточник:\n",
+    "changelog": "Список изменений",
+    "clean_up": "Удалить загруженные файлы",
+    "hide_tabs": "Настроить скрытие пунктов меню",
+    "internet_settings": "Edit internet settings",
+    "browser": "Запуск браузера (только при запуске через игру)",
+    "batch_copy": "Batch copy files",
+    "batch_copy_not_found": "The following files were not found and couldn't be copied:\n",
+    "batch_copy_config_not_found": "This tool allows you to copy files to other locations, which may be needed for your bootloader/trinket. Grab copy_files.json at 'https://git.io/aiosu_copy_files' and add it to your config folder. This will also be performed after updates.",
+    "language": "Изменить язык приложения",
+    "outdated_titles": "Доступные обновления",
+    "latest_version_not_found": "Невозможно найти информацию об обновлении",
+    "outdated_titles_desc": "Есть обновления для следующих игр:"
+
+  },
+  "utils": {
+    "fw_warning": "Размер архива слишком большой. Запустите программу в режиме тайтла - для этого запустите любую игру, удерживая кнопку (R) до появления Homebrew Menu",
+    "overwrite": " Do you want to overwrite existing ",
+    "wrong_type_sigpatches": "The downloaded file is not a sigpatches archive. This is most likely due to a broken link. If the problem persists after more than 30 minutes, please open an issue on Github.",
+    "wrong_type_fw": "Загружаемый файл - не архив с прошивкой. Возможно, ссылка по которой должен быть архив с прошивкой, битая. Попробуйте еще через пол часа. Если проблема повторилась, напишите в группу в telegram: https://t.me/kefir_switch/29305",
+    "overwrite_inis": "Do you want to overwrite existing .ini config files?",
+    "wrong_type_cfw": "The downloaded file is not a CFW archive. This is most likely due to a broken link. If the problem persists after more than 30 minutes, please open an issue on Github."
+  },
+  "ams_update": {
+    "reboot_rcm": "Свитч будет перезагружен в специальный пейлоад, чтобы завершить установку обновления.\n\nНе прерывайте процесс завершения установки во избежании проблем!\n\nЕсли процесс завис и не прекращается, выключите консоль, удерживая кнопку питания 15 секунд, а затем установите кефир вручную через ПК.",
+    "install_hekate": "Do you want to also download Hekate?\nIf not, the Switch will now reboot to a special payload in order to finalise the install.",
+    "delete_contents": "Would you like to remove the existing '/atmosphere/contents/' directory? This will prevent crashes if you have sysmodules that do not support the latest Atmosph\u00e8re. Please note that it will delete all your existing sysmodules, mods and cheats.",
+    "delete_sysmodules_flags": "Would you like to delete all the custom sysmodules startup flags? This will turn off all your sysmodules and prevent crashes if you have sysmodules that do not support the latest Atmosphère.",
+    "current_kefir": "Текущая версия: \n\ue016 Kefir: ",
+    "getting_ams": "Обновление Kefir",
+    "current_ams": "\u25c6 Текущая версия Atmosphère:",
+    "erista_rev": "\u25c6 Ревизия: Erista",
+    "mariko_rev": "\u25c6 Ревизия: Mariko"
+  },
+  "firmware": {
+    "launch_daybreak": "Запустить Daybreak для установки скачанной прошивки?"
+  },
+  "net": {
+    "title": "Internet settings"
+  },
+  "errors": {
+    "insufficient_storage": "Для выполнения этой операции на карте не хватает места",
+    "error_message": "{}\nPlease try again in a little while. If the problem persists, open an issue on Github",
+    "mariko_payload_missing": "In order to update Atmosphère on patched Switches, your payload needs to be named \"payload.bin\" and should be at the root of your SD card."
+  },
+  "language": {
+    "system_default": "System default",
+    "en-US": "American English (en-US)",
+    "ko": "한국어 (ko)",
+    "ru": "Russian (ru)",
+    "ua": "Ukrainian (ua)"
+  },
+  "worker": {
+    "of": "из",
+    "download_progress": "({:.1f} MB из {:.1f} MB - {:.1f} MB/s)",
+    "time_left": "({} осталось)"
+  },
+
+  "cheat_settings": {
+    "title": "Настройки читов",
+    "current_status": "Текущий статус",
+    "config_ready": "Настройки готовы к конфигурации",
+    "auto_enable_cheats": "Автоматически включать читы для всех игр",
+    "remember_state": "Запомнить состояния переключения читов",
+    "create_config": "Создать файл конфигурации",
+    "config_created": "Файл конфигурации успешно создан.",
+    "config_create_failed": "Не удалось создать файл конфигурации.",
+    "restart_to_payload": "Перезагрузка в Payload",
+    "restart_confirm": "Перезагрузить систему для применения настроек читов?",
+    "info": "Информация",
+    "info_desc": "Настройка поведения читов Atmosphere. Изменения требуют перезагрузки."
+  }
+}

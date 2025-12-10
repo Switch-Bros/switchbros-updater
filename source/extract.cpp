@@ -59,7 +59,7 @@ namespace extract {
             s64 freeStorage;
 
             if (R_SUCCEEDED(fs::getFreeStorageSD(freeStorage))) {
-                brls::Logger::info("Uncompressed size of archive {}: {}. Available: {}", archivePath, uncompressedSize, freeStorage);
+                brls::Logger::info("Unkomprimierte Groesse des Archivs {}: {}. Verfuegbar: {}", archivePath, uncompressedSize, freeStorage);
                 if (uncompressedSize * 1.1 > freeStorage) {
                     brls::Application::crash("menus/errors/insufficient_storage"_i18n);
                     std::this_thread::sleep_for(std::chrono::microseconds(2000000));

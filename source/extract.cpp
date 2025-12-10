@@ -126,7 +126,7 @@ namespace extract {
                     }
                     else {
                         extractEntry(filename, zfile);
-                        if (filename.substr(0, 14) == "/hekate_ctcaer") {
+                        if (filename.substr(0, 13) == "hekate_ctcaer") {
                             fs::copyFile(filename, UPDATE_BIN_PATH);
                             if (CurrentCfw::running_cfw == CFW::ams && util::showDialogBoxBlocking(fmt::format("menus/utils/set_hekate_reboot_payload"_i18n, UPDATE_BIN_PATH, REBOOT_PAYLOAD_PATH), "menus/common/yes"_i18n, "menus/common/no"_i18n) == 0) {
                                 fs::copyFile(UPDATE_BIN_PATH, REBOOT_PAYLOAD_PATH);
@@ -215,18 +215,6 @@ namespace extract {
                 std::filesystem::create_directory(AMS_CONTENTS);
                 chdir(AMS_PATH);
                 return std::string(CONTENTS_PATH).length();
-                break;
-            case CFW::rnx:
-                std::filesystem::create_directory(REINX_PATH);
-                std::filesystem::create_directory(REINX_CONTENTS);
-                chdir(REINX_PATH);
-                return std::string(CONTENTS_PATH).length();
-                break;
-            case CFW::sxos:
-                std::filesystem::create_directory(SXOS_PATH);
-                std::filesystem::create_directory(SXOS_TITLES);
-                chdir(SXOS_PATH);
-                return std::string(TITLES_PATH).length();
                 break;
         }
         return 0;

@@ -1,19 +1,19 @@
 {
     "about": false,
     "atmosphere": false,
+    "atmosphereentries": false,
     "browser": false,
     "cfw": true,
     "cheats": false,
     "cleanup": true,
-    "custom": true,
     "downloadpayload": true,
     "firmwares": false,
+    "hidetabs": true,
     "jccolor": true,
     "language": true,
     "move": true,
     "netsettings": true,
-    "outdatedtitles": false,
-    "pccolor": true
+    "pccolor": true,
     "rebootpayload": true,
-    "hidetabs": true,
+    "custom": true
 }

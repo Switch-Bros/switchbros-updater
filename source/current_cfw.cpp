@@ -2,7 +2,6 @@
 #include "fs.hpp"
 
 #include <switch.h>
-
 namespace CurrentCfw {
 
     namespace {

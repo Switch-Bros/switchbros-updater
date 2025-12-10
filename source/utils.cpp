@@ -44,6 +44,11 @@ namespace util {
 
     void downloadArchive(const std::string& url, contentType type, long& status_code)
     {
+  	if (std::filesystem::exists("/bootloader/hekate_ipl.ini")) {
+  		fs::copyFile("/bootloader/update.bin", "/payload.bin");
+        fs::copyFile("/bootloader/hekate_ipl.ini", "/backup/SB/bootloader/hekate_ipl.ini");
+  		fs::copyFile("/bootloader/nyx.ini", "/backup/SB/bootloader/nyx.ini");
+    }
         fs::createTree(DOWNLOAD_PATH);
         cleanup();
         switch (type) {
@@ -187,14 +192,14 @@ namespace util {
                 break;
             }
             case contentType::ams_cfw: {
-                if (std::filesystem::exists(KEFIR_DIRECTORY_PATH)) std::filesystem::remove_all(KEFIR_DIRECTORY_PATH);
-                std::filesystem::create_directory(KEFIR_DIRECTORY_PATH);
-                extract::extract(CFW_FILENAME, KEFIR_DIRECTORY_PATH, 1);
+                if (std::filesystem::exists(SWITCHBROS_DIRECTORY_PATH)) std::filesystem::remove_all(SWITCHBROS_DIRECTORY_PATH);
+                std::filesystem::create_directory(SWITCHBROS_DIRECTORY_PATH);
+                extract::extract(CFW_FILENAME, SWITCHBROS_DIRECTORY_PATH, 1);
 
-                if (std::filesystem::exists("/kefir/bootloader/hekate_ipl.ini")) {
-                    fs::copyFile("/kefir/bootloader/hekate_ipl.ini", "/bootloader/hekate_ipl.ini");
-                    fs::copyFile("/kefir/config/kefir-updater/kefir_updater.ini", "/bootloader/ini/!kefir_updater.ini");
-                    fs::copyFile("/kefir/bootloader/res/ku.bmp", "/bootloader/res/ku.bmp");
+                if (std::filesystem::exists("/SwitchBros_BasisPaket/bootloader/hekate_ipl.ini")) {
+                    fs::copyFile("/SwitchBros_BasisPaket/bootloader/hekate_ipl.ini", "/bootloader/hekate_ipl.ini");
+                    fs::copyFile("/SwitchBros_BasisPaket/config/switchbros-updater/switchbros_updater.ini", "/bootloader/ini/!switchbros_updater.ini");
+                    fs::copyFile("/SwitchBros_BasisPaket/bootloader/res/icon_SB_nobox.bmp", "/bootloader/res/icon_SB_nobox.bmp");
                     if (std::filesystem::exists(CFW_FILENAME)) std::filesystem::remove_all(CFW_FILENAME);
                 }
                 break;
@@ -450,5 +455,5 @@ void cleanup()
     fs::removeDir(AMS_DIRECTORY_PATH);
     fs::removeDir(SEPT_DIRECTORY_PATH);
     fs::removeDir(FW_DIRECTORY_PATH);
-    fs::removeDir(KEFIR_DIRECTORY_PATH);
+    fs::removeDir(SWITCHBROS_DIRECTORY_PATH);
 }

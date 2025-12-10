@@ -135,4 +135,9 @@ namespace fs {
         return nsGetFreeSpaceSize(NcmStorageId_SdCard, &free);
     }
 
+    void removeTheme() {
+            if (std::filesystem::exists("/atmosphere/contents/0100000000001000")) fs::removeDir("/atmosphere/contents/0100000000001000");
+            if (std::filesystem::exists("/atmosphere/contents/0100000000001007")) fs::removeDir("/atmosphere/contents/0100000000001007");
+            if (std::filesystem::exists("/atmosphere/contents/0100000000001013")) fs::removeDir("/atmosphere/contents/0100000000001013");
+    }
 }  // namespace fs

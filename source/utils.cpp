@@ -365,13 +365,13 @@ namespace util {
         std::string res;
         switch (status_code) {
             case 500:
-                res = fmt::format("{0:}: Internal Server Error", status_code);
+                res = fmt::format("{0:}: Interner Serverfehler", status_code);
                 break;
             case 503:
-                res = fmt::format("{0:}: Service Temporarily Unavailable", status_code);
+                res = fmt::format("{0:}: Dienst voruebergehend nicht verfuegbar", status_code);
                 break;
             default:
-                res = fmt::format("error: {0:}", status_code);
+                res = fmt::format("Fehler: {0:}", status_code);
                 break;
         }
         return res;
